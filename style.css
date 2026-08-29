@@ -1,4 +1,4 @@
- /* styles.css */
+/* styles.css */
 
 body {
     font-family: Arial, sans-serif;
@@ -31,4 +31,52 @@ p {
     font-size: 1em;
     line-height: 1.6;
     margin: 10px 0;
-}
+}
+
+/* Seletor de idioma. Fica acima do título de propósito: a Play Console tem
+   um campo só para a política, então quem chega pelo link da loja precisa
+   achar a outra versão antes de começar a ler. */
+.idiomas {
+    font-size: 0.9em;
+    margin-bottom: 16px;
+    text-align: right;
+}
+
+/* Data da última revisão, logo abaixo do título. */
+.atualizacao {
+    color: #777;
+    font-size: 0.9em;
+    margin-top: 0;
+}
+
+ul {
+    font-size: 1em;
+    line-height: 1.6;
+    padding-left: 22px;
+}
+
+li {
+    margin: 6px 0;
+}
+
+a {
+    color: #1a5fb4;
+}
+
+/* Nome de pacote dos apps: monoespaçado para não se confundir com o texto. */
+code {
+    background-color: #f0f0f5;
+    border-radius: 4px;
+    font-size: 0.9em;
+    padding: 1px 5px;
+}
+
+/* Em telas estreitas o cartão ocupa a largura toda: a margem de 50px deixava
+   pouco espaço para o texto no celular. */
+@media (max-width: 600px) {
+    .container {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
