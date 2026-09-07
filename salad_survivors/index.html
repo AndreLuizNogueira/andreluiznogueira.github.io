@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Salad Survivors">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Salad Survivors</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #f0f6fc;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    #loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid rgba(74, 222, 128, 0.2);
+      border-top-color: #4ade80;
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .loading-title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #4ade80;
+      letter-spacing: 1px;
+    }
+
+    .loading-sub {
+      font-size: 14px;
+      color: #8b949e;
+    }
+
+    #file-protocol-warning {
+      display: none;
+      max-width: 560px;
+      margin: 20px;
+      padding: 24px;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    #file-protocol-warning h2 {
+      margin-top: 0;
+      color: #f85149;
+      font-size: 20px;
+    }
+
+    #file-protocol-warning p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #c9d1d9;
+    }
+
+    .code-box {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-family: Consolas, monospace;
+      font-size: 13px;
+      color: #58a6ff;
+      text-align: left;
+      margin: 12px 0;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">
+    <div class="spinner"></div>
+    <div class="loading-title">Salad Survivors</div>
+    <div class="loading-sub">Carregando jogo...</div>
+  </div>
+
+  <div id="file-protocol-warning">
+    <h2>⚠️ Servidor Web Necessário</h2>
+    <p>
+      O Flutter Web utiliza módulos JavaScript, WebAssembly e CanvasKit, que são <b>bloqueados pelos navegadores</b> quando abertos diretamente com dois cliques no arquivo (<code>file://</code>).
+    </p>
+    <p>Para executar o jogo no navegador, execute o servidor local com o arquivo <b><code>iniciar_web.bat</code></b> na pasta do jogo ou execute no terminal:</p>
+    <div class="code-box">python -m http.server 8080 --directory build/web</div>
+    <p style="color: #8b949e; font-size: 12px;">Em seguida, acesse no navegador: <b>http://localhost:8080</b></p>
+  </div>
+
+  <script>
+    if (window.location.protocol === 'file:') {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('file-protocol-warning').style.display = 'block';
+    }
+  </script>
+
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
