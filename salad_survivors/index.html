@@ -173,7 +173,11 @@
       if (warnEl) warnEl.style.display = 'block';
     }
 
-    // Desaparece com a tela de loading assim que o Flutter monta a tela
+    // Some quando o Flutter desenha o PRIMEIRO QUADRO, nao quando ele monta a
+    // view. Sao coisas diferentes: a view aparece no DOM antes de existir
+    // qualquer widget, e dispensar o loader ali descobria alguns segundos de
+    // tela preta. O Dart desenha a sua propria tela de carregamento, identica
+    // a esta, entao a troca nao pisca.
     const dismissLoading = () => {
       const loader = document.getElementById('loading');
       if (loader) {
@@ -186,17 +190,11 @@
         }, 300);
       }
     };
-
-    const domObserver = new MutationObserver((mutations, obs) => {
-      if (document.querySelector('flutter-view, flt-glass-pane, flt-scene-host')) {
-        dismissLoading();
-        obs.disconnect();
-      }
-    });
-    domObserver.observe(document.body, { childList: true, subtree: true });
-
-    // Fallback de segurança por timeout (caso o evento do observer demore)
     window.addEventListener('flutter-first-frame', dismissLoading);
+
+    // Rede de segurança: se o evento nunca chegar, o loader não pode ficar
+    // para sempre em cima de um jogo que já está rodando.
+    setTimeout(dismissLoading, 20000);
   </script>
 
   <script src="flutter_bootstrap.js" async></script>
