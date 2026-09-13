@@ -197,36 +197,6 @@
     setTimeout(dismissLoading, 20000);
   </script>
 
-  <script>
-    // Resolucao maxima em que o Flutter desenha, em pixels fisicos: cerca de
-    // Full HD. Numa tela 4K o canvas inteiro tinha quatro vezes isso, e o
-    // navegador levava mais tempo copiando cada quadro do que o jogo levava
-    // para desenha-lo - 30 FPS com a arena vazia. Aqui o Flutter recebe um
-    // devicePixelRatio menor, desenha num canvas menor e o navegador amplia.
-    //
-    // O valor e calculado UMA vez, pelo tamanho do MONITOR, e nao muda mais:
-    // o Flutter so lida bem com o devicePixelRatio que encontra ao abrir. Um
-    // valor que mudasse com a janela (maximizar, restaurar) desenhava o jogo
-    // encolhido num canto. Pelo mesmo motivo a opcao "Limitar resolucao do
-    // jogo" (flutter.limitResolution = "false" quando desligada) vale ao
-    // recarregar a pagina.
-    (function () {
-      var MAX_PIXELS = 1920 * 1080 * 1.1;
-      try {
-        var stored = window.localStorage.getItem('flutter.limitResolution');
-        if (stored && stored.indexOf('false') >= 0) return;
-      } catch (e) {}
-      var ratio = window.devicePixelRatio || 1;
-      var area = window.screen.width * window.screen.height;
-      if (!(area > 0) || area * ratio * ratio <= MAX_PIXELS) return;
-      var capped = Math.min(ratio, Math.sqrt(MAX_PIXELS / area));
-      Object.defineProperty(window, 'devicePixelRatio', {
-        configurable: true,
-        get: function () { return capped; }
-      });
-    })();
-  </script>
-
   <script src="flutter_bootstrap.js" async></script>
 </body>
 
