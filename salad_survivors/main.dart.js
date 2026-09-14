@@ -109520,7 +109520,7 @@ m=t.N
 if(A.e4(o,m).length===0)n.push("(ainda sem medi\xe7\xf5es: jogue pelo menos 5 segundos)")
 B.b.N(n,A.e4(o,m))
 s=2
-return A.p(A.B7(new A.qN("v0.69.0+158\n"+B.b.bM(n,"\n"))),$async$B6)
+return A.p(A.B7(new A.qN("v0.69.1+159\n"+B.b.bM(n,"\n"))),$async$B6)
 case 2:p.ahL(A.aXz(null,null,null,null,null,B.a2,null,A.au(l.gacw(),null,null,null,null,null,null,null),null,B.TX,null,null,null,null,null,null,null,null,null,null))
 return A.A(null,r)}})
 return A.B($async$B6,r)},
@@ -109578,7 +109578,7 @@ break}o=k.ok.cc.a
 s=3
 return A.p(m.c.A3(a),$async$wa)
 case 3:s=4
-return A.p(l.ve(new A.ws(a,o.p1,A.rs(p.r),p.w.a,o.f,o.z,o.go,"v0.69.0+158",p.x.b)),$async$wa)
+return A.p(l.ve(new A.ws(a,o.p1,A.rs(p.r),p.w.a,o.f,o.z,o.go,"v0.69.1+159",p.x.b)),$async$wa)
 case 4:n=c
 if(p.c!=null)p.a4(new A.aiY(p,n))
 q=n
@@ -109683,7 +109683,7 @@ m=h.as
 l=f.ok
 k=l.cc.a
 j=h.ch
-e.push(new A.RI(h.ay,k,h.gadI(),h.gGZ(),d,s,r,q,p,o,n,m,l.hS,j,g))}e.push(A.iQ(8,A.ff(A.X4(!0,A.au("v0.69.0+158",g,g,g,g,B.anY,g,g),!0),!0,g),g,g,g,12,g,g))
+e.push(new A.RI(h.ay,k,h.gadI(),h.gGZ(),d,s,r,q,p,o,n,m,l.hS,j,g))}e.push(A.iQ(8,A.ff(A.X4(!0,A.au("v0.69.1+159",g,g,g,g,B.anY,g,g),!0),!0,g),g,g,g,12,g,g))
 return new A.Fd(A.ib(B.ce,e,B.a2,B.qx),g)}}
 A.aiW.prototype={
 $1(a){return A.aOg().$1("[desempenho] "+a)},
