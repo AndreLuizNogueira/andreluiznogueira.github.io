@@ -116500,7 +116500,7 @@ p.push(new A.bn(B.wc,A.bZ(l,B.y,B.n,B.G),k))}p.push(new A.bn(B.wc,A.ae(j.ga8k(),
 p.push(new A.cU(j.ga8g(),new A.ahE(a,j),B.Zp,B.bC,k))
 return A.ht(B.bI,p,!1,k,360,this.c,r,s)}}
 A.ahE.prototype={
-$0(){return A.bpi(this.b.guY(),"v0.81.2+176",this.a)},
+$0(){return A.bpi(this.b.guY(),"v0.81.3+177",this.a)},
 $S:0}
 A.fn.prototype={
 J(){return"GameShellScreen."+this.b}}
@@ -116966,7 +116966,7 @@ n=t.N
 if(A.dI(o,n).length===0)k.push("(ainda sem medi\xe7\xf5es: jogue pelo menos 5 segundos)")
 B.b.N(k,A.dI(o,n))
 s=2
-return A.p(A.Cs(new A.rz("v0.81.2+176\n"+B.b.bT(k,"\n"))),$async$Cr)
+return A.p(A.Cs(new A.rz("v0.81.3+177\n"+B.b.bT(k,"\n"))),$async$Cr)
 case 2:p.VQ(A.aWv(null,null,null,null,null,B.U,null,A.ae(j.gagO(),null,null,null,null,null,null,null),null,B.w9,null,null,null,null,null,null,null,null,null,null))
 return A.x(null,r)}})
 return A.y($async$Cr,r)},
@@ -117033,7 +117033,7 @@ n=o.eT.a
 s=3
 return A.p(l.f.Br(a),$async$xd)
 case 3:s=4
-return A.p(k.wc(new A.xq(a,n.p1,A.lP(p.r),p.w.a,n.f,n.z,n.go,"v0.81.2+176",p.x.b,A.b2P(o.gh5().b))),$async$xd)
+return A.p(k.wc(new A.xq(a,n.p1,A.lP(p.r),p.w.a,n.f,n.z,n.go,"v0.81.3+177",p.x.b,A.b2P(o.gh5().b))),$async$xd)
 case 4:m=c
 if(p.c!=null)p.Z(new A.amQ(p,m))
 q=m
@@ -117181,7 +117181,7 @@ s.push(A.hv(28,A.mi(!0,new A.Iy(a6,A.b3o(r,a3.dx.a,q.a),a3.gVW(),a3.gaUI(),a4),B
 a6={}
 a6.a=null
 if(a2!=null){a6.a=a2
-s.push(A.hv(28,A.mi(!0,new A.TB(a2,new A.amt(a6,a3),a4),B.aE,!0),a4,a4,16,16,a4,a4))}s.push(A.hv(8,A.fp(A.mi(!0,A.ae("v0.81.2+176",a4,a4,a4,a4,B.asi,a4,a4),B.aE,!0),!0,a4),a4,a4,a4,12,a4,a4))
+s.push(A.hv(28,A.mi(!0,new A.TB(a2,new A.amt(a6,a3),a4),B.aE,!0),a4,a4,16,16,a4,a4))}s.push(A.hv(8,A.fp(A.mi(!0,A.ae("v0.81.3+177",a4,a4,a4,a4,B.asi,a4,a4),B.aE,!0),!0,a4),a4,a4,a4,12,a4,a4))
 return A.aym(a4,A.hx(B.bW,s,B.U,B.rT),a4)}}
 A.amE.prototype={
 $0(){return this.a.f=B.wP},
