@@ -112388,7 +112388,7 @@ n=t.N
 if(A.dD(o,n).length===0)k.push("(ainda sem medi\xe7\xf5es: jogue pelo menos 5 segundos)")
 B.b.N(k,A.dD(o,n))
 s=2
-return A.o(A.BL(new A.rb("v0.80.0+172\n"+B.b.bG(k,"\n"))),$async$BC)
+return A.o(A.BL(new A.rb("v0.80.1+173\n"+B.b.bG(k,"\n"))),$async$BC)
 case 2:p.Uy(A.aSS(null,null,null,null,null,B.a3,null,A.am(j.gaf_(),null,null,null,null,null,null,null),null,B.vK,null,null,null,null,null,null,null,null,null,null))
 return A.x(null,r)}})
 return A.y($async$BC,r)},
@@ -112455,7 +112455,7 @@ n=o.eE.a
 s=3
 return A.o(l.f.AA(a),$async$wB)
 case 3:s=4
-return A.o(k.vE(new A.wU(a,n.p1,A.ly(p.r),p.w.a,n.f,n.z,n.go,"v0.80.0+172",p.x.b,A.b_4(o.gfU().b))),$async$wB)
+return A.o(k.vE(new A.wU(a,n.p1,A.ly(p.r),p.w.a,n.f,n.z,n.go,"v0.80.1+173",p.x.b,A.b_4(o.gfU().b))),$async$wB)
 case 4:m=c
 if(p.c!=null)p.X(new A.akE(p,m))
 q=m
@@ -112602,7 +112602,7 @@ s.push(A.hm(28,A.tZ(!0,new A.HF(a6,A.b_E(r,a3.dx.a,q.a),a3.gUE(),a3.gaSs(),a4),!
 a6={}
 a6.a=null
 if(a2!=null){a6.a=a2
-s.push(A.hm(28,A.tZ(!0,new A.Sj(a2,new A.aki(a6,a3),a4),!0),a4,a4,16,16,a4,a4))}s.push(A.hm(8,A.fh(A.tZ(!0,A.am("v0.80.0+172",a4,a4,a4,a4,B.arf,a4,a4),!0),!0,a4),a4,a4,a4,12,a4,a4))
+s.push(A.hm(28,A.tZ(!0,new A.Sj(a2,new A.aki(a6,a3),a4),!0),a4,a4,16,16,a4,a4))}s.push(A.hm(8,A.fh(A.tZ(!0,A.am("v0.80.1+173",a4,a4,a4,a4,B.arf,a4,a4),!0),!0,a4),a4,a4,a4,12,a4,a4))
 return new A.FW(A.iw(B.cm,s,B.a3,B.ry),a4)}}
 A.akt.prototype={
 $0(){return this.a.f=B.wm},
