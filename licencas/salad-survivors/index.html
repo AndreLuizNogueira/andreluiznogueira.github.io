@@ -18,7 +18,7 @@
 <main class="legal wrap"><a class="back" href="../">← Todas as políticas</a>
 <p class="eyebrow">Salad Survivors</p>
 <h1>Política de Privacidade</h1>
-<p class="updated">Última atualização: 18 de setembro de 2026</p>
+<p class="updated">Última atualização: 20 de setembro de 2026</p>
 <p>Esta política se aplica ao <strong>Salad Survivors</strong>, desenvolvido por André Luiz Nogueira.</p>
 <div class="summary"><strong>Em poucas palavras</strong>
 <p>Você pode jogar sem criar conta. O progresso fica no aparelho ou navegador. Se decidir enviar uma pontuação, ela entra no placar público. Relatórios técnicos são enviados quando você aciona esse recurso. Esta versão do jogo não exibe anúncios.</p>
@@ -32,8 +32,10 @@
 <section>
 <h2>Placar online e informações públicas</h2>
 <p>O envio de uma pontuação é opcional e utiliza infraestrutura do Supabase. São enviados o nome ou apelido escolhido, pontuação, modo, dificuldade, onda, duração, resultado, personagem, cepas utilizadas e versão do jogo. O servidor registra a data de criação. Nas versões compatíveis, também é enviado o código do jogador para permitir a exclusão das suas pontuações.</p>
-<p>O apelido e os dados da partida são públicos no placar. O código do jogador não é exibido pelo placar. Prefira um apelido e não informe dados pessoais nesse campo.</p>
+<p>O apelido e os dados da partida são públicos no placar. O código do jogador não é exibido pelo placar. Prefira um apelido e não informe dados pessoais nesse campo. Apelidos com palavrões ou com cara de contato (telefone, e-mail, endereço de site) são recusados pelo jogo e pelo servidor.</p>
+<p>O desafio diário tem um placar próprio, com as mesmas informações. A data e a semente do desafio vêm do servidor.</p>
 <p>Se você solicitar o envio sem conexão, a pontuação pode ficar em uma fila local de até 20 registros e ser reenviada automaticamente quando o jogo conseguir se conectar.</p>
+<p>Para limitar abusos, o servidor guarda por até um dia um resumo criptográfico (hash) do endereço IP e do código do jogador de quem envia; não é possível recuperar o IP a partir dele.</p>
 </section>
 <section>
 <h2>Relatórios de diagnóstico</h2>
@@ -47,6 +49,15 @@
 <p>Todos os envios pela internet (placar, relatórios e compra) são feitos com criptografia (HTTPS). O Supabase hospeda os registros online. Ao acessar serviços pela internet, informações de conexão, como endereço IP, podem ser processadas pela infraestrutura para entregar e proteger o serviço. O processamento pode ocorrer fora do seu país.</p>
 <p>Saiba mais sobre os provedores na <a href="https://supabase.com/privacy">Política de Privacidade do Supabase</a> e na <a href="https://policies.google.com/privacy">Política de Privacidade do Google</a>. Para solicitações sobre os registros do jogo hospedados no Supabase, contate o desenvolvedor pelo e-mail abaixo.</p>
 </section>
+<section id="idade">
+<h2>Idade do jogador</h2>
+<p>Na edição distribuída pelo Google Play, o jogo consulta a faixa de idade que a própria loja informa (API Play Age Signals), como pede o ECA Digital (Lei 15.211/2025). A resposta é usada só no aparelho, para uma decisão: se o placar pode mostrar o apelido digitado. Ela não é guardada nem enviada para nós.</p>
+<p>Se a loja informar que o jogador tem menos de 18 anos, ou não informar a idade, o jogo continua completo e a pontuação entra no placar como "Jogador", sem apelido. Nas versões para computador e navegador não há loja para consultar.</p>
+</section>
+<section id="denuncias">
+<h2>Denúncias de apelidos</h2>
+<p>Cada linha do placar tem um botão "Denunciar". A denúncia registra qual linha foi apontada, uma cópia do apelido e um resumo criptográfico (hash) do IP de quem denunciou, usado só para limitar abusos. O desenvolvedor analisa cada denúncia e remove o que desrespeitar as regras. Também é possível denunciar pelo e-mail abaixo.</p>
+</section>
 <section id="exclusao">
 <h2>Conservação e exclusão</h2>
 <p>Os dados locais permanecem até serem removidos por você ou pelo sistema. Os registros enviados ao servidor não são apagados ao desinstalar o jogo. Não há prazo automático de exclusão definido para estes registros.</p>
@@ -58,8 +69,16 @@
 <p>Você pode jogar sem enviar pontuações ou relatórios. Não vendemos seus dados. O tratamento dos registros online tem como finalidade oferecer o placar solicitado por você, diagnosticar problemas e atender pedidos de suporte. Evite incluir informações pessoais no apelido e nas mensagens de suporte que não sejam necessárias ao atendimento.</p>
 </section>
 <section>
-<h2>Crianças</h2>
-<p>O Salad Survivors não é direcionado a crianças menores de 13 anos e não coleta intencionalmente dados pessoais delas. Se você é responsável por uma criança e acredita que ela enviou dados pessoais no apelido do placar, escreva para o e-mail abaixo para que sejam removidos.</p>
+<h2>Crianças e responsáveis</h2>
+<p>O Salad Survivors tem classificação indicativa Livre, mostrada na tela inicial. Ele não é direcionado a crianças menores de 13 anos e não coleta intencionalmente dados pessoais delas. Não tem anúncios, nem conversa entre jogadores, nem caixas de recompensa pagas.</p>
+<p>Para pais e responsáveis:</p>
+<ul>
+<li><strong>Placar:</strong> enviar a pontuação é sempre opcional. Menores de 18 anos, ou jogadores cuja idade a loja não informa, aparecem só como "Jogador".</li>
+<li><strong>Tempo de jogo:</strong> em Configurações → Exibição, o jogo mostra quanto se jogou no dia e tem um lembrete de pausa, ligado a cada 60 minutos por padrão (pode ser 30, 60, 90 ou desligado).</li>
+<li><strong>Compras:</strong> a única compra é a edição completa, feita pelo Google Play. A aprovação de compras por um responsável é configurada no Google Play (controles da família / Family Link).</li>
+<li><strong>Dados enviados:</strong> para apagar as pontuações de uma instalação, use Configurações → Privacidade ou escreva para o e-mail abaixo.</li>
+</ul>
+<p>Se você é responsável por uma criança e acredita que ela enviou dados pessoais no apelido do placar, use o botão "Denunciar" ou escreva para o e-mail abaixo para que sejam removidos.</p>
 </section>
 <section>
 <h2>Contato e solicitações</h2>

@@ -19,7 +19,7 @@
 <a class="back" href="../en.html">← All policies</a>
 <p class="eyebrow">Salad Survivors</p>
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: September 18, 2026</p>
+<p class="updated">Last updated: September 20, 2026</p>
 <p>This policy applies to <strong>Salad Survivors</strong>, developed by André Luiz Nogueira.</p>
 <div class="summary"><strong>At a glance</strong>
 <p>You can play without creating an account. Progress stays on your device or in your browser. If you choose to submit a score, it is added to the public leaderboard. Technical reports are sent when you activate that feature. This version of the game does not display ads.</p>
@@ -33,8 +33,10 @@
 <section>
 <h2>Online leaderboard and public information</h2>
 <p>Score submission is optional and uses Supabase infrastructure. Submitted information includes your chosen name or nickname, score, mode, difficulty, wave, duration, result, character, strains used and game version. The server records the creation date. In supported versions, the player code is also sent to allow you to delete your scores.</p>
-<p>Your nickname and run details are public on the leaderboard. The player code is not displayed on the leaderboard. Use a nickname and do not enter personal information in that field.</p>
+<p>Your nickname and run details are public on the leaderboard. The player code is not displayed on the leaderboard. Use a nickname and do not enter personal information in that field. Nicknames with profanity or that look like contact details (phone number, e-mail, web address) are refused by the game and by the server.</p>
+<p>The daily challenge has its own leaderboard with the same information. The challenge's date and seed come from the server.</p>
 <p>If you request submission while offline, the score may be held in a local queue of up to 20 records and automatically sent again when the game can connect.</p>
+<p>To limit abuse, the server keeps a cryptographic summary (hash) of the sender's IP address and player code for up to one day; the IP address cannot be recovered from it.</p>
 </section>
 <section>
 <h2>Diagnostic reports</h2>
@@ -48,6 +50,15 @@
 <p>Everything sent over the internet (leaderboard, reports and purchase) is encrypted in transit (HTTPS). Supabase hosts online records. When you access services over the internet, connection information, such as your IP address, may be processed by the infrastructure to deliver and protect the service. Processing may take place outside your country.</p>
 <p>Learn more about the providers in the <a href="https://supabase.com/privacy">Supabase Privacy Policy</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. For requests about game records hosted on Supabase, contact the developer at the email address below.</p>
 </section>
+<section id="age">
+<h2>Player age</h2>
+<p>In the edition distributed through Google Play, the game asks the store for the age range it knows (Play Age Signals API), as Brazil's ECA Digital (Law 15.211/2025) requires. The answer is used only on the device, for one decision: whether the leaderboard may show the typed nickname. It is not stored or sent to us.</p>
+<p>If the store reports that the player is under 18, or does not report an age, the game stays complete and the score goes on the leaderboard as "Player", without a nickname. The PC and browser versions have no store to ask.</p>
+</section>
+<section id="reports">
+<h2>Nickname reports</h2>
+<p>Every leaderboard row has a "Report" button. A report records which row was flagged, a copy of the nickname and a cryptographic summary (hash) of the reporter's IP address, used only to limit abuse. The developer reviews each report and removes whatever breaks the rules. You can also report by e-mail at the address below.</p>
+</section>
 <section id="deletion">
 <h2>Retention and deletion</h2>
 <p>Local data remains until you or the system remove it. Records sent to the server are not erased when you uninstall the game. No automatic deletion period has been set for these records.</p>
@@ -59,8 +70,16 @@
 <p>You can play without submitting scores or reports. We do not sell your data. Online records are processed to provide the leaderboard you requested, diagnose issues and respond to support requests. Avoid including personal information in your nickname or support messages that is not needed to address your request.</p>
 </section>
 <section>
-<h2>Children</h2>
-<p>Salad Survivors is not directed at children under 13 and does not knowingly collect their personal information. If you are a parent or guardian and believe a child has entered personal information as a leaderboard nickname, write to the email address below so it can be removed.</p>
+<h2>Children and parents</h2>
+<p>Salad Survivors is rated for all ages (Brazilian rating "L", shown on the title screen). It is not directed at children under 13 and does not knowingly collect their personal information. It has no ads, no chat between players and no paid loot boxes.</p>
+<p>For parents and guardians:</p>
+<ul>
+<li><strong>Leaderboard:</strong> submitting a score is always optional. Players under 18, or whose age the store does not report, appear only as "Player".</li>
+<li><strong>Playtime:</strong> under Settings → Display, the game shows how long it has been played today and offers a break reminder, on every 60 minutes by default (30, 60, 90 or off).</li>
+<li><strong>Purchases:</strong> the only purchase is the full edition, made through Google Play. Purchase approval by a parent is set up in Google Play (family controls / Family Link).</li>
+<li><strong>Data sent:</strong> to delete an installation's scores, use Settings → Privacy or write to the email address below.</li>
+</ul>
+<p>If you are a parent or guardian and believe a child has entered personal information as a leaderboard nickname, use the "Report" button or write to the email address below so it can be removed.</p>
 </section>
 <section>
 <h2>Contact and requests</h2>
