@@ -1,82 +1,108 @@
-/* styles.css */
+:root{color-scheme:light;--paper:#f7f6f2;--ink:#232720;--muted:#62665e;--line:#dedfd5;--accent:#ad492b}
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:28px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:5px}
+a:hover{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:6px}
+img{display:block;max-width:100%}
+.wrap{width:min(1180px,calc(100% - 96px));margin-inline:auto}
+.site-header{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-block:30px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:13px;font-size:14px;font-weight:700;text-decoration:none}
+.brand-mark{background:var(--ink);color:var(--paper);font-size:24px;letter-spacing:-2px;border-radius:50%;width:43px;height:43px;display:grid;place-items:center;padding-right:3px}
+.site-header nav{display:flex;gap:29px;font-size:13px}
+.site-header nav a{text-decoration:none}
+.hero{padding-top:83px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:1.8px;display:flex;align-items:center;gap:9px}
+.dot{width:7px;height:7px;background:var(--accent);border-radius:50%}
+h1{font-size:clamp(42px,5.7vw,76px);letter-spacing:-3.5px;line-height:1.08;font-weight:500;margin:28px 0 25px}
+h1 span{color:#7a7d71}
+.intro{font-size:18px;line-height:1.65;max-width:500px;color:var(--muted)}
+.text-link{display:inline-flex;gap:36px;font-size:13px;font-weight:700;margin-top:19px;text-decoration:none}
+.hero-note{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line);padding:65px 0 23px;color:var(--muted);font-size:11px}
+.hero-note span:last-child{font-size:10px;letter-spacing:1.4px}
+.section-heading{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:36px 0 30px}
+.section-heading h2{font-size:18px;margin:0;font-weight:500}
+.section-heading>span{font-size:12px;color:var(--muted)}
+.project{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding-bottom:48px;margin-bottom:48px;border-bottom:1px solid var(--line)}
+.project-art{height:410px;border-radius:5px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.listagem-art{background:#eeeddf}
+.pet-art{background:#f2e4d6}
+.art-label{position:absolute;top:27px;font-size:9px;letter-spacing:1.5px;font-weight:700;color:#646458}
+.art-caption{position:absolute;bottom:27px;font-size:12px;color:#626252}
+.listagem-art img{width:222px;height:222px;object-fit:contain;transform:rotate(-7deg);filter:drop-shadow(0 16px 12px #51452618)}
+.pet-art img{width:204px;height:204px;object-fit:contain;border-radius:44px;transform:rotate(6deg);box-shadow:0 20px 35px #8d491c20}
+.project-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:9px;letter-spacing:1.1px;color:var(--muted)}
+.status{background:#e8ecdf;color:#4e613a;padding:6px 9px;border-radius:4px;letter-spacing:0;font-size:10px}
+.development{background:#f0e7d3;color:#776025}
+.project-copy h3{font-size:34px;font-weight:500;letter-spacing:-1.1px;margin:22px 0 14px}
+.project-tagline{font-size:23px;line-height:1.25;letter-spacing:-.5px;margin:0 0 16px}
+.project-copy>p:not(.project-tagline){font-size:14px;line-height:1.8;color:var(--muted);max-width:440px}
+.features{list-style:none;padding:0;display:flex;gap:6px 14px;flex-wrap:wrap;margin:22px 0 26px;font-size:10px;color:#585e50}
+.features li::before{content:'+';color:#818871;margin-right:5px}
+.project-links{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.button{background:var(--ink);color:#fff;padding:13px 16px;border-radius:3px;font-size:11px;text-decoration:none;display:inline-flex;gap:17px;align-items:center}
+.button:hover{background:#444d3b;color:white}
+.policy-link{font-size:11px}
+.game-art>img{width:100%;height:100%;object-fit:cover;object-position:48% center}
+.game-art::after{content:'';position:absolute;inset:0;background:linear-gradient(#07170c77,transparent 45%,#07170c88)}
+.game-art-title{position:absolute;top:25px;left:27px;font-size:43px;font-weight:900;line-height:.93;color:#f8ecc9;letter-spacing:-2px;z-index:1;text-shadow:0 2px 4px #0006}
+.game-art-title span{font-size:30px;letter-spacing:-1px}
+.game-caption{position:absolute;bottom:26px;left:27px;color:#fff6d6;z-index:1;font-size:10px;font-weight:700;letter-spacing:1.5px}
+.contact{padding:24px 0 72px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.contact h2{font-size:32px;line-height:1.2;font-weight:500;letter-spacing:-1px;margin:16px 0 0}
+.contact>a{font-size:14px;overflow-wrap:anywhere}
+.site-footer{border-top:1px solid var(--line);padding-block:25px 32px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:11px;color:var(--muted)}
+.skip-link{position:absolute;left:20px;top:-100px;padding:12px;background:var(--ink);color:white;z-index:10}
+.skip-link:focus{top:10px}
+
+.legal{max-width:760px;padding-block:60px 80px;line-height:1.8}
+.legal h1{font-size:44px;letter-spacing:-1.8px;line-height:1.15}
+.legal h2{font-size:21px;line-height:1.35;margin-top:36px}
+.legal p,.legal li{font-size:15px;color:#4f554b}
+.legal .updated{font-size:12px;color:var(--muted)}
+.legal .summary{background:#eceee4;border-left:3px solid #828c68;padding:17px 22px;margin:28px 0}
+.legal code{overflow-wrap:anywhere;font-size:12px}
+.legal ul{padding-left:21px}
+.policy-list{list-style:none;padding:0!important;margin:35px 0}
+.policy-list li{border-bottom:1px solid var(--line)}
+.policy-list a{display:flex;justify-content:space-between;gap:20px;padding:22px 0;text-decoration:none;font-size:21px}
+.legal .back{font-size:13px}
+
+@media(max-width:1000px){.wrap{width:calc(100% - 56px)}
+.project{gap:30px}
+.project-art{height:390px}
+.project-links{gap:16px}
+.project-meta{font-size:8px}
+.contact{align-items:flex-start;flex-direction:column}
 }
 
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+@media(max-width:640px){.wrap{width:calc(100% - 40px)}
+.site-header{padding-block:22px;align-items:flex-start;flex-wrap:wrap;gap:20px}
+.site-header nav{width:100%;justify-content:space-between;gap:15px}
+.brand{font-size:13px}
+.hero{padding-top:48px}
+h1{font-size:43px;letter-spacing:-2px}
+.intro{font-size:16px}
+.hero-note{padding-top:45px}
+.hero-note span:last-child{display:none}
+.section-heading{align-items:flex-start;flex-direction:column;gap:8px}
+.project{grid-template-columns:1fr;gap:26px;margin-bottom:34px;padding-bottom:34px}
+.project-art{height:330px}
+.project-meta{font-size:9px}
+.project-copy h3{margin-top:17px;font-size:31px}
+.project-tagline{font-size:22px}
+.project-copy>p:not(.project-tagline){max-width:none}
+.project-links{gap:20px}
+.contact{padding:12px 0 48px}
+.contact h2{font-size:29px}
+.site-footer{font-size:10px}
+.legal{padding-top:35px}
+.legal h1{font-size:36px}
+.legal p,.legal li{font-size:14px}
+.policy-list a{font-size:19px}
 }
 
-h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin-top: 20px;
-}
-
-p {
-    font-size: 1em;
-    line-height: 1.6;
-    margin: 10px 0;
-}
-
-/* Seletor de idioma. Fica acima do título de propósito: a Play Console tem
-   um campo só para a política, então quem chega pelo link da loja precisa
-   achar a outra versão antes de começar a ler. */
-.idiomas {
-    font-size: 0.9em;
-    margin-bottom: 16px;
-    text-align: right;
-}
-
-/* Data da última revisão, logo abaixo do título. */
-.atualizacao {
-    color: #777;
-    font-size: 0.9em;
-    margin-top: 0;
-}
-
-ul {
-    font-size: 1em;
-    line-height: 1.6;
-    padding-left: 22px;
-}
-
-li {
-    margin: 6px 0;
-}
-
-a {
-    color: #1a5fb4;
-}
-
-/* Nome de pacote dos apps: monoespaçado para não se confundir com o texto. */
-code {
-    background-color: #f0f0f5;
-    border-radius: 4px;
-    font-size: 0.9em;
-    padding: 1px 5px;
-}
-
-/* Em telas estreitas o cartão ocupa a largura toda: a margem de 50px deixava
-   pouco espaço para o texto no celular. */
-@media (max-width: 600px) {
-    .container {
-        margin: 0;
-        border-radius: 0;
-        box-shadow: none;
-    }
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
 }
