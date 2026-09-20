@@ -30857,8 +30857,9 @@ _.x=d
 _.y=0
 _.z=5
 _.Q=e
-_.as=f
-_.at=!1},
+_.as=null
+_.at=f
+_.ax=!1},
 anD:function anD(a){this.a=a},
 anB:function anB(a){this.a=a},
 anC:function anC(a){this.a=a},
@@ -110725,11 +110726,11 @@ if(s<1)return
 p.z=s-1
 r.m(0,a,p.y)}p.Q.b07(a.b,a.e*p.b)
 return},
-a41(a,b){this.at=b
-return this.as=this.as.cX(new A.anB(a),t.H).lV(A.brT())},
+a41(a,b){this.ax=b
+return this.at=this.at.cX(new A.anB(a),t.H).lV(A.brT())},
 Ol(a){return this.a41(a,!1)},
 zu(){var s=this
-if(s.at)return s.as
+if(s.ax)return s.at
 return s.a41(new A.anC(s),!0)},
 wQ(a,b){return this.b09(a,b)},
 tY(a){return this.wQ(a,!1)},
@@ -110764,7 +110765,7 @@ A.anC.prototype={
 $0(){var s=0,r=A.x(t.H),q,p=this,o,n,m,l
 var $async$$0=A.y(function(a,b){if(a===1)return A.u(b,r)
 for(;;)switch(s){case 0:l=p.a
-l.at=!1
+l.ax=!1
 o=l.f
 if(o!=null)n=!(l.d&&!l.e&&l.c>0)
 else n=!0
@@ -119506,7 +119507,7 @@ p.push(new A.b5(B.xl,A.bR(l,B.t,B.m,B.u),k))}p.push(new A.b5(B.xl,A.a6(j.gaaK(),
 p.push(new A.c6(j.gaaF(),new A.aj7(a,j),B.a0F,B.b5,k,k))
 return A.fG(B.bq,p,!1,k,k,k,360,this.c,k,k,r,s)}}
 A.aj7.prototype={
-$0(){return A.btf(this.b.gvG(),"v0.97.7+216",this.a)},
+$0(){return A.btf(this.b.gvG(),"v0.97.8+217",this.a)},
 $S:0}
 A.lZ.prototype={
 J(){return"DailyBoard."+this.b}}
@@ -120477,7 +120478,7 @@ a8=m.y2
 a8=a8==null?"":"Falha anterior: "+a8+"\n"
 a7=a7.b
 a7=a7.length===0?"(sem eventos)":B.b.bQ(a7,"\n")
-i="v0.97.7+216\n"+c+"\n"+d+"\nAudio ready: "+a+"\nAudio paused: "+a4+"\nLifecycle: "+A.j(a0)+"\nScreen: "+a1.b+"\nHeld: "+a2+"\nBoard: "+a3+" fila="+a5+" diag="+a6+"\nRede: "+a9+"\n"+a8+"--- eventos (segundos desde a abertura) ---\n"+a7
+i="v0.97.8+217\n"+c+"\n"+d+"\nAudio ready: "+a+"\nAudio paused: "+a4+"\nLifecycle: "+A.j(a0)+"\nScreen: "+a1.b+"\nHeld: "+a2+"\nBoard: "+a3+" fila="+a5+" diag="+a6+"\nRede: "+a9+"\n"+a8+"--- eventos (segundos desde a abertura) ---\n"+a7
 h=!1
 g=!1
 p=4
@@ -120512,7 +120513,7 @@ break
 case 17:if(m.c!=null)k.mp(A.mJ(null,null,null,null,null,B.J,null,A.a6(l.gak6(),null,null,null,null,null,null,null,null),null,B.dN,null,null,null,null,null,null,null,null,null,null))
 p=20
 s=23
-return A.k(m.a.ay.CY(j,"web",i,"v0.97.7+216"),$async$nH)
+return A.k(m.a.ay.CY(j,"web",i,"v0.97.8+217"),$async$nH)
 case 23:g=!0
 p=4
 s=22
@@ -120645,7 +120646,7 @@ o=o.al
 o=o==null?null:o.a
 if(o==null)o=""
 s=4
-return A.k(d.x3(new A.ub(a,e,"",o,0,m,l.a,k,j,i,"v0.97.7+216",h.b,g,null)),$async$y8)
+return A.k(d.x3(new A.ub(a,e,"",o,0,m,l.a,k,j,i,"v0.97.8+217",h.b,g,null)),$async$y8)
 case 4:f=a0
 g=$.wx()
 if(f)e="enviado"
@@ -120832,7 +120833,7 @@ s={}
 s.a=null
 if(a7!=null){s.a=a7
 m.push(A.fZ(28,A.ll(!0,new A.UV(a7,new A.aoq(s,a8),a9),B.av,!0),a9,a9,16,16,a9,a9))}if(a8.x===B.ct)m.push(B.an_)
-m.push(A.fZ(8,A.eZ(A.ll(!0,A.a6("v0.97.7+216",a9,a9,a9,a9,a9,B.avb,a9,a9),B.av,!0),!0,a9),a9,a9,a9,12,a9,a9))
+m.push(A.fZ(8,A.eZ(A.ll(!0,A.a6("v0.97.8+217",a9,a9,a9,a9,a9,B.avb,a9,a9),B.av,!0),!0,a9),a9,a9,a9,12,a9,a9))
 return new A.GC(p,A.ayx(o===B.ct,A.aAO(a9,A.yg(B.cK,A.hv(B.bS,m,B.J,B.tR),a9,new A.aor(a8),a9,a9,a9),a9),new A.aos(a8),t.K),a9)}}
 A.aoO.prototype={
 $0(){return this.a.x=B.xW},
