@@ -35167,9 +35167,9 @@ case 4:s="daily"
 break
 default:s=null}return s},
 anE(a){var s
-A:{if(B.bb===a||B.b3===a){s=B.aj3
-break A}if(B.ac===a){s=B.aj5
-break A}if(B.bs===a||B.aS===a){s=B.aj1
+A:{if(B.bb===a||B.b3===a){s=B.aj5
+break A}if(B.ac===a){s=B.aj6
+break A}if(B.bs===a||B.aS===a){s=B.aj4
 break A}s=null}return s},
 b3N(a){var s
 A:{if(B.aS===a){s=B.md
@@ -114010,7 +114010,7 @@ q.aM5()
 q.cW=q.hk=!0
 s=q.k2
 s.cw(B.e0)
-s.tY(B.aj4)
+s.tY(B.aj0)
 q.lK()},
 b23(a){var s=this,r=s.hA
 if(r<=0)return
@@ -118452,7 +118452,7 @@ r===$&&A.a()
 r.fn(n,q*4,p.at)
 s=s.k2
 s.cw(B.Pd)
-s.tY(B.aj6)
+s.tY(B.aj1)
 return o},
 aqV(a){return this.Kt(a,1)},
 A_(){var s,r,q,p,o,n=this,m=n.fx=0
@@ -119495,7 +119495,7 @@ p.push(new A.b5(B.xl,A.bR(l,B.t,B.m,B.u),k))}p.push(new A.b5(B.xl,A.a6(j.gaaK(),
 p.push(new A.c6(j.gaaF(),new A.aj7(a,j),B.a0F,B.b5,k,k))
 return A.fG(B.bq,p,!1,k,k,k,360,this.c,k,k,r,s)}}
 A.aj7.prototype={
-$0(){return A.btd(this.b.gvG(),"v0.97.3+212",this.a)},
+$0(){return A.btd(this.b.gvG(),"v0.97.4+213",this.a)},
 $S:0}
 A.lZ.prototype={
 J(){return"DailyBoard."+this.b}}
@@ -120466,7 +120466,7 @@ a8=m.y2
 a8=a8==null?"":"Falha anterior: "+a8+"\n"
 a7=a7.b
 a7=a7.length===0?"(sem eventos)":B.b.bQ(a7,"\n")
-i="v0.97.3+212\n"+c+"\n"+d+"\nAudio ready: "+a+"\nAudio paused: "+a4+"\nLifecycle: "+A.j(a0)+"\nScreen: "+a1.b+"\nHeld: "+a2+"\nBoard: "+a3+" fila="+a5+" diag="+a6+"\nRede: "+a9+"\n"+a8+"--- eventos (segundos desde a abertura) ---\n"+a7
+i="v0.97.4+213\n"+c+"\n"+d+"\nAudio ready: "+a+"\nAudio paused: "+a4+"\nLifecycle: "+A.j(a0)+"\nScreen: "+a1.b+"\nHeld: "+a2+"\nBoard: "+a3+" fila="+a5+" diag="+a6+"\nRede: "+a9+"\n"+a8+"--- eventos (segundos desde a abertura) ---\n"+a7
 h=!1
 g=!1
 p=4
@@ -120501,7 +120501,7 @@ break
 case 17:if(m.c!=null)k.mp(A.mJ(null,null,null,null,null,B.J,null,A.a6(l.gak6(),null,null,null,null,null,null,null,null),null,B.dN,null,null,null,null,null,null,null,null,null,null))
 p=20
 s=23
-return A.k(m.a.ay.CY(j,"web",i,"v0.97.3+212"),$async$nH)
+return A.k(m.a.ay.CY(j,"web",i,"v0.97.4+213"),$async$nH)
 case 23:g=!0
 p=4
 s=22
@@ -120634,7 +120634,7 @@ o=o.al
 o=o==null?null:o.a
 if(o==null)o=""
 s=4
-return A.k(d.x3(new A.ub(a,e,"",o,0,m,l.a,k,j,i,"v0.97.3+212",h.b,g,null)),$async$y8)
+return A.k(d.x3(new A.ub(a,e,"",o,0,m,l.a,k,j,i,"v0.97.4+213",h.b,g,null)),$async$y8)
 case 4:f=a0
 g=$.wx()
 if(f)e="enviado"
@@ -120709,7 +120709,7 @@ return new A.HX(q,p.garj(),s===!1,o)},
 ga37(){var s,r
 if(this.w!=null||!this.e)return null
 s=this.x
-A:{if(B.ct===s||B.qB===s){r=B.aj0
+A:{if(B.ct===s||B.qB===s){r=B.aj3
 break A}r=B.aj2
 break A}return r},
 G(b3){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3,a4,a5,a6,a7,a8=this,a9=null,b0=a8.w,b1=a8.ga37(),b2={}
@@ -120821,7 +120821,7 @@ s={}
 s.a=null
 if(a7!=null){s.a=a7
 m.push(A.fZ(28,A.ll(!0,new A.UV(a7,new A.aoq(s,a8),a9),B.av,!0),a9,a9,16,16,a9,a9))}if(a8.x===B.ct)m.push(B.an_)
-m.push(A.fZ(8,A.eZ(A.ll(!0,A.a6("v0.97.3+212",a9,a9,a9,a9,a9,B.avb,a9,a9),B.av,!0),!0,a9),a9,a9,a9,12,a9,a9))
+m.push(A.fZ(8,A.eZ(A.ll(!0,A.a6("v0.97.4+213",a9,a9,a9,a9,a9,B.avb,a9,a9),B.av,!0),!0,a9),a9,a9,a9,12,a9,a9))
 return new A.GC(p,A.ayx(o===B.ct,A.aAO(a9,A.yg(B.cK,A.hv(B.bS,m,B.J,B.tR),a9,new A.aor(a8),a9,a9,a9),a9),new A.aos(a8),t.K),a9)}}
 A.aoO.prototype={
 $0(){return this.a.x=B.xW},
@@ -132585,14 +132585,14 @@ B.aaL=s(["corn","potato"],t.s)
 B.Kd=new A.yt(2,"Mini-Boss II",B.XS,3.5,2.5,1.5,8,12,B.aaL,1,"level2")
 B.hL=new A.YK(0,"latestPointer")
 B.rz=new A.YK(1,"averageBoundaryPointers")
-B.aj0=new A.mq("title.ogg",0,"title")
-B.aj1=new A.mq("stage.ogg",2,"stage")
-B.Kf=new A.mq("lose.ogg",7,"lose")
-B.aj2=new A.mq("menu.ogg",1,"menu")
-B.aj3=new A.mq("endless.ogg",4,"endless")
-B.aj4=new A.mq("win.ogg",6,"win")
-B.aj5=new A.mq("cultivation.mp3",5,"cultivation")
-B.aj6=new A.mq("boss.ogg",3,"boss")
+B.aj0=new A.mq("win.mp3",6,"win")
+B.aj1=new A.mq("boss.mp3",3,"boss")
+B.aj2=new A.mq("menu.mp3",1,"menu")
+B.aj3=new A.mq("title.mp3",0,"title")
+B.Kf=new A.mq("lose.mp3",7,"lose")
+B.aj4=new A.mq("stage.mp3",2,"stage")
+B.aj5=new A.mq("endless.mp3",4,"endless")
+B.aj6=new A.mq("cultivation.mp3",5,"cultivation")
 B.aje=new A.ux(0,"clipRect")
 B.ajf=new A.ux(1,"clipRRect")
 B.ajg=new A.ux(2,"clipPath")
