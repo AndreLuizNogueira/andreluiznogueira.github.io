@@ -1,0 +1,84 @@
+[
+  {
+    "id": "rod.fiberglass",
+    "category": "rod",
+    "tier": 1,
+    "stats": {
+      "responsiveness": 4.0
+    }
+  },
+  {
+    "id": "rod.carbon",
+    "category": "rod",
+    "tier": 2,
+    "stats": {
+      "responsiveness": 3.2
+    }
+  },
+  {
+    "id": "line.nylon",
+    "category": "line",
+    "tier": 1,
+    "stats": {
+      "maxTension": 1.5,
+      "spikeTolerance": 0.22,
+      "graceTime": 0.5,
+      "dragMax": 0.5,
+      "ratedWeightKg": 6,
+      "depthRating": 30
+    }
+  },
+  {
+    "id": "line.braided",
+    "category": "line",
+    "tier": 2,
+    "stats": {
+      "maxTension": 1.9,
+      "spikeTolerance": 0.3,
+      "graceTime": 0.6,
+      "dragMax": 0.6,
+      "ratedWeightKg": 12,
+      "depthRating": 60,
+      "resists": {
+        "abrasion": 1
+      }
+    }
+  },
+  {
+    "id": "line.special_gift",
+    "category": "line",
+    "tier": 2,
+    "unique": true,
+    "stats": {
+      "maxTension": 2.4,
+      "spikeTolerance": 0.35,
+      "graceTime": 0.7,
+      "dragMax": 0.7,
+      "ratedWeightKg": 25,
+      "depthRating": 120,
+      "resists": {
+        "abrasion": 2
+      }
+    }
+  },
+  {
+    "id": "reel.basic",
+    "category": "reel",
+    "tier": 1,
+    "stats": {
+      "torque": 0.85,
+      "speed": 2.6,
+      "fightEfficiency": 0.035
+    }
+  },
+  {
+    "id": "reel.geared",
+    "category": "reel",
+    "tier": 2,
+    "stats": {
+      "torque": 1.0,
+      "speed": 3.0,
+      "fightEfficiency": 0.045
+    }
+  }
+]
