@@ -1,1 +1,17 @@
-{ "_version": 1 }
+{
+  "_version": 1,
+  "equipment.rod.fiberglass.name": "Vara de fibra de vidro",
+  "equipment.rod.fiberglass.description": "A vara de todo pescador da vila. Reage no ritmo certo para quem está aprendendo.",
+  "equipment.rod.carbon.name": "Vara de carbono",
+  "equipment.rod.carbon.description": "Mais pesada na mão e mais calma na linha: amortece os picos da arrancada.",
+  "equipment.line.nylon.name": "Linha de náilon",
+  "equipment.line.nylon.description": "Barata e honesta. Aguenta peixe de até 6 kg em águas rasas.",
+  "equipment.line.braided.name": "Linha trançada",
+  "equipment.line.braided.description": "Aguenta o dobro do náilon, vai mais fundo e resiste ao atrito das pedras.",
+  "equipment.line.special_gift.name": "Linha Especial",
+  "equipment.line.special_gift.description": "Presente de um velho amigo. Ele disse para usar só quando realmente precisasse.",
+  "equipment.reel.basic.name": "Molinete simples",
+  "equipment.reel.basic.description": "Recolhe sem pressa e sem surpresas.",
+  "equipment.reel.geared.name": "Molinete engrenado",
+  "equipment.reel.geared.description": "Mais força e mais velocidade: cansa o peixe mais rápido pela forma como luta."
+}

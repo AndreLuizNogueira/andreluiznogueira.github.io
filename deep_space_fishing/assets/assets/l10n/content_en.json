@@ -1,1 +1,17 @@
-{ "_version": 1 }
+{
+  "_version": 1,
+  "equipment.rod.fiberglass.name": "Fiberglass rod",
+  "equipment.rod.fiberglass.description": "Every village angler's rod. It responds at the right pace for someone still learning.",
+  "equipment.rod.carbon.name": "Carbon rod",
+  "equipment.rod.carbon.description": "Heavier in the hand and calmer on the line: it softens the spike of a burst.",
+  "equipment.line.nylon.name": "Nylon line",
+  "equipment.line.nylon.description": "Cheap and honest. Holds fish up to 6 kg in shallow water.",
+  "equipment.line.braided.name": "Braided line",
+  "equipment.line.braided.description": "Holds twice what nylon does, reaches deeper and resists rubbing against rocks.",
+  "equipment.line.special_gift.name": "Special Line",
+  "equipment.line.special_gift.description": "A gift from an old friend. He said to use it only when you truly needed it.",
+  "equipment.reel.basic.name": "Simple reel",
+  "equipment.reel.basic.description": "Reels in without hurry and without surprises.",
+  "equipment.reel.geared.name": "Geared reel",
+  "equipment.reel.geared.description": "More torque and more speed: it tires the fish faster through how you fight."
+}
