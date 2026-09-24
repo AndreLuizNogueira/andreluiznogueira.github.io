@@ -43,6 +43,80 @@
     For more details:
     * https://docs.flutter.dev/platform-integration/web/initialization
   -->
+  <script>
+    (function () {
+      var wantLock = false;
+      var moveCb = null;
+      var skipFrames = 0;
+
+      function lockTarget() {
+        return document.documentElement;
+      }
+
+      function requestLock() {
+        var el = lockTarget();
+        if (!el || !el.requestPointerLock) return;
+        var result = el.requestPointerLock();
+        if (result && result.catch) result.catch(function () {});
+      }
+
+      window.drezkulSetWantPointerLock = function (want) {
+        wantLock = !!want;
+      };
+      window.drezkulLockPointer = function () {
+        requestLock();
+      };
+      window.drezkulUnlockPointer = function () {
+        if (document.exitPointerLock) document.exitPointerLock();
+      };
+      window.drezkulIsPointerLocked = function () {
+        return !!document.pointerLockElement;
+      };
+      window.drezkulSetPointerLockChangeCallback = function (cb) {
+        document.addEventListener('pointerlockchange', function () {
+          if (document.pointerLockElement) {
+            // Ignora os primeiros frames após o bloqueio, pois navegadores baseados em Chromium
+            // reportam a distância entre a posição anterior do cursor e o centro da tela como delta.
+            skipFrames = 3;
+          }
+          cb();
+        });
+      };
+      window.drezkulSetPointerMoveCallback = function (cb) {
+        moveCb = cb;
+      };
+
+      // Capture no gesto do clique — Flutter chama requestPointerLock tarde demais.
+      document.addEventListener('mousedown', function (event) {
+        if (!wantLock || event.button !== 0) return;
+        if (document.pointerLockElement) return;
+        requestLock();
+      }, true);
+
+      document.addEventListener('mousemove', function (event) {
+        if (!document.pointerLockElement || !moveCb) return;
+        if (skipFrames > 0) {
+          skipFrames--;
+          return;
+        }
+        var mx = event.movementX;
+        var my = event.movementY;
+        if (typeof mx !== 'number') mx = 0;
+        if (typeof my !== 'number') my = 0;
+
+        // Descarta apenas saltos artificiais de teleporte de cursor do Chromium (> 500px num único frame)
+        if (Math.abs(mx) > 500 || Math.abs(my) > 500) {
+          return;
+        }
+
+        // Suaviza a velocidade vertical para evitar saltos bruscos no pitch,
+        // permitindo movimento lateral rápido e sem barreira.
+        my = Math.max(-30, Math.min(30, my));
+
+        moveCb(mx, my);
+      });
+    })();
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 
