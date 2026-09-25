@@ -24646,6 +24646,10 @@ path_provider_android
 path_provider_foundation
 path_provider_linux
 path_provider_platform_interface
+shared_preferences
+shared_preferences_android
+shared_preferences_foundation
+shared_preferences_platform_interface
 vector_math
 
 Copyright 2013 The Flutter Authors
@@ -24677,6 +24681,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------------
 path_provider_windows
 plugin_platform_interface
+shared_preferences_linux
+shared_preferences_web
+shared_preferences_windows
 xdg_directories
 
 Copyright 2013 The Flutter Authors. All rights reserved.

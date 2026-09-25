@@ -1,0 +1,344 @@
+[
+  {
+    "id": "spike.guide",
+    "start": [
+      {
+        "node": "again",
+        "requires": [
+          "spike.guide.met"
+        ]
+      },
+      "hello"
+    ],
+    "nodes": {
+      "hello": {
+        "speaker": "spike_guide",
+        "text": "dialogue.spike.guide.hello",
+        "set": [
+          "spike.guide.met"
+        ],
+        "next": "ask"
+      },
+      "again": {
+        "speaker": "spike_guide",
+        "text": "dialogue.spike.guide.again",
+        "next": "ask"
+      },
+      "ask": {
+        "speaker": "spike_guide",
+        "text": "dialogue.spike.guide.ask",
+        "choices": [
+          {
+            "text": "dialogue.spike.guide.choice_fishing",
+            "next": "fishing"
+          },
+          {
+            "text": "dialogue.spike.guide.choice_portal",
+            "next": "portal"
+          },
+          {
+            "text": "dialogue.spike.guide.choice_bye",
+            "next": null
+          }
+        ]
+      },
+      "fishing": {
+        "speaker": "spike_guide",
+        "text": "dialogue.spike.guide.fishing",
+        "next": "ask"
+      },
+      "portal": {
+        "speaker": "spike_guide",
+        "text": "dialogue.spike.guide.portal",
+        "next": "ask"
+      }
+    }
+  },
+  {
+    "id": "friend.talk",
+    "start": [
+      {
+        "node": "after_catch",
+        "requires": [
+          "encounter.earth.pier.caught"
+        ],
+        "forbids": [
+          "friend.festival_invite"
+        ]
+      },
+      {
+        "node": "festival_wait",
+        "requires": [
+          "friend.festival_invite"
+        ]
+      },
+      {
+        "node": "again",
+        "requires": [
+          "friend.met"
+        ]
+      },
+      "first"
+    ],
+    "nodes": {
+      "first": {
+        "text": "dialogue.friend.first",
+        "speaker": "friend",
+        "set": [
+          "friend.met"
+        ],
+        "next": "teach"
+      },
+      "teach": {
+        "text": "dialogue.friend.teach",
+        "speaker": "friend",
+        "next": "teach_more"
+      },
+      "teach_more": {
+        "text": "dialogue.friend.teach_more",
+        "speaker": "friend"
+      },
+      "again": {
+        "text": "dialogue.friend.again",
+        "speaker": "friend"
+      },
+      "after_catch": {
+        "text": "dialogue.friend.after_catch",
+        "speaker": "friend",
+        "set": [
+          "friend.festival_invite"
+        ]
+      },
+      "festival_wait": {
+        "text": "dialogue.friend.festival_wait",
+        "speaker": "friend"
+      }
+    }
+  },
+  {
+    "id": "friend.gift",
+    "start": [
+      "give"
+    ],
+    "nodes": {
+      "give": {
+        "text": "dialogue.friend.gift",
+        "speaker": "friend",
+        "next": "ask"
+      },
+      "ask": {
+        "text": "dialogue.friend.gift_rule",
+        "speaker": "friend",
+        "choices": [
+          {
+            "text": "dialogue.friend.gift_why",
+            "next": "why"
+          },
+          {
+            "text": "dialogue.friend.gift_thanks",
+            "next": "thanks"
+          }
+        ]
+      },
+      "why": {
+        "text": "dialogue.friend.gift_why_answer",
+        "speaker": "friend"
+      },
+      "thanks": {
+        "text": "dialogue.friend.gift_thanks_answer",
+        "speaker": "friend"
+      }
+    }
+  },
+  {
+    "id": "villager.alarm",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.villager.alarm",
+        "speaker": "villager",
+        "next": "b"
+      },
+      "b": {
+        "text": "dialogue.villager.alarm_nobody",
+        "speaker": "villager"
+      }
+    }
+  },
+  {
+    "id": "villager.talk",
+    "start": [
+      {
+        "node": "after_boss",
+        "requires": [
+          "encounter.earth.boss.caught"
+        ]
+      },
+      {
+        "node": "boss",
+        "requires": [
+          "earth.boss.appeared"
+        ]
+      },
+      "calm"
+    ],
+    "nodes": {
+      "calm": {
+        "text": "dialogue.villager.calm",
+        "speaker": "villager"
+      },
+      "boss": {
+        "text": "dialogue.villager.boss",
+        "speaker": "villager"
+      },
+      "after_boss": {
+        "text": "dialogue.villager.after_boss",
+        "speaker": "villager"
+      }
+    }
+  },
+  {
+    "id": "family.letters",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.family.letters",
+        "speaker": "friend_family",
+        "next": "b"
+      },
+      "b": {
+        "text": "dialogue.family.letters_kept",
+        "speaker": "friend_family",
+        "next": "c"
+      },
+      "c": {
+        "text": "dialogue.family.letters_ask",
+        "speaker": "friend_family"
+      }
+    }
+  },
+  {
+    "id": "family.talk",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.family.talk",
+        "speaker": "friend_family"
+      }
+    }
+  },
+  {
+    "id": "organizer.busy",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.organizer.busy",
+        "speaker": "organizer"
+      }
+    }
+  },
+  {
+    "id": "organizer.talk",
+    "start": [
+      {
+        "node": "rounds",
+        "requires": [
+          "tournament.entered"
+        ]
+      },
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.organizer.busy",
+        "speaker": "organizer"
+      },
+      "rounds": {
+        "text": "dialogue.organizer.rounds",
+        "speaker": "organizer"
+      }
+    }
+  },
+  {
+    "id": "organizer.dinner",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.organizer.dinner",
+        "speaker": "organizer",
+        "next": "b"
+      },
+      "b": {
+        "text": "dialogue.player.dinner_letters",
+        "speaker": "player",
+        "next": "c"
+      },
+      "c": {
+        "text": "dialogue.organizer.dinner_agree",
+        "speaker": "organizer"
+      }
+    }
+  },
+  {
+    "id": "aliens.reveal",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.aliens.sorry",
+        "speaker": "alien_a",
+        "next": "b"
+      },
+      "b": {
+        "text": "dialogue.aliens.searching",
+        "speaker": "alien_b",
+        "next": "c"
+      },
+      "c": {
+        "text": "dialogue.aliens.confession",
+        "speaker": "alien_a",
+        "choices": [
+          {
+            "text": "dialogue.aliens.choice_killed",
+            "next": "d"
+          },
+          {
+            "text": "dialogue.aliens.choice_silent",
+            "next": "d"
+          }
+        ]
+      },
+      "d": {
+        "text": "dialogue.aliens.no_forgiveness",
+        "speaker": "alien_a",
+        "next": "e"
+      },
+      "e": {
+        "text": "dialogue.aliens.invasion",
+        "speaker": "alien_b",
+        "next": "f"
+      },
+      "f": {
+        "text": "dialogue.aliens.ask",
+        "speaker": "alien_a",
+        "choices": [
+          {
+            "text": "dialogue.aliens.choice_accept",
+            "next": null
+          }
+        ]
+      }
+    }
+  }
+]

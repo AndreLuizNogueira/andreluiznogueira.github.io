@@ -1,0 +1,79 @@
+{
+  "scenes": [
+    {
+      "id": "prologue.opening",
+      "map": "village",
+      "steps": [
+        { "card": "story.card.opening" },
+        { "card": "story.card.friend" }
+      ]
+    },
+    {
+      "id": "prologue.festival",
+      "map": "village",
+      "requires": ["friend.festival_invite"],
+      "steps": [
+        { "card": "story.card.months" },
+        { "card": "story.card.festival" },
+        { "dialogue": "friend.gift" },
+        { "give": "line.special_gift" },
+        { "flag": "earth.friend.gift_line" },
+        { "card": "story.card.weeks_later" },
+        { "dialogue": "villager.alarm" },
+        { "flag": "earth.boss.appeared" }
+      ]
+    },
+    {
+      "id": "prologue.aftermath",
+      "map": "village",
+      "requires": ["encounter.earth.boss.caught"],
+      "steps": [
+        { "card": "story.card.boss_caught" },
+        { "card": "story.card.damage" },
+        { "card": "story.card.loss" },
+        { "flag": "earth.friend.dead" },
+        { "card": "story.card.funeral" },
+        { "dialogue": "family.letters" },
+        { "card": "story.card.invitation" },
+        { "flag": "tournament.invited" }
+      ]
+    },
+    {
+      "id": "prologue.venue",
+      "map": "venue",
+      "requires": ["tournament.invited"],
+      "steps": [
+        { "card": "story.card.venue" },
+        { "dialogue": "organizer.busy" },
+        { "flag": "tournament.entered" }
+      ]
+    },
+    {
+      "id": "prologue.departure",
+      "map": "venue",
+      "requires": ["encounter.tournament.final.caught"],
+      "steps": [
+        { "card": "story.card.final" },
+        { "dialogue": "organizer.dinner" },
+        { "card": "story.card.knocked_out" },
+        { "card": "story.card.wake_up" },
+        { "dialogue": "aliens.reveal" },
+        { "card": "story.card.ship" },
+        { "title": true },
+        { "flag": "prologue.done" }
+      ]
+    }
+  ],
+  "objectives": [
+    { "requires": ["prologue.done"], "text": "objective.prologue_done" },
+    { "requires": ["tournament.entered", "encounter.tournament.round2.caught"], "text": "objective.tournament_final" },
+    { "requires": ["tournament.entered", "encounter.tournament.round1.caught"], "text": "objective.tournament_round2" },
+    { "requires": ["tournament.entered"], "text": "objective.tournament_round1" },
+    { "requires": ["tournament.invited"], "text": "objective.go_tournament" },
+    { "requires": ["earth.boss.appeared"], "text": "objective.boss" },
+    { "requires": ["friend.festival_invite"], "text": "objective.festival" },
+    { "requires": ["encounter.earth.pier.caught"], "text": "objective.tell_friend" },
+    { "requires": ["friend.met"], "text": "objective.pier" },
+    { "text": "objective.meet_friend" }
+  ]
+}
