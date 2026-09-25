@@ -81,6 +81,8 @@
           }
           cb();
         });
+      window.drezkulSetPointerMoveCallback = function (cb) {
+        moveCb = cb;
       };
       var clickCb = null;
       window.drezkulSetPointerClickCallback = function (cb) {
@@ -97,8 +99,11 @@
           return;
         }
         if (clickCb) {
-          event.preventDefault();
-          clickCb(event.button);
+          try {
+            clickCb(event.button);
+          } catch (e) {
+            console.error('[drezkul] clickCb error:', e);
+          }
         }
       }, true);
 
