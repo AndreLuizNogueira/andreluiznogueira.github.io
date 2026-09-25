@@ -82,15 +82,24 @@
           cb();
         });
       };
-      window.drezkulSetPointerMoveCallback = function (cb) {
-        moveCb = cb;
+      var clickCb = null;
+      window.drezkulSetPointerClickCallback = function (cb) {
+        clickCb = cb;
       };
 
       // Capture no gesto do clique — Flutter chama requestPointerLock tarde demais.
+      // E quando o Pointer Lock está ativo, o navegador direciona os cliques diretamente ao document.documentElement,
+      // fazendo com que o Flutter Web perca os eventos no widget tree.
       document.addEventListener('mousedown', function (event) {
-        if (!wantLock || event.button !== 0) return;
-        if (document.pointerLockElement) return;
-        requestLock();
+        if (!wantLock) return;
+        if (!document.pointerLockElement) {
+          if (event.button === 0) requestLock();
+          return;
+        }
+        if (clickCb) {
+          event.preventDefault();
+          clickCb(event.button);
+        }
       }, true);
 
       document.addEventListener('mousemove', function (event) {
