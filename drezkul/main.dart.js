@@ -39018,7 +39018,7 @@ s.r=B.jM.gn()
 b3.c3(a8,s)
 b1.bM.az(b3,new A.j(a7+8,22))}s=b1.bM
 s===$&&A.a()
-s.sdP(B.a2i)
+s.sdP(B.a2h)
 b1.bM.hg()
 s=b1.bM.b
 a4=s.c+12
@@ -39186,7 +39186,7 @@ h=r+12
 j.bM.az(a,new A.j(h,q+10))
 if(s.as){p=s.Q
 p=B.c.ah(p/s.x,0,1)
-j.bM.sdP(B.a2h)
+j.bM.sdP(B.a2i)
 j.bM.hg()
 j.bM.az(a,new A.j(h,q+28))
 l=q+50
@@ -80541,12 +80541,12 @@ B.mp=new A.bF(-1,-1)
 B.a2f=new A.yw(null,null,null)
 B.a4D=new A.l(!0,B.o9,null,null,null,null,9,B.W,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.a2g=new A.fD("ESPA\xc7O: Atirar | R: Recarregar | 1-3: Armas",null,null,B.aD,null,null,null,null,null,null,B.a4D)
-B.a5_=new A.l(!0,B.h2,null,null,null,null,14,B.kG,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a2h=new A.fD("RECARREGANDO...",null,null,B.aD,null,null,null,null,null,null,B.a5_)
 B.a0r=new A.fz(B.o,B.lD,4)
 B.vl=s([B.a0r],t.kO)
 B.a2S=new A.l(!0,B.o_,null,"monospace",null,null,11,B.aO,null,null,null,null,null,null,null,null,null,null,null,null,null,null,B.vl,null,null,null)
-B.a2i=new A.fD("v0.0.21+21",null,null,B.aD,null,null,null,null,null,null,B.a2S)
+B.a2h=new A.fD("v0.0.22+22",null,null,B.aD,null,null,null,null,null,null,B.a2S)
+B.a5_=new A.l(!0,B.h2,null,null,null,null,14,B.kG,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.a2i=new A.fD("RECARREGANDO...",null,null,B.aD,null,null,null,null,null,null,B.a5_)
 B.a2k=new A.l(!0,B.L,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.Fy=new A.l(!0,null,null,null,null,null,null,B.aO,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.Jz=new A.t(1,1,0.30196078431372547,0.30196078431372547,B.e)
