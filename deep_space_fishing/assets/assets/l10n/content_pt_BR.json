@@ -62,7 +62,6 @@
   "dialogue.aliens.choice_killed": "Meu amigo morreu por causa disso.",
   "dialogue.aliens.choice_silent": "(Ficar em silêncio.)",
   "dialogue.aliens.no_forgiveness": "Sabemos. Lamentamos a morte dele. Não pedimos perdão.",
-  "dialogue.aliens.invasion": "Criaturas como aquela estão sendo usadas como armas contra outros mundos. Milhares morreram. E quem as envia vai chegar à Terra.",
   "dialogue.aliens.ask": "Venha com a gente.",
   "dialogue.aliens.choice_accept": "Eu vou. Mas isso não muda o que vocês fizeram.",
   "story.card.opening": "Terra. Uma pequena vila de pescadores.",
@@ -78,7 +77,7 @@
   "story.card.venue": "O endereço leva a um salão lotado. Perto da entrada, dois sujeitos estranhos observam. Alguém vê seu convite e já o coloca na competição.",
   "story.card.final": "Na final, outra criatura colossal, da mesma origem da que destruiu a vila. A Linha Especial aguenta.",
   "story.card.knocked_out": "Tarde da noite, a caminho do carro, tudo escurece.",
-  "story.card.wake_up": "Você acorda. Os dois sujeitos estranhos conversam num idioma que você nunca ouviu.",
+  "story.card.wake_up": "Você acorda numa nave. Os dois estranhos do torneio estão ali, com outros que você nunca viu. Conversam num idioma desconhecido.",
   "story.card.ship": "Você aceita. Não é amizade, nem perdão. A nave parte.",
   "objective.meet_friend": "Fale com o amigo, perto da casa dele.",
   "objective.pier": "Pesque um peixe no cais.",
@@ -92,5 +91,9 @@
   "objective.prologue_done": "Fim do prólogo. A jornada continua na próxima fase.",
   "map.spike.name": "Laboratório de exploração",
   "map.village.name": "Vila",
-  "map.venue.name": "Torneio"
+  "map.venue.name": "Torneio",
+  "character.survivor_a.name": "Sobrevivente A",
+  "character.survivor_b.name": "Sobrevivente B",
+  "dialogue.survivors.world_a": "O meu mundo não tinha mares. Nem lagos. Um dia, criaturas como aquela começaram a surgir.",
+  "dialogue.survivors.world_b": "O meu também. Milhares morreram. Elas são armas. E quem as envia vai chegar à Terra."
 }

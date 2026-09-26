@@ -325,9 +325,9 @@
         "next": "e"
       },
       "e": {
-        "text": "dialogue.aliens.invasion",
-        "speaker": "alien_b",
-        "next": "f"
+        "speaker": "survivor_a",
+        "text": "dialogue.survivors.world_a",
+        "next": "e2"
       },
       "f": {
         "text": "dialogue.aliens.ask",
@@ -338,6 +338,11 @@
             "next": null
           }
         ]
+      },
+      "e2": {
+        "speaker": "survivor_b",
+        "text": "dialogue.survivors.world_b",
+        "next": "f"
       }
     }
   }
