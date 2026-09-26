@@ -29,7 +29,7 @@
     "fishWeightKg": 22,
     "depthM": 12,
     "strength": 2.25,
-    "endurance": 0.35,
+    "endurance": 0.3,
     "initialDistance": 24,
     "sprite": "fish/earth_boss_128_anim_v1",
     "spriteSize": 96

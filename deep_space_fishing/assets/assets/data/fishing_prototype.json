@@ -18,8 +18,9 @@
   "slackGrace": 1,
   "biteVariation": 1.4,
   "castDuration": 0.6,
-  "hookWindow": 1.8,
-  "missedDuration": 0.7,
+  "hookDelay": 0.45,
+  "lineReserve": 2.0,
+  "dragSlip": 0.75,
   "biteWait": 1.2,
   "brakeDrain": 0.02
 }

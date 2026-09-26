@@ -27,7 +27,8 @@
           "image": "screens/cutscene_festa_v1.png"
         },
         {
-          "dialogue": "friend.gift"
+          "dialogue": "friend.gift",
+          "image": "screens/cutscene_festa_v1.png"
         },
         {
           "give": "line.special_gift"
@@ -71,7 +72,8 @@
           "image": "screens/cutscene_funeral_corrigido_v1.png"
         },
         {
-          "dialogue": "family.letters"
+          "dialogue": "family.letters",
+          "image": "screens/cutscene_funeral_corrigido_v1.png"
         },
         {
           "card": "story.card.invitation",

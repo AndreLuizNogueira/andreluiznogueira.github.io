@@ -36,7 +36,7 @@
       "maxTension": 1.9,
       "spikeTolerance": 0.3,
       "graceTime": 0.6,
-      "dragMax": 0.6,
+      "dragMax": 0.5,
       "ratedWeightKg": 12,
       "depthRating": 60,
       "resists": {

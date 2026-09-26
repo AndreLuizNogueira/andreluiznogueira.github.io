@@ -82,38 +82,72 @@
     ],
     "nodes": {
       "first": {
-        "text": "dialogue.friend.first",
         "speaker": "friend",
+        "text": "dialogue.friend.first",
+        "expression": "laugh",
         "set": [
           "friend.met"
         ],
-        "next": "teach",
-        "expression": "laugh"
+        "next": "first_b"
+      },
+      "first_b": {
+        "speaker": "friend",
+        "text": "dialogue.friend.first_b",
+        "next": "teach"
       },
       "teach": {
-        "text": "dialogue.friend.teach",
         "speaker": "friend",
+        "text": "dialogue.friend.teach",
         "next": "teach_more"
       },
       "teach_more": {
+        "speaker": "friend",
         "text": "dialogue.friend.teach_more",
-        "speaker": "friend"
+        "next": "teach_end"
+      },
+      "teach_end": {
+        "speaker": "friend",
+        "text": "dialogue.friend.teach_end"
       },
       "again": {
-        "text": "dialogue.friend.again",
-        "speaker": "friend"
+        "speaker": "friend",
+        "text": "dialogue.friend.again"
       },
       "after_catch": {
-        "text": "dialogue.friend.after_catch",
         "speaker": "friend",
+        "text": "dialogue.friend.after_catch",
+        "expression": "laugh",
+        "next": "invite"
+      },
+      "invite": {
+        "speaker": "friend",
+        "text": "dialogue.friend.invite",
         "set": [
           "friend.festival_invite"
         ],
+        "choices": [
+          {
+            "text": "dialogue.friend.invite_yes",
+            "next": "invite_yes"
+          },
+          {
+            "text": "dialogue.friend.invite_maybe",
+            "next": "invite_maybe"
+          }
+        ]
+      },
+      "invite_yes": {
+        "speaker": "friend",
+        "text": "dialogue.friend.invite_yes_answer",
         "expression": "laugh"
       },
+      "invite_maybe": {
+        "speaker": "friend",
+        "text": "dialogue.friend.invite_maybe_answer"
+      },
       "festival_wait": {
-        "text": "dialogue.friend.festival_wait",
-        "speaker": "friend"
+        "speaker": "friend",
+        "text": "dialogue.friend.festival_wait"
       }
     }
   },
@@ -124,13 +158,19 @@
     ],
     "nodes": {
       "give": {
-        "text": "dialogue.friend.gift",
         "speaker": "friend",
+        "text": "dialogue.friend.gift",
+        "next": "line"
+      },
+      "line": {
+        "speaker": "friend",
+        "text": "dialogue.friend.gift_line",
         "next": "ask"
       },
       "ask": {
-        "text": "dialogue.friend.gift_rule",
         "speaker": "friend",
+        "text": "dialogue.friend.gift_rule",
+        "expression": "serious",
         "choices": [
           {
             "text": "dialogue.friend.gift_why",
@@ -140,17 +180,22 @@
             "text": "dialogue.friend.gift_thanks",
             "next": "thanks"
           }
-        ],
-        "expression": "serious"
+        ]
       },
       "why": {
-        "text": "dialogue.friend.gift_why_answer",
         "speaker": "friend",
+        "text": "dialogue.friend.gift_why_answer",
+        "expression": "serious",
+        "next": "why_b"
+      },
+      "why_b": {
+        "speaker": "friend",
+        "text": "dialogue.friend.gift_why_answer_b",
         "expression": "serious"
       },
       "thanks": {
-        "text": "dialogue.friend.gift_thanks_answer",
         "speaker": "friend",
+        "text": "dialogue.friend.gift_thanks_answer",
         "expression": "laugh"
       }
     }
@@ -162,13 +207,18 @@
     ],
     "nodes": {
       "a": {
-        "text": "dialogue.villager.alarm",
         "speaker": "villager",
+        "text": "dialogue.villager.alarm",
         "next": "b"
       },
       "b": {
-        "text": "dialogue.villager.alarm_nobody",
-        "speaker": "villager"
+        "speaker": "villager",
+        "text": "dialogue.villager.alarm_fish",
+        "next": "c"
+      },
+      "c": {
+        "speaker": "villager",
+        "text": "dialogue.villager.alarm_nobody"
       }
     }
   },
@@ -211,18 +261,28 @@
     ],
     "nodes": {
       "a": {
-        "text": "dialogue.family.letters",
         "speaker": "friend_family",
+        "text": "dialogue.family.letters_thanks",
         "next": "b"
       },
       "b": {
-        "text": "dialogue.family.letters_kept",
         "speaker": "friend_family",
+        "text": "dialogue.family.letters",
         "next": "c"
       },
       "c": {
-        "text": "dialogue.family.letters_ask",
-        "speaker": "friend_family"
+        "speaker": "friend_family",
+        "text": "dialogue.family.letters_mark",
+        "next": "d"
+      },
+      "d": {
+        "speaker": "friend_family",
+        "text": "dialogue.family.letters_kept",
+        "next": "e"
+      },
+      "e": {
+        "speaker": "friend_family",
+        "text": "dialogue.family.letters_ask"
       }
     }
   },
@@ -279,18 +339,33 @@
     ],
     "nodes": {
       "a": {
-        "text": "dialogue.organizer.dinner",
         "speaker": "organizer",
+        "text": "dialogue.organizer.dinner",
+        "next": "a2"
+      },
+      "a2": {
+        "speaker": "organizer",
+        "text": "dialogue.organizer.dinner_ask",
         "next": "b"
       },
       "b": {
-        "text": "dialogue.player.dinner_letters",
         "speaker": "player",
+        "text": "dialogue.player.dinner_letters",
+        "next": "b2"
+      },
+      "b2": {
+        "speaker": "player",
+        "text": "dialogue.player.dinner_stop",
         "next": "c"
       },
       "c": {
+        "speaker": "organizer",
         "text": "dialogue.organizer.dinner_agree",
-        "speaker": "organizer"
+        "next": "d"
+      },
+      "d": {
+        "speaker": "organizer",
+        "text": "dialogue.organizer.dinner_sorry"
       }
     }
   },
@@ -301,18 +376,38 @@
     ],
     "nodes": {
       "a": {
-        "text": "dialogue.aliens.sorry",
         "speaker": "alien_a",
+        "text": "dialogue.aliens.sorry",
+        "next": "a2"
+      },
+      "a2": {
+        "speaker": "alien_a",
+        "text": "dialogue.aliens.alone",
         "next": "b"
       },
       "b": {
-        "text": "dialogue.aliens.searching",
         "speaker": "alien_b",
+        "text": "dialogue.aliens.searching",
+        "next": "b2"
+      },
+      "b2": {
+        "speaker": "alien_b",
+        "text": "dialogue.aliens.recognized",
         "next": "c"
       },
       "c": {
-        "text": "dialogue.aliens.confession",
         "speaker": "alien_a",
+        "text": "dialogue.aliens.confession_lead",
+        "next": "c2"
+      },
+      "c2": {
+        "speaker": "alien_a",
+        "text": "dialogue.aliens.confession",
+        "next": "c3"
+      },
+      "c3": {
+        "speaker": "alien_a",
+        "text": "dialogue.aliens.confession_why",
         "choices": [
           {
             "text": "dialogue.aliens.choice_killed",
@@ -320,34 +415,54 @@
           },
           {
             "text": "dialogue.aliens.choice_silent",
-            "next": "d"
+            "next": "d_silent"
           }
         ]
       },
       "d": {
-        "text": "dialogue.aliens.mourn",
         "speaker": "alien_a",
+        "text": "dialogue.aliens.mourn",
+        "next": "e"
+      },
+      "d_silent": {
+        "speaker": "alien_b",
+        "text": "dialogue.aliens.mourn_silent",
         "next": "e"
       },
       "e": {
         "speaker": "survivor_a",
         "text": "dialogue.survivors.world_a",
+        "next": "e_b"
+      },
+      "e_b": {
+        "speaker": "survivor_a",
+        "text": "dialogue.survivors.world_a_came",
         "next": "e2"
       },
+      "e2": {
+        "speaker": "survivor_b",
+        "text": "dialogue.survivors.world_b",
+        "next": "e3"
+      },
+      "e3": {
+        "speaker": "survivor_b",
+        "text": "dialogue.survivors.weapons",
+        "next": "e4"
+      },
+      "e4": {
+        "speaker": "survivor_b",
+        "text": "dialogue.survivors.coming",
+        "next": "f"
+      },
       "f": {
-        "text": "dialogue.aliens.ask",
         "speaker": "alien_a",
+        "text": "dialogue.aliens.ask",
         "choices": [
           {
             "text": "dialogue.aliens.choice_accept",
             "next": null
           }
         ]
-      },
-      "e2": {
-        "speaker": "survivor_b",
-        "text": "dialogue.survivors.world_b",
-        "next": "f"
       }
     }
   }
