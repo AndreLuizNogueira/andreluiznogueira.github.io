@@ -61,7 +61,6 @@
   "dialogue.aliens.confession": "We were the ones who brought that fish to your village. To find someone able to catch it.",
   "dialogue.aliens.choice_killed": "My friend died because of that.",
   "dialogue.aliens.choice_silent": "(Stay silent.)",
-  "dialogue.aliens.no_forgiveness": "We know. We mourn his death. We do not ask for forgiveness.",
   "dialogue.aliens.ask": "Come with us.",
   "dialogue.aliens.choice_accept": "I'll go. But that doesn't change what you did.",
   "story.card.opening": "Earth. A small fishing village.",
@@ -78,7 +77,7 @@
   "story.card.final": "In the final, another colossal creature, of the same kind that destroyed the village. The Special Line holds.",
   "story.card.knocked_out": "Late at night, on the way to the car, everything goes dark.",
   "story.card.wake_up": "You wake up on a ship. The two strangers from the tournament are there, with others you have never seen. They talk in an unknown language.",
-  "story.card.ship": "You accept. Not friendship, not forgiveness. The ship departs.",
+  "story.card.ship": "You accept. That does not mean friendship, or forgiveness. Not yet. The ship departs.",
   "objective.meet_friend": "Talk to your friend, near his house.",
   "objective.pier": "Catch a fish at the pier.",
   "objective.tell_friend": "Show the fish to your friend.",
@@ -95,5 +94,6 @@
   "character.survivor_a.name": "Survivor A",
   "character.survivor_b.name": "Survivor B",
   "dialogue.survivors.world_a": "My world had no seas. No lakes. One day, creatures like that one started to appear.",
-  "dialogue.survivors.world_b": "Mine too. Thousands died. They are weapons. And whoever sends them will reach Earth."
+  "dialogue.survivors.world_b": "Mine too. Thousands died. They are weapons. And whoever sends them will reach Earth.",
+  "dialogue.aliens.mourn": "We know. We mourn his death."
 }

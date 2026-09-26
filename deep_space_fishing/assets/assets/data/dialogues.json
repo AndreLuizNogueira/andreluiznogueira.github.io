@@ -320,7 +320,7 @@
         ]
       },
       "d": {
-        "text": "dialogue.aliens.no_forgiveness",
+        "text": "dialogue.aliens.mourn",
         "speaker": "alien_a",
         "next": "e"
       },
