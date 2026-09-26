@@ -87,7 +87,8 @@
         "set": [
           "friend.met"
         ],
-        "next": "teach"
+        "next": "teach",
+        "expression": "laugh"
       },
       "teach": {
         "text": "dialogue.friend.teach",
@@ -107,7 +108,8 @@
         "speaker": "friend",
         "set": [
           "friend.festival_invite"
-        ]
+        ],
+        "expression": "laugh"
       },
       "festival_wait": {
         "text": "dialogue.friend.festival_wait",
@@ -138,15 +140,18 @@
             "text": "dialogue.friend.gift_thanks",
             "next": "thanks"
           }
-        ]
+        ],
+        "expression": "serious"
       },
       "why": {
         "text": "dialogue.friend.gift_why_answer",
-        "speaker": "friend"
+        "speaker": "friend",
+        "expression": "serious"
       },
       "thanks": {
         "text": "dialogue.friend.gift_thanks_answer",
-        "speaker": "friend"
+        "speaker": "friend",
+        "expression": "laugh"
       }
     }
   },

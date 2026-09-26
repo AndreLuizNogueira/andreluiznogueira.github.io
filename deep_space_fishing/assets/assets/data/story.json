@@ -4,76 +4,196 @@
       "id": "prologue.opening",
       "map": "village",
       "steps": [
-        { "card": "story.card.opening" },
-        { "card": "story.card.friend" }
+        {
+          "card": "story.card.opening"
+        },
+        {
+          "card": "story.card.friend"
+        }
       ]
     },
     {
       "id": "prologue.festival",
       "map": "village",
-      "requires": ["friend.festival_invite"],
+      "requires": [
+        "friend.festival_invite"
+      ],
       "steps": [
-        { "card": "story.card.months" },
-        { "card": "story.card.festival" },
-        { "dialogue": "friend.gift" },
-        { "give": "line.special_gift" },
-        { "flag": "earth.friend.gift_line" },
-        { "card": "story.card.weeks_later" },
-        { "dialogue": "villager.alarm" },
-        { "flag": "earth.boss.appeared" }
+        {
+          "card": "story.card.months"
+        },
+        {
+          "card": "story.card.festival",
+          "image": "screens/cutscene_festa_v1.png"
+        },
+        {
+          "dialogue": "friend.gift"
+        },
+        {
+          "give": "line.special_gift"
+        },
+        {
+          "flag": "earth.friend.gift_line"
+        },
+        {
+          "card": "story.card.weeks_later"
+        },
+        {
+          "dialogue": "villager.alarm"
+        },
+        {
+          "flag": "earth.boss.appeared"
+        }
       ]
     },
     {
       "id": "prologue.aftermath",
       "map": "village",
-      "requires": ["encounter.earth.boss.caught"],
+      "requires": [
+        "encounter.earth.boss.caught"
+      ],
       "steps": [
-        { "card": "story.card.boss_caught" },
-        { "card": "story.card.damage" },
-        { "card": "story.card.loss" },
-        { "flag": "earth.friend.dead" },
-        { "card": "story.card.funeral" },
-        { "dialogue": "family.letters" },
-        { "card": "story.card.invitation" },
-        { "flag": "tournament.invited" }
+        {
+          "card": "story.card.boss_caught"
+        },
+        {
+          "card": "story.card.damage",
+          "image": "screens/cutscene_destruicao_v1.png"
+        },
+        {
+          "card": "story.card.loss"
+        },
+        {
+          "flag": "earth.friend.dead"
+        },
+        {
+          "card": "story.card.funeral",
+          "image": "screens/cutscene_funeral_corrigido_v1.png"
+        },
+        {
+          "dialogue": "family.letters"
+        },
+        {
+          "card": "story.card.invitation",
+          "image": "screens/cutscene_cartas_v1.png"
+        },
+        {
+          "flag": "tournament.invited"
+        }
       ]
     },
     {
       "id": "prologue.venue",
       "map": "venue",
-      "requires": ["tournament.invited"],
+      "requires": [
+        "tournament.invited"
+      ],
       "steps": [
-        { "card": "story.card.venue" },
-        { "dialogue": "organizer.busy" },
-        { "flag": "tournament.entered" }
+        {
+          "card": "story.card.venue"
+        },
+        {
+          "dialogue": "organizer.busy"
+        },
+        {
+          "flag": "tournament.entered"
+        }
       ]
     },
     {
       "id": "prologue.departure",
       "map": "venue",
-      "requires": ["encounter.tournament.final.caught"],
+      "requires": [
+        "encounter.tournament.final.caught"
+      ],
       "steps": [
-        { "card": "story.card.final" },
-        { "dialogue": "organizer.dinner" },
-        { "card": "story.card.knocked_out" },
-        { "card": "story.card.wake_up" },
-        { "dialogue": "aliens.reveal" },
-        { "card": "story.card.ship" },
-        { "title": true },
-        { "flag": "prologue.done" }
+        {
+          "card": "story.card.final"
+        },
+        {
+          "dialogue": "organizer.dinner"
+        },
+        {
+          "card": "story.card.knocked_out"
+        },
+        {
+          "card": "story.card.wake_up"
+        },
+        {
+          "dialogue": "aliens.reveal"
+        },
+        {
+          "card": "story.card.ship",
+          "image": "screens/cutscene_partida_v1.png"
+        },
+        {
+          "title": true
+        },
+        {
+          "flag": "prologue.done"
+        }
       ]
     }
   ],
   "objectives": [
-    { "requires": ["prologue.done"], "text": "objective.prologue_done" },
-    { "requires": ["tournament.entered", "encounter.tournament.round2.caught"], "text": "objective.tournament_final" },
-    { "requires": ["tournament.entered", "encounter.tournament.round1.caught"], "text": "objective.tournament_round2" },
-    { "requires": ["tournament.entered"], "text": "objective.tournament_round1" },
-    { "requires": ["tournament.invited"], "text": "objective.go_tournament" },
-    { "requires": ["earth.boss.appeared"], "text": "objective.boss" },
-    { "requires": ["friend.festival_invite"], "text": "objective.festival" },
-    { "requires": ["encounter.earth.pier.caught"], "text": "objective.tell_friend" },
-    { "requires": ["friend.met"], "text": "objective.pier" },
-    { "text": "objective.meet_friend" }
+    {
+      "requires": [
+        "prologue.done"
+      ],
+      "text": "objective.prologue_done"
+    },
+    {
+      "requires": [
+        "tournament.entered",
+        "encounter.tournament.round2.caught"
+      ],
+      "text": "objective.tournament_final"
+    },
+    {
+      "requires": [
+        "tournament.entered",
+        "encounter.tournament.round1.caught"
+      ],
+      "text": "objective.tournament_round2"
+    },
+    {
+      "requires": [
+        "tournament.entered"
+      ],
+      "text": "objective.tournament_round1"
+    },
+    {
+      "requires": [
+        "tournament.invited"
+      ],
+      "text": "objective.go_tournament"
+    },
+    {
+      "requires": [
+        "earth.boss.appeared"
+      ],
+      "text": "objective.boss"
+    },
+    {
+      "requires": [
+        "friend.festival_invite"
+      ],
+      "text": "objective.festival"
+    },
+    {
+      "requires": [
+        "encounter.earth.pier.caught"
+      ],
+      "text": "objective.tell_friend"
+    },
+    {
+      "requires": [
+        "friend.met"
+      ],
+      "text": "objective.pier"
+    },
+    {
+      "text": "objective.meet_friend"
+    }
   ]
 }
