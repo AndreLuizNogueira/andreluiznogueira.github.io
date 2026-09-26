@@ -1,0 +1,16 @@
+{
+  "frameWidth": 128,
+  "frameHeight": 128,
+  "animations": {
+    "bubble_medium": {
+      "row": 0,
+      "frames": 6,
+      "stepTime": 0.1,
+      "loop": true
+    }
+  },
+  "pivot": {
+    "x": 64,
+    "y": 64
+  }
+}

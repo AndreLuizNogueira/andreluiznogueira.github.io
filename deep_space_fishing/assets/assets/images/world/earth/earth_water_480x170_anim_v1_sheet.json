@@ -1,0 +1,16 @@
+{
+  "frameWidth": 480,
+  "frameHeight": 170,
+  "animations": {
+    "wave": {
+      "row": 0,
+      "frames": 3,
+      "stepTime": 0.25,
+      "loop": true
+    }
+  },
+  "pivot": {
+    "y": 85,
+    "x": 240
+  }
+}

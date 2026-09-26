@@ -1,0 +1,16 @@
+{
+  "frameWidth": 128,
+  "frameHeight": 128,
+  "animations": {
+    "reel": {
+      "row": 0,
+      "frames": 6,
+      "stepTime": 0.12,
+      "loop": true
+    }
+  },
+  "pivot": {
+    "y": 120,
+    "x": 64
+  }
+}

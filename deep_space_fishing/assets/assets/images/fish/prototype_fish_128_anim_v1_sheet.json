@@ -1,0 +1,28 @@
+{
+  "frameWidth": 128,
+  "frameHeight": 128,
+  "animations": {
+    "swim": {
+      "row": 0,
+      "frames": 4,
+      "stepTime": 0.18,
+      "loop": true
+    },
+    "fight": {
+      "row": 1,
+      "frames": 6,
+      "stepTime": 0.1,
+      "loop": true
+    },
+    "caught": {
+      "row": 2,
+      "frames": 5,
+      "stepTime": 0.12,
+      "loop": false
+    }
+  },
+  "pivot": {
+    "y": 64,
+    "x": 64
+  }
+}

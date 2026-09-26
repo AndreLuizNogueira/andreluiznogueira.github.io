@@ -1,0 +1,16 @@
+{
+  "frameWidth": 128,
+  "frameHeight": 128,
+  "animations": {
+    "ripple": {
+      "row": 0,
+      "frames": 6,
+      "stepTime": 0.1,
+      "loop": false
+    }
+  },
+  "pivot": {
+    "y": 64,
+    "x": 64
+  }
+}

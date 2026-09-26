@@ -1,0 +1,22 @@
+{
+  "frameWidth": 128,
+  "frameHeight": 128,
+  "animations": {
+    "idle": {
+      "row": 0,
+      "frames": 4,
+      "stepTime": 0.2,
+      "loop": true
+    },
+    "walk": {
+      "row": 1,
+      "frames": 8,
+      "stepTime": 0.1,
+      "loop": true
+    }
+  },
+  "pivot": {
+    "y": 120,
+    "x": 64
+  }
+}
