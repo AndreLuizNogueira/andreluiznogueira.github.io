@@ -49242,9 +49242,9 @@ q=b.a
 s=q[0]
 q=q[1]
 r=new A.k(new Float32Array(2))
-r.W((s-40)/2,q-40)
+r.W((s-64)/2,q-64)
 q=new A.k(new Float32Array(2))
-q.ez(40)
+q.ez(64)
 p.p6(a,r,q)
 return!0}}
 A.Me.prototype={
@@ -49525,7 +49525,7 @@ G(){return"TargetKind."+this.b}}
 A.Nf.prototype={}
 A.a81.prototype={
 gZc(){var s,r,q,p,o,n,m,l,k=this
-for(s=k.ax,s=new A.cI(s,s.r,s.e),r=null,q=44;s.n();){p=s.d
+for(s=k.ax,s=new A.cI(s,s.r,s.e),r=null,q=70;s.n();){p=s.d
 o=p.w
 if(o==null)o=null
 else{n=k.b
@@ -51116,7 +51116,7 @@ for(s=r.length,l=0;l<r.length;r.length===s||(0,A.q)(r),++l)j.push(A.cE(r[l],k,k,
 return A.f5(j,B.b_,B.a1,B.c1)}}
 A.kE.prototype={
 au(){var s=t.N
-return new A.Er(new A.a9s(A.n(s,t.J6),A.n(s,t.G1),A.ao(t.jr)),new A.a81(B.NT,new A.CQ(A.df(B.cj,s)),B.a4h,B.d5,A.n(s,t.j5)),new A.Q0(A.b([],t.s),$.aj()))}}
+return new A.Er(new A.a9s(A.n(s,t.J6),A.n(s,t.G1),A.ao(t.jr)),new A.a81(B.NT,new A.CQ(A.df(B.cj,s)),B.a4i,B.d5,A.n(s,t.j5)),new A.Q0(A.b([],t.s),$.aj()))}}
 A.Er.prototype={
 bL(){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e=this,d=null
 e.el()
@@ -51174,7 +51174,7 @@ f.L()
 g=A.az(A.bN(d),d,!1,t.o)
 s=new A.Me(s,n,e.gQS(),l,$,B.i7,B.i7,0,0,0,0,new A.PQ(B.jg,!0,!0),1,!0,$,$,80,new A.k(j),B.cx,B.cx,B.dO,0,!1,$,$,d,d,d,d,$,i,0,d,d,h,f,B.w,0,new A.b8(g,0,0,t.d),d,new A.at([]),new A.at([]))
 s.cS(d,d,d,d,0,d,d,d,d)
-s.a6R(100,k,m,72)
+s.a6R(100,k,m,115)
 e.r=s
 e.xQ(r,p.a)
 e.k4=A.aIO(B.N3,new A.as5(e))},
@@ -52083,7 +52083,7 @@ o.A(0,"campaign")
 o.A(0,"equipment")
 s=3
 return A.j(m.z2(),$async$y4)
-case 3:if(p.c!=null)p.Ry(B.a4i)
+case 3:if(p.c!=null)p.Ry(B.a4h)
 case 1:return A.w(q,r)}})
 return A.x($async$y4,r)},
 N(a){var s,r=null,q=A.dF(a,B.aK,t.C)
@@ -96847,8 +96847,8 @@ B.a4e=new A.a4(!0,!1)
 B.a4f=new A.a4(!0,!0)
 B.a4g=new A.a4(B.Hi,B.Hh)
 B.G2=new A.lJ(0,0)
-B.a4h=new A.j0("spike",80,120)
-B.a4i=new A.j0("village",96,150)
+B.a4h=new A.j0("village",154,240)
+B.a4i=new A.j0("spike",80,120)
 B.a6=new A.F(0,0,0,0)
 B.G3=new A.F(0,0,256,32)
 B.a4j=new A.F(10,20,15,28)
