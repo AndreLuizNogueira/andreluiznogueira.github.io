@@ -48225,7 +48225,7 @@ c6.aor(c9,r,q)
 s=c6.eb
 s===$&&A.a()
 if(s.a.d<=0)c6.aok(c9,r,q)
-c6.aw.sbS(B.afD)
+c6.aw.sbS(B.afB)
 c6.aw.co()
 s=c6.aw.b
 c0=s.c+12
@@ -49072,7 +49072,7 @@ m=q+12
 a0.aw.au(a2,new A.e(m,p+10))
 if(r.as){s=r.Q
 s=B.c.a2(s/r.x,0,1)
-a0.aw.sbS(B.afB)
+a0.aw.sbS(B.afC)
 a0.aw.co()
 a0.aw.au(a2,new A.e(m,p+28))
 l=p+50
@@ -49114,7 +49114,7 @@ c.sbS(new A.d2(""+h,a1,a1,B.a7,a1,a1,a1,a1,a1,a1,new A.l(!0,b,a1,a1,a1,a1,10,B.V
 a0.aw.co()
 c=a0.aw
 b=c.b
-c.au(a2,new A.e(f+(16-b.c)/2,i+(20-b.a.c.gbp())/2))}a0.aw.sbS(B.afC)
+c.au(a2,new A.e(f+(16-b.c)/2,i+(20-b.a.c.gbp())/2))}a0.aw.sbS(B.afD)
 a0.aw.co()
 a0.aw.au(a2,new A.e(m,p+56))}},
 aon(b2,b3,b4){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9=this,b0=null,b1=a9.fQ.aCG("fire")
@@ -51958,7 +51958,7 @@ amP(a,b){A.baa(new A.aAc(this,b,new A.Vs(new A.dc("127.0.0.1:8080",B.qC,B.c4),$.
 R(a){var s,r=this,q=null,p=A.fR(a,B.eN,t.wr)
 if(p==null){A.hS("pt")
 p=new A.jn()}s=A.bV(20)
-return new A.mb(A.cy(q,A.aoZ(A.fs(A.wN(new A.hd(B.O_,A.cL(A.b([A.fs(A.cy(q,B.ac6,B.x,q,q,new A.bF(B.S4,q,A.dd(B.Qh,1),s,q,q,B.R),q,q,q,B.Tp,q,q,q),q,q),B.iA,B.akB,B.L9,B.akD,B.aeq,new A.pp(B.oP,B.aW,p.ga2o(),p.ga2p(),r.a.c,!0,q),B.fW,new A.pp(B.V1,B.cp,p.gMm(),p.gMn(),new A.aAd(r,a,p),!1,q),B.fW,new A.pp(B.V0,B.b7,p.ga2m(),p.ga2n(),r.a.f,!1,q),B.fW,new A.pp(B.V_,B.c9,p.ga2q(),"V\xeddeo, Controles, \xc1udio e Idioma",r.a.r,!1,q),B.aer,A.fs(A.aZ("v0.0.56+56 \u2022 Powered by PlayForge & V-Engine",q,q,q,q,q,B.agu,q,q),q,q)],t.p),B.bK,B.fw,B.C),q),B.TC,B.aV),q,q),!0),B.x,q,q,B.O7,q,q,q,q,q,q,q),q,q,q,q)}}
+return new A.mb(A.cy(q,A.aoZ(A.fs(A.wN(new A.hd(B.O_,A.cL(A.b([A.fs(A.cy(q,B.ac6,B.x,q,q,new A.bF(B.S4,q,A.dd(B.Qh,1),s,q,q,B.R),q,q,q,B.Tp,q,q,q),q,q),B.iA,B.akB,B.L9,B.akD,B.aeq,new A.pp(B.oP,B.aW,p.ga2o(),p.ga2p(),r.a.c,!0,q),B.fW,new A.pp(B.V1,B.cp,p.gMm(),p.gMn(),new A.aAd(r,a,p),!1,q),B.fW,new A.pp(B.V0,B.b7,p.ga2m(),p.ga2n(),r.a.f,!1,q),B.fW,new A.pp(B.V_,B.c9,p.ga2q(),"V\xeddeo, Controles, \xc1udio e Idioma",r.a.r,!1,q),B.aer,A.fs(A.aZ("v0.0.57+57 \u2022 Powered by PlayForge & V-Engine",q,q,q,q,q,B.agu,q,q),q,q)],t.p),B.bK,B.fw,B.C),q),B.TC,B.aV),q,q),!0),B.x,q,q,B.O7,q,q,q,q,q,q,q),q,q,q,q)}}
 A.aAc.prototype={
 $1(a){var s,r=null,q=A.bV(16),p=this.b,o=t.p,n=A.c9(A.b([B.Vo,B.fV,A.aZ(p.gMm(),r,r,r,r,r,B.aj3,r,r)],o),B.N,B.r,B.C,0),m=this.a,l=A.b([A.aZ(p.gMn(),r,r,r,r,r,B.aiS,r,r),B.dW,new A.yb(B.uQ,B.bg,p.gM6(),p.gM5(),new A.aA8(m,a),!0,r),B.iA,new A.yb(B.k0,B.aW,p.ga2J(),p.ga2I(),new A.aA9(m,a),!1,r),B.iA],o),k=A.bV(10),j=A.dd(B.ds,1),i=A.c9(A.b([B.Vf,B.ck,A.aZ(p.ga2G(),r,r,r,r,r,B.ait,r,r)],o),B.N,B.r,B.C,0),h=A.aZ(p.ga2F(),r,r,r,r,r,B.Ly,r,r),g=this.c,f=p.ga2K()
 f=A.aPI(r,new A.hx(4,A.bV(8),B.ro),r,r,r,r,r,r,!0,new A.hx(4,A.bV(8),B.ro),r,r,r,r,r,B.tw,!0,r,r,r,r,new A.hx(4,A.bV(8),B.NQ),r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,!0,r,B.Ly,f,!0,!0,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r)
@@ -111061,14 +111061,14 @@ B.afz=new A.Fm(B.h,null)
 B.Lw=new A.fZ(0,0,B.l,!1,0,0)
 B.ahv=new A.l(!0,B.ak,null,null,null,null,11,B.aH,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.afA=new A.d2("DEATHMATCH",null,null,B.a7,null,null,null,null,null,null,B.ahv)
-B.aiK=new A.l(!0,B.bA,null,null,null,null,14,B.dy,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.afB=new A.d2("RECARREGANDO...",null,null,B.a7,null,null,null,null,null,null,B.aiK)
-B.aih=new A.l(!0,B.nG,null,null,null,null,9,B.ab,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.afC=new A.d2("ESPA\xc7O: Atirar | R: Recarregar | 1-4 ou Q/E: Armas",null,null,B.a7,null,null,null,null,null,null,B.aih)
 B.ad3=new A.ee(B.m,B.id,4)
 B.AN=s([B.ad3],t.G)
 B.agg=new A.l(!0,B.tu,null,"monospace",null,null,11,B.V,null,null,null,null,null,null,null,null,null,null,null,null,null,null,B.AN,null,null,null)
-B.afD=new A.d2("v0.0.56+56",null,null,B.a7,null,null,null,null,null,null,B.agg)
+B.afB=new A.d2("v0.0.57+57",null,null,B.a7,null,null,null,null,null,null,B.agg)
+B.aiK=new A.l(!0,B.bA,null,null,null,null,14,B.dy,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.afC=new A.d2("RECARREGANDO...",null,null,B.a7,null,null,null,null,null,null,B.aiK)
+B.aih=new A.l(!0,B.nG,null,null,null,null,9,B.ab,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.afD=new A.d2("ESPA\xc7O: Atirar | R: Recarregar | 1-4 ou Q/E: Armas",null,null,B.a7,null,null,null,null,null,null,B.aih)
 B.afF=new A.l(!0,B.a1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.iF=new A.l(!0,null,null,null,null,null,null,B.V,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.afG=new A.l(!0,B.ap,null,"monospace",null,null,16,B.aH,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
