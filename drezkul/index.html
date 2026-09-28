@@ -95,6 +95,8 @@
       // fazendo com que o Flutter Web perca os eventos no widget tree.
       document.addEventListener('mousedown', function (event) {
         if (!wantLock) return;
+        // mousedown de compatibilidade vindo de um toque: não há mouse para travar.
+        if (event.sourceCapabilities && event.sourceCapabilities.firesTouchEvents) return;
         if (!document.pointerLockElement) {
           if (event.button === 0) requestLock();
           return;
