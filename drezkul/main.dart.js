@@ -57561,7 +57561,7 @@ $S:588}
 A.PH.prototype={
 N(a){var s=A.dH(a,B.dz,t.wr)
 if(s==null){A.h9("pt")
-s=new A.iu()}return new A.PG(s.gN_(),"Drezkul",A.b([new A.mI(s.ga36(),B.a00),new A.mI(s.ga35(),B.a7l),new A.mI(s.ga3c(),B.a7C),new A.mI(s.ga3a(),B.a7O),new A.mI(s.ga38(),A.b([s.ga39()],t.s)),new A.mI(s.ga34(),B.a1k)],t.iV),this.c,s.ga3b(),s.ga37(),"Drezkul","v0.0.81+81",null)}}
+s=new A.iu()}return new A.PG(s.gN_(),"Drezkul",A.b([new A.mI(s.ga36(),B.a00),new A.mI(s.ga35(),B.a7l),new A.mI(s.ga3c(),B.a7C),new A.mI(s.ga3a(),B.a7O),new A.mI(s.ga38(),A.b([s.ga39()],t.s)),new A.mI(s.ga34(),B.a1k)],t.iV),this.c,s.ga3b(),s.ga37(),"Drezkul","v0.0.82+82",null)}}
 A.SK.prototype={
 N(a){var s,r,q,p,o,n,m=this,l=null,k=A.dH(a,B.dz,t.wr)
 if(k==null){A.h9("pt")
@@ -57894,7 +57894,7 @@ p.a.toString
 B.b.M(r,A.b([B.bo,new A.qG(B.wt,B.ul,n.gN_().toUpperCase(),n.ga7g(),p.a.w,!1,B.aqU)],q))
 p.a.toString
 r.push(B.aiM)
-r.push(A.eL(A.aN("v0.0.81+81 \u2022 Powered by PlayForge & V-Engine",o,o,o,o,o,B.akS,o,o),o,o))
+r.push(A.eL(A.aN("v0.0.82+82 \u2022 Powered by PlayForge & V-Engine",o,o,o,o,o,B.akS,o,o),o,o))
 return new A.ni(A.d5(o,A.pY(!0,A.aTQ(s,A.eL(A.Hc(new A.eu(B.Qm,A.cu(r,B.bL,B.e7,B.z),o),B.p7,B.aC),o,o)),B.b4,!0),B.u,o,o,B.Qu,o,o,o,o,o,o,o),o,o,o,o)}}
 A.aHG.prototype={
 $1(a){var s,r=null,q=A.c1(16),p=this.b,o=t.p,n=A.c3(A.b([B.Yh,B.hp,A.aN(p.gPr(),r,r,r,r,r,B.ann,r,r)],o),B.G,B.q,B.z,0),m=this.a,l=A.b([A.aN(p.gPs(),r,r,r,r,r,B.anc,r,r),B.ef,new A.A3(B.ws,B.by,p.gP8(),p.gP7(),new A.aHC(m,a),!0,r),B.hq,new A.A3(B.kS,B.bk,p.ga7D(),p.ga7C(),new A.aHD(m,a),!1,r),B.hq],o),k=A.c1(10),j=A.dO(B.eF,1),i=A.c3(A.b([B.Y9,B.c6,A.aN(p.ga7A(),r,r,r,r,r,B.amP,r,r)],o),B.G,B.q,B.z,0),h=A.aN(p.ga7z(),r,r,r,r,r,B.NN,r,r),g=this.c,f=p.ga7E()
@@ -123112,7 +123112,7 @@ B.ajZ=new A.dz("RECARREGANDO...",null,null,B.ac,null,null,null,null,null,null,B.
 B.aho=new A.eo(B.m,B.j1,4)
 B.CA=s([B.aho],t.T)
 B.akE=new A.u(!0,B.v_,null,"monospace",null,null,11,B.a_,null,null,null,null,null,null,null,null,null,null,null,null,null,null,B.CA,null,null,null)
-B.ak_=new A.dz("v0.0.81+81",null,null,B.ac,null,null,null,null,null,null,B.akE)
+B.ak_=new A.dz("v0.0.82+82",null,null,B.ac,null,null,null,null,null,null,B.akE)
 B.akR=new A.u(!0,B.k,null,null,null,null,15,B.ay,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.ak0=new A.dz("\u25b6  VER REPLAY DA MORTE  (K)",null,null,B.ac,null,null,null,null,null,null,B.akR)
 B.amE=new A.u(!0,B.oy,null,null,null,null,9,B.ad,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
