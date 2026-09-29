@@ -110,6 +110,25 @@
         }
       }, true);
 
+      // Mira: botão direito segurado. Pelos botões do evento de ponteiro,
+      // porque apertar um segundo botão com outro já apertado só gera
+      // pointermove (e com o ponteiro travado o Flutter não vê os cliques).
+      window.drezkulAimHeld = false;
+      function trackAim(event) {
+        if (event.pointerType && event.pointerType !== 'mouse') return;
+        window.drezkulAimHeld = (event.buttons & 2) !== 0;
+      }
+      document.addEventListener('pointerdown', trackAim, true);
+      document.addEventListener('pointermove', trackAim, true);
+      document.addEventListener('pointerup', trackAim, true);
+      window.addEventListener('blur', function () {
+        window.drezkulAimHeld = false;
+      });
+      // O botão direito é a mira: sem o menu de contexto do navegador.
+      document.addEventListener('contextmenu', function (event) {
+        event.preventDefault();
+      });
+
       document.addEventListener('mousemove', function (event) {
         if (!document.pointerLockElement || !moveCb) return;
         if (skipFrames > 0) {
