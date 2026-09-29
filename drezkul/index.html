@@ -97,18 +97,33 @@
         if (!wantLock) return;
         // mousedown de compatibilidade vindo de um toque: não há mouse para travar.
         if (event.sourceCapabilities && event.sourceCapabilities.firesTouchEvents) return;
-        if (!document.pointerLockElement) {
-          if (event.button === 0) requestLock();
-          return;
-        }
-        if (clickCb) {
-          try {
-            clickCb(event.button);
-          } catch (e) {
-            console.error('[drezkul] clickCb error:', e);
+        if (!document.pointerLockElement && event.button === 0) requestLock();
+      }, true);
+
+      // Cliques com o ponteiro travado, pelos botões do evento de ponteiro: o
+      // esquerdo apertado com o direito já pressionado (mirando) só gera
+      // pointermove, e o tiro não saía.
+      var lastButtons = 0;
+      function trackClicks(event) {
+        if (event.pointerType && event.pointerType !== 'mouse') return;
+        var pressed = event.buttons & ~lastButtons;
+        lastButtons = event.buttons;
+        if (!document.pointerLockElement || !clickCb || !wantLock) return;
+        // Bits dos botões → número do botão (1: esquerdo = 0, 2: direito = 2, 4: meio = 1).
+        var map = [[1, 0], [4, 1], [2, 2]];
+        for (var i = 0; i < map.length; i++) {
+          if (pressed & map[i][0]) {
+            try {
+              clickCb(map[i][1]);
+            } catch (e) {
+              console.error('[drezkul] clickCb error:', e);
+            }
           }
         }
-      }, true);
+      }
+      document.addEventListener('pointerdown', trackClicks, true);
+      document.addEventListener('pointermove', trackClicks, true);
+      document.addEventListener('pointerup', trackClicks, true);
 
       // Mira: botão direito segurado. Pelos botões do evento de ponteiro,
       // porque apertar um segundo botão com outro já apertado só gera
