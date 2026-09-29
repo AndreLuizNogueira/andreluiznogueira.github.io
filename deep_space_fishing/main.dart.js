@@ -9385,7 +9385,7 @@ a3q(){var s=0,r=A.w(t.H),q,p,o,n,m,l,k,j,i
 var $async$a3q=A.x(function(a,b){if(a===1)return A.t(b,r)
 for(;;)switch(s){case 0:if($.ab==null)A.aEX()
 $.ab.toString
-$.aHc="v0.1.15+16"
+$.aHc="v0.1.16+17"
 q=new A.Ng(A.b([],t.s))
 s=2
 return A.j(A.aB6(q),$async$a3q)
@@ -9435,7 +9435,7 @@ i=$.aKE
 if(i==null)A.V(A.ax("The SharedPreferencesAsyncPlatform instance must be set."))
 else j.b=i
 s=7
-return A.j(A.aka(A.aEk("v0.1.15+16",!0,B.kM,new A.aik(j,"dsf.")),a),$async$aB7)
+return A.j(A.aka(A.aEk("v0.1.16+17",!0,B.kM,new A.aik(j,"dsf.")),a),$async$aB7)
 case 7:n=c
 A:{m=n.d
 if(B.GK===m){a.ie(B.ee,B.ed,"Save principal inv\xe1lido; usado o backup.")
@@ -9452,7 +9452,7 @@ g=o.pop()
 l=A.a3(g)
 k=A.am(g)
 a.k0(B.ch,B.ed,"Armazenamento indispon\xedvel; save s\xf3 em mem\xf3ria",l,k)
-q=A.Cx(null,a,A.aEk("v0.1.15+16",!0,B.kM,null),B.jM)
+q=A.Cx(null,a,A.aEk("v0.1.16+17",!0,B.kM,null),B.jM)
 s=1
 break
 s=6
@@ -98315,7 +98315,7 @@ B.a4B=new A.v0(4,"unknown")
 B.a4C=new A.BP(null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.h=new A.qS(0)
 B.ac3=new A.y(!0,B.px,null,null,null,null,11,B.a7,null,0.5,null,null,null,null,null,null,null,B.h,null,null,null,null,null,null,null,null)
-B.acm=new A.kh("v0.1.15+16",null,B.ac3,null,null,null,null,null,null,null)
+B.acm=new A.kh("v0.1.16+17",null,B.ac3,null,null,null,null,null,null,null)
 B.a5k=new A.Cu(!0,B.acm,null)
 B.PG=new A.l9(!0,B.a5k,null)
 B.a4D=new A.qo(null,null,12,8,null,null,B.PG,null)
