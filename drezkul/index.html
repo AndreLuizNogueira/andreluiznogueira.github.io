@@ -32,6 +32,23 @@
 
   <title>drezkul</title>
   <link rel="manifest" href="manifest.json">
+
+  <!-- A página é só o jogo: sem zoom, rolagem nem "puxar para atualizar".
+       Com zoom de pinça (o Chrome deixa forçar nas opções de acessibilidade),
+       o jogo encolhia e sobrava uma faixa branca sem jeito de voltar. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      overscroll-behavior: none;
+      touch-action: none;
+      background: #070B14;
+    }
+  </style>
 </head>
 
 <body>
@@ -143,6 +160,34 @@
       document.addEventListener('contextmenu', function (event) {
         event.preventDefault();
       });
+
+      // O Flutter troca o viewport por um que deixa dar zoom até 5x; aqui ele
+      // volta a ser o sem zoom (o jogo encolhia e sobrava uma faixa branca).
+      var VIEWPORT = 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover';
+      function applyViewport() {
+        var meta = document.querySelector('meta[name="viewport"]');
+        if (meta && meta.getAttribute('content') !== VIEWPORT) meta.setAttribute('content', VIEWPORT);
+      }
+      new MutationObserver(applyViewport).observe(document.head, { childList: true, subtree: true, attributes: true, attributeFilter: ['content'] });
+      window.addEventListener('flutter-first-frame', applyViewport);
+
+      // Se a página ainda assim levar zoom ou rolar, volta ao normal: reescrever
+      // o viewport faz o navegador voltar à escala 1.
+      function resetZoom() {
+        var vv = window.visualViewport;
+        if (vv && Math.abs(vv.scale - 1) > 0.01) {
+          var meta = document.querySelector('meta[name="viewport"]');
+          if (meta) {
+            var content = meta.getAttribute('content');
+            meta.setAttribute('content', content + ', ');
+            setTimeout(function () { meta.setAttribute('content', content); }, 50);
+          }
+        }
+        if (window.scrollX || window.scrollY) window.scrollTo(0, 0);
+      }
+      if (window.visualViewport) window.visualViewport.addEventListener('resize', resetZoom);
+      window.addEventListener('scroll', resetZoom);
+      window.addEventListener('orientationchange', resetZoom);
 
       document.addEventListener('mousemove', function (event) {
         if (!document.pointerLockElement || !moveCb) return;
