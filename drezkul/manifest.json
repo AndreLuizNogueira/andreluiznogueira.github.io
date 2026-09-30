@@ -1,12 +1,12 @@
 {
-    "name": "drezkul",
-    "short_name": "drezkul",
+    "name": "Drezkul",
+    "short_name": "Drezkul",
     "start_url": ".",
-    "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
-    "orientation": "portrait-primary",
+    "display": "fullscreen",
+    "background_color": "#070B14",
+    "theme_color": "#070B14",
+    "description": "FPS retrô com bots, times, rede local e editor de mapas",
+    "orientation": "any",
     "prefer_related_applications": false,
     "icons": [
         {
