@@ -2,7 +2,7 @@
 
 Site estático para GitHub Pages, em HTML e CSS, sem dependências de build.
 A página inicial reúne Listagem, Hora do Pet, Salad Survivors, Deep Space Fishing,
-Drezkul e VForma. As imagens
+Drezkul e R3Forma. As imagens
 em `assets/` foram copiadas dos projetos originais.
 
 ## Políticas individuais
@@ -10,15 +10,15 @@ em `assets/` foram copiadas dos projetos originais.
 - Listagem: https://andreluiznogueira.github.io/licencas/listagem/
 - Hora do Pet: https://andreluiznogueira.github.io/licencas/hora-do-pet/
 - Salad Survivors: https://andreluiznogueira.github.io/licencas/salad-survivors/
-- VForma: https://andreluiznogueira.github.io/licencas/vforma/
+- R3Forma: https://andreluiznogueira.github.io/licencas/r3forma/
 
 Depois da publicação, atualizar os links nas lojas e nos aplicativos que
 ainda apontem para a raiz. A raiz agora é o portfólio. A política conjunta
 anterior está em `/licencas/anteriores/`; `/en.html` continua acessível e
 indica onde encontrar as políticas individuais atuais, em português.
 
-O jogo web existente continua em `/salad_survivors/`. O VForma é publicado em
-`/vforma/` pelo workflow `deploy.yml` do próprio repositório dele. O arquivo `app-ads.txt`
+O jogo web existente continua em `/salad_survivors/`. O R3Forma é publicado em
+`/r3forma/` pelo workflow `deploy.yml` do próprio repositório dele. O arquivo `app-ads.txt`
 continua na raiz para os serviços de anúncios.
 
 ## Manutenção

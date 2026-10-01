@@ -65,10 +65,10 @@ h1 span{color:#7a7d71}
 .drezkul-mark::before{width:24%;height:100%;left:38%}
 .drezkul-mark::after{width:100%;height:24%;top:38%}
 .drezkul-mark span{position:absolute;inset:27%;border:2px solid #d8e5d855;background:#10191bcc;box-shadow:0 0 0 13px #10191b88}
-.vforma-art{background:linear-gradient(150deg,#2c5675 0%,#1d3e58 60%,#142d42 100%)}
-.vforma-art::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 19px,#ffffff10 20px 21px),repeating-linear-gradient(0deg,transparent 0 19px,#ffffff10 20px 21px)}
-.vforma-art .art-label,.vforma-art .art-caption{z-index:1;color:#d6e6f2}
-.vforma-plan{position:relative;width:min(300px,78%);height:auto;transform:rotate(-4deg);filter:drop-shadow(0 14px 18px #0005)}
+.r3forma-art{background:linear-gradient(150deg,#2c5675 0%,#1d3e58 60%,#142d42 100%)}
+.r3forma-art::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 19px,#ffffff10 20px 21px),repeating-linear-gradient(0deg,transparent 0 19px,#ffffff10 20px 21px)}
+.r3forma-art .art-label,.r3forma-art .art-caption{z-index:1;color:#d6e6f2}
+.r3forma-plan{position:relative;width:min(300px,78%);height:auto;transform:rotate(-4deg);filter:drop-shadow(0 14px 18px #0005)}
 .contact{padding:14px 0 44px;display:flex;justify-content:space-between;align-items:center;gap:30px}
 .contact h2{font-size:32px;line-height:1.2;font-weight:500;letter-spacing:-1px;margin:16px 0 0}
 .contact>a{font-size:14px;overflow-wrap:anywhere}
