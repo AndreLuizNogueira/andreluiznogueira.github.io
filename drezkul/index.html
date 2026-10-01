@@ -214,6 +214,12 @@
       });
     })();
   </script>
+  <script>
+    // Cache dos arquivos do jogo no aparelho (ver drezkul_sw.js).
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('drezkul_sw.js').catch(function () {});
+    }
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 
