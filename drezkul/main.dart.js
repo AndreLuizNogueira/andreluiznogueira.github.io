@@ -10598,7 +10598,7 @@ j=q+12
 a5.al.av(a6,new A.e(j,p+10))
 if(r.as){s=r.Q
 s=B.c.O(s/r.x,0,1)
-a5.al.scb(B.arg)
+a5.al.scb(B.arh)
 a5.al.cE()
 a5.al.av(a6,new A.e(j,p+28))
 i=p+50
@@ -10692,7 +10692,7 @@ a1.bd(g,e)
 a0.al.av(a1,new A.e(h+8,66))},
 bab(a,b,c,d){var s,r,q,p,o,n=a.al
 n===$&&A.a()
-n.scb(B.arh)
+n.scb(B.arg)
 a.al.cE()
 n=a.al.b
 s=n.c+12
@@ -63779,7 +63779,7 @@ if(p==null)p=new A.hq(A.fp("pt"))
 s=p.gOS()
 r=A.b([new A.hJ(p.ga6o(),B.a3U),new A.hJ(p.ga6n(),B.abL),new A.hJ(p.ga6u(),B.ac5),new A.hJ(p.ga6s(),B.aci),new A.hJ(p.ga6q(),A.b(["The Free Firearm Sound Library (opengameart.org, CC0)","Gun Reload Sounds (opengameart.org)","42 Snow and Gravel Footsteps (opengameart.org, CC0)","Voiceover Pack: Fighter, Kenney (kenney.nl, CC0)","Impact Sounds, Kenney (kenney.nl, CC0)",p.ga6r()],t.s)),new A.hJ(p.ga6m(),B.a5l)],t.iV)
 q=p.ga6t()
-return A.b5h("Drezkul","v0.0.119+119",p.ga6p(),this.c,r,"Drezkul",q,s)}}
+return A.b5h("Drezkul","v0.0.120+120",p.ga6p(),this.c,r,"Drezkul",q,s)}}
 A.UX.prototype={
 N(a){var s,r,q,p,o,n,m=this,l=null,k=A.d1(a,B.cy,t.wr)
 if(k==null)k=new A.hq(A.fp("pt"))
@@ -64313,7 +64313,7 @@ o.a.toString
 B.b.L(r,A.b([B.b5,new A.n1(B.y6,B.vK,m.gOS().toUpperCase(),m.gabd(),o.a.w,!1,B.ayL)],p))
 o.a.toString
 r.push(B.aq6)
-r.push(A.ez(A.aF("v0.0.119+119 \u2022 Powered by PlayForge & V-Engine",n,n,n,n,n,B.asa,n,n),n,n))
+r.push(A.ez(A.aF("v0.0.120+120 \u2022 Powered by PlayForge & V-Engine",n,n,n,n,n,B.asa,n,n),n,n))
 return new A.mw(A.cG(n,A.ox(!0,A.azi(s,A.ez(A.A3(new A.e_(B.Sx,A.ct(r,B.bO,B.eB,B.v),n),B.qf,B.ay),n,n)),B.aS,!0),B.r,n,n,B.SJ,n,n,n,n,n,n,n),n,n,n,n)}}
 A.aO9.prototype={
 $1(a){var s,r=null,q=A.c9(16),p=this.b,o=t.p,n=A.c_(A.b([B.a0R,B.hT,A.aF(p.gRa(),r,r,r,r,r,B.auN,r,r)],o),B.C,B.q,B.v,0),m=A.aF(p.gRb(),r,r,r,r,r,B.auB,r,r),l=p.gabJ(),k=p.gabK(),j=this.a,i=A.c9(10),h=A.dX(B.f5,1),g=A.c_(A.b([B.a0F,B.bU,A.aF(p.gabN(),r,r,r,r,r,B.auc,r,r)],o),B.C,B.q,B.v,0),f=A.aF(p.gabL(),r,r,r,r,r,B.PU,r,r),e=this.c,d=p.gabP()
@@ -134338,12 +134338,12 @@ B.ard=new A.bU(0,0)
 B.are=new A.JG(null,null,null)
 B.arf=new A.JH(B.h,null)
 B.PS=new A.i4(0,0,B.l,!1,0,0)
-B.aut=new A.u(!0,B.by,null,null,null,null,14,B.bz,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.arg=new A.cA("RECARREGANDO...",null,null,B.X,null,null,null,null,null,null,B.aut)
 B.aoK=new A.er(B.m,B.jD,4)
 B.Ej=s([B.aoK],t.kO)
 B.arX=new A.u(!0,B.wr,null,"monospace",null,null,11,B.a_,null,null,null,null,null,null,null,null,null,null,null,null,null,null,B.Ej,null,null,null)
-B.arh=new A.cA("v0.0.119+119",null,null,B.X,null,null,null,null,null,null,B.arX)
+B.arg=new A.cA("v0.0.120+120",null,null,B.X,null,null,null,null,null,null,B.arX)
+B.aut=new A.u(!0,B.by,null,null,null,null,14,B.bz,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.arh=new A.cA("RECARREGANDO...",null,null,B.X,null,null,null,null,null,null,B.aut)
 B.as9=new A.u(!0,B.i,null,null,null,null,15,B.am,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.ari=new A.cA("\u25b6  VER REPLAY DA MORTE  (K)",null,null,B.X,null,null,null,null,null,null,B.as9)
 B.au2=new A.u(!0,B.kR,null,null,null,null,9,B.av,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
