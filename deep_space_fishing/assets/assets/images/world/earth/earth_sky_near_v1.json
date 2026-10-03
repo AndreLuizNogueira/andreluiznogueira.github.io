@@ -1,0 +1,12 @@
+{
+  "width": 480,
+  "height": 320,
+  "safeArea": {
+    "x": 0,
+    "y": 50,
+    "width": 480,
+    "height": 270
+  },
+  "renderOffsetY": -50,
+  "horizontalRepeat": true
+}

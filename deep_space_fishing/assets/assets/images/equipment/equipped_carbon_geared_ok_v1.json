@@ -1,0 +1,11 @@
+{
+  "width": 128,
+  "height": 128,
+  "pivot": {
+    "x": 38,
+    "y": 98
+  },
+  "state": "ok",
+  "combination": "carbon_geared",
+  "note": "Pivot proposto no cabo; validar encaixe no personagem durante integracao."
+}

@@ -1,0 +1,16 @@
+{
+  "frameWidth": 128,
+  "frameHeight": 128,
+  "animations": {
+    "ambient": {
+      "row": 0,
+      "frames": 4,
+      "stepTime": 0.28,
+      "loop": true
+    }
+  },
+  "pivot": {
+    "x": 64,
+    "y": 64
+  }
+}

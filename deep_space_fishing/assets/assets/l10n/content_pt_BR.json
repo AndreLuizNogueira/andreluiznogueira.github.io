@@ -178,13 +178,13 @@
   "character.client_1.name": "Cliente na fila",
   "character.client_2.name": "Cliente na fila",
   "character.client_3.name": "Cliente na fila",
-  "character.baker.name": "Padeiro",
+  "character.baker.name": "Padeira",
   "character.boat_builder.name": "Carpinteiro de barcos",
   "character.gatekeeper.name": "Porteiro do torneio",
   "character.rival.name": "Competidor",
   "character.spectator_1.name": "Espectador",
-  "character.spectator_2.name": "Espectadora",
+  "character.spectator_2.name": "Espectador",
   "character.stand_rod.name": "Vendedor de varas",
-  "character.stand_line.name": "Vendedora de linhas",
+  "character.stand_line.name": "Vendedor de linhas",
   "character.stand_reel.name": "Vendedor de molinetes"
 }
