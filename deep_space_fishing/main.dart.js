@@ -9408,7 +9408,7 @@ a3G(){var s=0,r=A.v(t.H),q,p,o,n,m,l,k,j,i
 var $async$a3G=A.w(function(a,b){if(a===1)return A.r(b,r)
 for(;;)switch(s){case 0:if($.ad==null)A.aFG()
 $.ad.toString
-$.aHZ="v0.1.39+40"
+$.aHZ="v0.1.40+41"
 q=new A.Ns(A.b([],t.s))
 s=2
 return A.k(A.aBS(q),$async$a3G)
@@ -9463,7 +9463,7 @@ i=$.aLq
 if(i==null)A.V(A.ay("The SharedPreferencesAsyncPlatform instance must be set."))
 else j.b=i
 s=7
-return A.k(A.akE(A.aF3("v0.1.39+40",!0,B.kV,new A.aiO(j,"dsf.")),a),$async$aBT)
+return A.k(A.akE(A.aF3("v0.1.40+41",!0,B.kV,new A.aiO(j,"dsf.")),a),$async$aBT)
 case 7:n=c
 A:{m=n.d
 if(B.H0===m){a.hQ(B.dq,B.eh,"Save principal inv\xe1lido; usado o backup.")
@@ -9480,7 +9480,7 @@ g=o.pop()
 l=A.a3(g)
 k=A.an(g)
 a.kb(B.cj,B.eh,"Armazenamento indispon\xedvel; save s\xf3 em mem\xf3ria",l,k)
-q=A.CF(null,a,A.aF3("v0.1.39+40",!0,B.kV,null),B.jS)
+q=A.CF(null,a,A.aF3("v0.1.40+41",!0,B.kV,null),B.jS)
 s=1
 break
 s=6
@@ -51895,7 +51895,7 @@ for(s=r.length,l=0;l<r.length;r.length===s||(0,A.x)(r),++l)j.push(A.cP(r[l],k,k,
 return A.en(j,B.aR,B.U,B.aU)}}
 A.l3.prototype={
 aj(){var s=t.N,r=A.dr(B.ch,s),q=A.Q(B.vK,t.aF)
-return new A.F8(new A.aaM(A.m(s,t.J6),A.m(s,t.bc),A.ap(t.jr)),new A.a9h(B.P8,new A.Dv(r),new A.C_(0,q),B.a5B,B.dd,A.m(s,t.j5)),new A.QP(A.b([],t.s),$.al()))}}
+return new A.F8(new A.aaM(A.m(s,t.J6),A.m(s,t.bc),A.ap(t.jr)),new A.a9h(B.P8,new A.Dv(r),new A.C_(0,q),B.a5C,B.dd,A.m(s,t.j5)),new A.QP(A.b([],t.s),$.al()))}}
 A.F8.prototype={
 bJ(){var s,r,q,p,o,n,m,l,k,j,i,h,g,f=this,e=null
 f.ea()
@@ -52994,7 +52994,7 @@ o.v(0,"campaign")
 o.v(0,"equipment")
 s=3
 return A.k(m.zi(),$async$yi)
-case 3:if(p.c!=null)p.Sc(B.a5C)
+case 3:if(p.c!=null)p.Sc(B.a5B)
 case 1:return A.t(q,r)}})
 return A.u($async$yi,r)},
 N(a){var s,r=null,q=A.dH(a,B.aJ,t.B)
@@ -99207,7 +99207,7 @@ B.NL=new A.mE(B.LD,!0,null,null)
 B.a53=new A.qv(0,0,0,0,null,null,B.NL,null)
 B.h=new A.r_(0)
 B.acz=new A.z(!0,B.pJ,null,null,null,null,11,B.a8,null,0.5,null,null,null,null,null,null,null,B.h,null,null,null,null,null,null,null,null)
-B.acS=new A.kl("v0.1.39+40",null,B.acz,null,null,null,null,null,null,null)
+B.acS=new A.kl("v0.1.40+41",null,B.acz,null,null,null,null,null,null,null)
 B.a5S=new A.CC(!0,B.acS,null)
 B.Q2=new A.lc(!0,B.a5S,null)
 B.a54=new A.qv(null,null,12,8,null,null,B.Q2,null)
@@ -99239,8 +99239,8 @@ B.n2=new A.Y("pose",0)
 B.a5y=new A.Y(!0,!1)
 B.a5z=new A.Y(!0,!0)
 B.a5A=new A.Y(B.I8,B.I7)
-B.a5B=new A.jf("spike",80,120)
-B.a5C=new A.jf("village",192,368)
+B.a5B=new A.jf("village",150,333)
+B.a5C=new A.jf("spike",80,120)
 B.a9=new A.F(0,0,0,0)
 B.a5D=new A.F(10,20,15,28)
 B.a5E=new A.F(4,16,28,32)
