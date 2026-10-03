@@ -54,7 +54,7 @@
       "id": "prologue.aftermath",
       "map": "village",
       "requires": [
-        "encounter.earth.boss.caught"
+        "earth.friend.found"
       ],
       "steps": [
         {
@@ -96,26 +96,6 @@
       "steps": [
         {
           "card": "story.card.venue"
-        },
-        {
-          "move": {
-            "who": "organizer",
-            "x": 175,
-            "y": 224
-          }
-        },
-        {
-          "dialogue": "organizer.busy"
-        },
-        {
-          "move": {
-            "who": "organizer",
-            "x": 365,
-            "y": 154
-          }
-        },
-        {
-          "flag": "tournament.entered"
         }
       ]
     },

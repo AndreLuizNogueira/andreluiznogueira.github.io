@@ -323,8 +323,11 @@
     ],
     "nodes": {
       "a": {
-        "text": "dialogue.organizer.busy",
-        "speaker": "organizer"
+        "text": "dialogue.organizer.enroll",
+        "speaker": "organizer",
+        "set": [
+          "tournament.entered"
+        ]
       },
       "rounds": {
         "text": "dialogue.organizer.rounds",
@@ -642,6 +645,185 @@
         "set": [
           "met.east_fisher"
         ]
+      }
+    }
+  },
+  {
+    "id": "fishmonger.talk",
+    "start": [
+      {
+        "node": "cheia",
+        "requires": [
+          "encounter.earth.pier.caught"
+        ]
+      },
+      "vazia"
+    ],
+    "nodes": {
+      "vazia": {
+        "text": "dialogue.fishmonger.empty",
+        "speaker": "fishmonger"
+      },
+      "cheia": {
+        "text": "dialogue.fishmonger.buy",
+        "speaker": "fishmonger"
+      }
+    }
+  },
+  {
+    "id": "client_1.talk",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.client_1.line",
+        "speaker": "client_1"
+      }
+    }
+  },
+  {
+    "id": "client_2.talk",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.client_2.line",
+        "speaker": "client_2"
+      }
+    }
+  },
+  {
+    "id": "client_3.talk",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.client_3.line",
+        "speaker": "client_3"
+      }
+    }
+  },
+  {
+    "id": "baker.talk",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.baker.talk",
+        "speaker": "baker"
+      }
+    }
+  },
+  {
+    "id": "boat_builder.talk",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.boat_builder.talk",
+        "speaker": "boat_builder"
+      }
+    }
+  },
+  {
+    "id": "gatekeeper.talk",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.gatekeeper.talk",
+        "speaker": "gatekeeper",
+        "set": [
+          "met.gatekeeper"
+        ]
+      }
+    }
+  },
+  {
+    "id": "rival.talk",
+    "start": [
+      {
+        "node": "depois",
+        "requires": [
+          "tournament.entered"
+        ]
+      },
+      "antes"
+    ],
+    "nodes": {
+      "antes": {
+        "text": "dialogue.rival.before",
+        "speaker": "rival"
+      },
+      "depois": {
+        "text": "dialogue.rival.after",
+        "speaker": "rival"
+      }
+    }
+  },
+  {
+    "id": "spectator_1.talk",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.spectator_1.talk",
+        "speaker": "spectator_1"
+      }
+    }
+  },
+  {
+    "id": "spectator_2.talk",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.spectator_2.talk",
+        "speaker": "spectator_2"
+      }
+    }
+  },
+  {
+    "id": "stand_rod.talk",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.stand_rod.talk",
+        "speaker": "stand_rod"
+      }
+    }
+  },
+  {
+    "id": "stand_line.talk",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.stand_line.talk",
+        "speaker": "stand_line"
+      }
+    }
+  },
+  {
+    "id": "stand_reel.talk",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "text": "dialogue.stand_reel.talk",
+        "speaker": "stand_reel"
       }
     }
   }
