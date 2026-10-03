@@ -465,5 +465,184 @@
         ]
       }
     }
+  },
+  {
+    "id": "neighbor.talk",
+    "start": [
+      {
+        "node": "boss",
+        "requires": [
+          "earth.boss.appeared"
+        ]
+      },
+      {
+        "node": "festa",
+        "requires": [
+          "friend.festival_invite"
+        ]
+      },
+      {
+        "node": "depois",
+        "requires": [
+          "friend.met"
+        ]
+      },
+      "primeiro"
+    ],
+    "nodes": {
+      "primeiro": {
+        "text": "dialogue.neighbor.first",
+        "speaker": "neighbor",
+        "set": [
+          "met.neighbor"
+        ]
+      },
+      "depois": {
+        "text": "dialogue.neighbor.after",
+        "speaker": "neighbor",
+        "set": [
+          "met.neighbor"
+        ]
+      },
+      "festa": {
+        "text": "dialogue.neighbor.festival",
+        "speaker": "neighbor",
+        "set": [
+          "met.neighbor"
+        ]
+      },
+      "boss": {
+        "text": "dialogue.neighbor.boss",
+        "speaker": "neighbor",
+        "set": [
+          "met.neighbor"
+        ]
+      }
+    }
+  },
+  {
+    "id": "kid.talk",
+    "start": [
+      {
+        "node": "depois",
+        "requires": [
+          "encounter.earth.pier.caught"
+        ]
+      },
+      "primeiro"
+    ],
+    "nodes": {
+      "primeiro": {
+        "text": "dialogue.kid.first",
+        "speaker": "kid",
+        "set": [
+          "met.kid"
+        ]
+      },
+      "depois": {
+        "text": "dialogue.kid.after",
+        "speaker": "kid",
+        "set": [
+          "met.kid"
+        ]
+      }
+    }
+  },
+  {
+    "id": "net_mender.talk",
+    "start": [
+      {
+        "node": "boss",
+        "requires": [
+          "earth.boss.appeared"
+        ]
+      },
+      "primeiro"
+    ],
+    "nodes": {
+      "primeiro": {
+        "text": "dialogue.net_mender.first",
+        "speaker": "net_mender",
+        "set": [
+          "met.net_mender"
+        ]
+      },
+      "boss": {
+        "text": "dialogue.net_mender.boss",
+        "speaker": "net_mender",
+        "set": [
+          "met.net_mender"
+        ]
+      }
+    }
+  },
+  {
+    "id": "fisher_old.talk",
+    "start": [
+      {
+        "node": "boss",
+        "requires": [
+          "earth.boss.appeared"
+        ]
+      },
+      {
+        "node": "pescou",
+        "requires": [
+          "encounter.earth.pier.caught"
+        ]
+      },
+      "primeiro"
+    ],
+    "nodes": {
+      "primeiro": {
+        "text": "dialogue.fisher_old.first",
+        "speaker": "fisher_old",
+        "set": [
+          "met.fisher_old"
+        ]
+      },
+      "pescou": {
+        "text": "dialogue.fisher_old.caught",
+        "speaker": "fisher_old",
+        "set": [
+          "met.fisher_old"
+        ]
+      },
+      "boss": {
+        "text": "dialogue.fisher_old.boss",
+        "speaker": "fisher_old",
+        "set": [
+          "met.fisher_old"
+        ]
+      }
+    }
+  },
+  {
+    "id": "east_fisher.talk",
+    "start": [
+      {
+        "node": "estrada",
+        "requires": [
+          "tournament.invited"
+        ]
+      },
+      "primeiro"
+    ],
+    "nodes": {
+      "primeiro": {
+        "text": "dialogue.east_fisher.first",
+        "speaker": "east_fisher",
+        "set": [
+          "met.east_fisher"
+        ]
+      },
+      "estrada": {
+        "text": "dialogue.east_fisher.road",
+        "speaker": "east_fisher",
+        "set": [
+          "met.east_fisher"
+        ]
+      }
+    }
   }
 ]
