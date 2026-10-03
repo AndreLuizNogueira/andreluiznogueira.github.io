@@ -1,0 +1,17 @@
+{
+  "size": {
+    "width": 460,
+    "height": 460
+  },
+  "pivot": {
+    "x": 230,
+    "y": 411
+  },
+  "direction": "south",
+  "density": 2,
+  "worldCanvas": {
+    "width": 230,
+    "height": 230
+  },
+  "animated": false
+}
