@@ -9408,7 +9408,7 @@ a3G(){var s=0,r=A.v(t.H),q,p,o,n,m,l,k,j,i
 var $async$a3G=A.w(function(a,b){if(a===1)return A.r(b,r)
 for(;;)switch(s){case 0:if($.ad==null)A.aFG()
 $.ad.toString
-$.aHZ="v0.1.41+42"
+$.aHZ="v0.1.42+43"
 q=new A.Ns(A.b([],t.s))
 s=2
 return A.k(A.aBS(q),$async$a3G)
@@ -9463,7 +9463,7 @@ i=$.aLq
 if(i==null)A.V(A.ay("The SharedPreferencesAsyncPlatform instance must be set."))
 else j.b=i
 s=7
-return A.k(A.akE(A.aF3("v0.1.41+42",!0,B.kV,new A.aiO(j,"dsf.")),a),$async$aBT)
+return A.k(A.akE(A.aF3("v0.1.42+43",!0,B.kV,new A.aiO(j,"dsf.")),a),$async$aBT)
 case 7:n=c
 A:{m=n.d
 if(B.H0===m){a.hQ(B.dq,B.eh,"Save principal inv\xe1lido; usado o backup.")
@@ -9480,7 +9480,7 @@ g=o.pop()
 l=A.a3(g)
 k=A.an(g)
 a.kb(B.cj,B.eh,"Armazenamento indispon\xedvel; save s\xf3 em mem\xf3ria",l,k)
-q=A.CF(null,a,A.aF3("v0.1.41+42",!0,B.kV,null),B.jS)
+q=A.CF(null,a,A.aF3("v0.1.42+43",!0,B.kV,null),B.jS)
 s=1
 break
 s=6
@@ -49369,7 +49369,7 @@ $S:400}
 A.a7f.prototype={
 $2(a,b){var s=A.b([],t.p)
 if(b!=null)s.push(new A.Bd(b,null))
-s.push(B.a54)
+s.push(B.a53)
 return A.ft(B.bb,s,B.a2,B.c6,null)},
 $S:409}
 A.aCa.prototype={
@@ -51662,7 +51662,7 @@ $S:691}
 A.a9V.prototype={
 $2(a,b){var s,r=this,q=null,p=B.c.aT(b.b*0.55,220,560),o=p/256,n=t.p,m=A.b([],n)
 if(!r.b){s=220*o
-B.b.I(m,A.b([A.hB(A.b([A.ld("assets/images/ui/icon_tension_v1.png",q,q,new A.a9U(),B.bH,q,28,28),B.a7N,A.Tb(A.ft(B.bb,A.b([A.aiL(0,A.aJ6("assets/images/ui/tension_frame_256x32_v1.png")),A.Rp(q,A.aHW(r.d,B.aY,s*r.c),10*o,q,18*o,q,11*o,q),A.aiL(0,A.aJ6("assets/images/ui/tension_marks_256x32_v1.png"))],n),B.a2,B.c6,q),p*32/256,p),B.a7L],n),B.ao,B.U,B.aU,0),B.HS,A.Tb(A.ft(B.bb,A.b([B.a53,A.aHW(B.pP,B.aY,s*r.e.w)],n),B.a2,B.c6,q),5,s),B.ny],n))}if(!r.f){n=A.fe(999)
+B.b.I(m,A.b([A.hB(A.b([A.ld("assets/images/ui/icon_tension_v1.png",q,q,new A.a9U(),B.bH,q,28,28),B.a7N,A.Tb(A.ft(B.bb,A.b([A.aiL(0,A.aJ6("assets/images/ui/tension_frame_256x32_v1.png")),A.Rp(q,A.aHW(r.d,B.aY,s*r.c),10*o,q,18*o,q,11*o,q),A.aiL(0,A.aJ6("assets/images/ui/tension_marks_256x32_v1.png"))],n),B.a2,B.c6,q),p*32/256,p),B.a7L],n),B.ao,B.U,B.aU,0),B.HS,A.Tb(A.ft(B.bb,A.b([B.a54,A.aHW(B.pP,B.aY,s*r.e.w)],n),B.a2,B.c6,q),5,s),B.ny],n))}if(!r.f){n=A.fe(999)
 m.push(A.jF(new A.c0(B.OP,new A.N1(r.a.c,q),q),new A.cI(B.py,q,A.mu(B.l6,1),n,q,q,B.ai),B.bl))}return A.en(m,B.ao,B.U,B.aU)},
 $S:231}
 A.a9U.prototype={
@@ -99202,15 +99202,15 @@ B.a5_=new A.v2(1,"scroll")
 B.a50=new A.v2(3,"scale")
 B.a51=new A.v2(4,"unknown")
 B.a52=new A.BW(null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.LD=new A.q(0.8,0.10588235294117647,0.13725490196078433,0.2,B.e)
-B.NL=new A.mE(B.LD,!0,null,null)
-B.a53=new A.qv(0,0,0,0,null,null,B.NL,null)
 B.h=new A.r_(0)
 B.acz=new A.z(!0,B.pJ,null,null,null,null,11,B.a8,null,0.5,null,null,null,null,null,null,null,B.h,null,null,null,null,null,null,null,null)
-B.acS=new A.kl("v0.1.41+42",null,B.acz,null,null,null,null,null,null,null)
+B.acS=new A.kl("v0.1.42+43",null,B.acz,null,null,null,null,null,null,null)
 B.a5S=new A.CC(!0,B.acS,null)
 B.Q2=new A.lc(!0,B.a5S,null)
-B.a54=new A.qv(null,null,12,8,null,null,B.Q2,null)
+B.a53=new A.qv(null,null,12,8,null,null,B.Q2,null)
+B.LD=new A.q(0.8,0.10588235294117647,0.13725490196078433,0.2,B.e)
+B.NL=new A.mE(B.LD,!0,null,null)
+B.a54=new A.qv(0,0,0,0,null,null,B.NL,null)
 B.a55=new A.BY(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.a56=new A.C1(null,null,null,null,null,null,null,null,null)
 B.hc=new A.b9(8,8)
