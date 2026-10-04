@@ -64,18 +64,51 @@
         ]
       },
       {
-        "node": "after_catch",
+        "node": "festival_wait",
         "requires": [
-          "encounter.earth.pier.caught"
-        ],
-        "forbids": [
           "friend.festival_invite"
         ]
       },
       {
-        "node": "festival_wait",
+        "node": "invite",
         "requires": [
-          "friend.festival_invite"
+          "shop.sold_fish"
+        ]
+      },
+      {
+        "node": "sell_wait",
+        "requires": [
+          "line.given"
+        ]
+      },
+      {
+        "node": "line",
+        "requires": [
+          "reel.given"
+        ]
+      },
+      {
+        "node": "reel_wait",
+        "requires": [
+          "reel.sent"
+        ]
+      },
+      {
+        "node": "rod_ready",
+        "requires": [
+          "carpenter.done"
+        ]
+      },
+      {
+        "node": "carpenter_wait",
+        "requires": [
+          "carpenter.sent"
+        ]
+      },
+      {
+        "node": "broken",
+        "requires": [
+          "encounter.earth.pier.caught"
         ]
       },
       {
@@ -113,17 +146,12 @@
       },
       "teach_end": {
         "speaker": "friend",
-        "text": "dialogue.friend.teach_end"
+        "text": "dialogue.friend.teach_end",
+        "next": "old_rod"
       },
       "again": {
         "speaker": "friend",
         "text": "dialogue.friend.again"
-      },
-      "after_catch": {
-        "speaker": "friend",
-        "text": "dialogue.friend.after_catch",
-        "expression": "laugh",
-        "next": "invite"
       },
       "invite": {
         "speaker": "friend",
@@ -165,6 +193,83 @@
       "spread": {
         "speaker": "friend",
         "text": "dialogue.friend.spread"
+      },
+      "old_rod": {
+        "speaker": "friend",
+        "text": "dialogue.friend.old_rod",
+        "set": [
+          "tutorial.old_rod"
+        ]
+      },
+      "broken": {
+        "speaker": "friend",
+        "text": "dialogue.friend.after_catch",
+        "expression": "laugh",
+        "next": "broken_b"
+      },
+      "broken_b": {
+        "speaker": "friend",
+        "text": "dialogue.friend.broken",
+        "next": "broken_c"
+      },
+      "broken_c": {
+        "speaker": "friend",
+        "text": "dialogue.friend.carpenter",
+        "set": [
+          "carpenter.sent"
+        ]
+      },
+      "carpenter_wait": {
+        "speaker": "friend",
+        "text": "dialogue.friend.carpenter_wait"
+      },
+      "rod_ready": {
+        "speaker": "friend",
+        "text": "dialogue.friend.rod_ready",
+        "next": "rod_ready_b"
+      },
+      "rod_ready_b": {
+        "speaker": "friend",
+        "text": "dialogue.friend.reel",
+        "set": [
+          "reel.sent"
+        ]
+      },
+      "reel_wait": {
+        "speaker": "friend",
+        "text": "dialogue.friend.reel_wait"
+      },
+      "line": {
+        "speaker": "friend",
+        "text": "dialogue.friend.reel_seen",
+        "expression": "laugh",
+        "next": "line_b"
+      },
+      "line_b": {
+        "speaker": "friend",
+        "text": "dialogue.friend.line",
+        "set": [
+          "line.given"
+        ],
+        "next": "line_c"
+      },
+      "line_c": {
+        "speaker": "friend",
+        "text": "dialogue.friend.meet_people",
+        "next": "line_d"
+      },
+      "line_d": {
+        "speaker": "friend",
+        "text": "dialogue.friend.search",
+        "next": "line_e"
+      },
+      "line_e": {
+        "speaker": "friend",
+        "text": "dialogue.friend.sell"
+      },
+      "sell_wait": {
+        "speaker": "friend",
+        "text": "dialogue.friend.sell_wait"
       }
     }
   },
@@ -645,6 +750,38 @@
         ]
       },
       {
+        "node": "reel_deliver",
+        "requires": [
+          "reel.asked",
+          "collect.star.1",
+          "collect.star.2",
+          "collect.star.3",
+          "collect.star.4",
+          "collect.star.5"
+        ],
+        "forbids": [
+          "reel.given"
+        ]
+      },
+      {
+        "node": "reel_wait",
+        "requires": [
+          "reel.asked"
+        ],
+        "forbids": [
+          "reel.given"
+        ]
+      },
+      {
+        "node": "reel_ask",
+        "requires": [
+          "reel.sent"
+        ],
+        "forbids": [
+          "reel.asked"
+        ]
+      },
+      {
         "node": "pescou",
         "requires": [
           "encounter.earth.pier.caught"
@@ -680,6 +817,34 @@
         "set": [
           "met.fisher_old",
           "festival.told.fisher_old"
+        ]
+      },
+      "reel_ask": {
+        "speaker": "fisher_old",
+        "text": "dialogue.fisher_old.reel_ask",
+        "next": "reel_ask_b"
+      },
+      "reel_ask_b": {
+        "speaker": "fisher_old",
+        "text": "dialogue.fisher_old.reel_ask_b",
+        "set": [
+          "reel.asked"
+        ]
+      },
+      "reel_wait": {
+        "speaker": "fisher_old",
+        "text": "dialogue.fisher_old.reel_wait"
+      },
+      "reel_deliver": {
+        "speaker": "fisher_old",
+        "text": "dialogue.fisher_old.reel_deliver",
+        "next": "reel_deliver_b"
+      },
+      "reel_deliver_b": {
+        "speaker": "fisher_old",
+        "text": "dialogue.fisher_old.reel_deliver_b",
+        "set": [
+          "reel.given"
         ]
       }
     }
@@ -801,12 +966,74 @@
   {
     "id": "boat_builder.talk",
     "start": [
+      {
+        "node": "deliver",
+        "requires": [
+          "carpenter.asked",
+          "collect.wood.1",
+          "collect.wood.2",
+          "collect.wood.3",
+          "collect.wood.4",
+          "collect.stone.1",
+          "collect.stone.2",
+          "collect.stone.3"
+        ],
+        "forbids": [
+          "carpenter.done"
+        ]
+      },
+      {
+        "node": "wait",
+        "requires": [
+          "carpenter.asked"
+        ],
+        "forbids": [
+          "carpenter.done"
+        ]
+      },
+      {
+        "node": "ask",
+        "requires": [
+          "carpenter.sent"
+        ],
+        "forbids": [
+          "carpenter.asked"
+        ]
+      },
       "a"
     ],
     "nodes": {
       "a": {
         "text": "dialogue.boat_builder.talk",
         "speaker": "boat_builder"
+      },
+      "ask": {
+        "speaker": "boat_builder",
+        "text": "dialogue.boat_builder.ask",
+        "next": "ask_b"
+      },
+      "ask_b": {
+        "speaker": "boat_builder",
+        "text": "dialogue.boat_builder.ask_b",
+        "set": [
+          "carpenter.asked"
+        ]
+      },
+      "wait": {
+        "speaker": "boat_builder",
+        "text": "dialogue.boat_builder.wait"
+      },
+      "deliver": {
+        "speaker": "boat_builder",
+        "text": "dialogue.boat_builder.deliver",
+        "next": "deliver_b"
+      },
+      "deliver_b": {
+        "speaker": "boat_builder",
+        "text": "dialogue.boat_builder.deliver_b",
+        "set": [
+          "carpenter.done"
+        ]
       }
     }
   },

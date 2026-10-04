@@ -80,5 +80,63 @@
       "speed": 3.0,
       "fightEfficiency": 0.045
     }
+  },
+  {
+    "id": "rod.old",
+    "category": "rod",
+    "tier": 1,
+    "unique": true,
+    "breaksWhen": "encounter.earth.pier.caught",
+    "stats": {
+      "responsiveness": 4.4
+    }
+  },
+  {
+    "id": "line.old",
+    "category": "line",
+    "tier": 1,
+    "unique": true,
+    "breaksWhen": "encounter.earth.pier.caught",
+    "stats": {
+      "maxTension": 1.4,
+      "spikeTolerance": 0.2,
+      "graceTime": 0.45,
+      "dragMax": 0.45,
+      "ratedWeightKg": 5,
+      "depthRating": 20
+    }
+  },
+  {
+    "id": "reel.worn",
+    "category": "reel",
+    "tier": 1,
+    "unique": true,
+    "breaksWhen": "encounter.earth.pier.caught",
+    "stats": {
+      "torque": 0.8,
+      "speed": 2.4,
+      "fightEfficiency": 0.03
+    }
+  },
+  {
+    "id": "rod.carved",
+    "category": "rod",
+    "tier": 1,
+    "unique": true,
+    "stats": {
+      "responsiveness": 4.0
+    }
+  },
+  {
+    "id": "reel.old",
+    "category": "reel",
+    "tier": 1,
+    "unique": true,
+    "breaksWhen": "encounter.earth.boss.caught",
+    "stats": {
+      "torque": 0.85,
+      "speed": 2.6,
+      "fightEfficiency": 0.035
+    }
   }
 ]

@@ -13,6 +13,60 @@
       ]
     },
     {
+      "id": "tutorial.old_rod",
+      "map": "village",
+      "requires": [
+        "tutorial.old_rod"
+      ],
+      "steps": [
+        {
+          "give": "rod.old"
+        },
+        {
+          "give": "line.old"
+        },
+        {
+          "give": "reel.worn"
+        }
+      ]
+    },
+    {
+      "id": "tutorial.carved_rod",
+      "map": "village",
+      "requires": [
+        "carpenter.done"
+      ],
+      "steps": [
+        {
+          "give": "rod.carved"
+        }
+      ]
+    },
+    {
+      "id": "tutorial.old_reel",
+      "map": "village",
+      "requires": [
+        "reel.given"
+      ],
+      "steps": [
+        {
+          "give": "reel.old"
+        }
+      ]
+    },
+    {
+      "id": "tutorial.line",
+      "map": "village",
+      "requires": [
+        "line.given"
+      ],
+      "steps": [
+        {
+          "give": "line.nylon"
+        }
+      ]
+    },
+    {
       "id": "prologue.festival",
       "map": "village",
       "requires": [
@@ -213,6 +267,40 @@
         "festival.told.neighbor",
         "festival.told.baker",
         "festival.told.fisher_old"
+      ]
+    },
+    {
+      "requires": [
+        "reel.asked"
+      ],
+      "forbids": [
+        "reel.given"
+      ],
+      "text": "objective.starfish",
+      "count": [
+        "collect.star.1",
+        "collect.star.2",
+        "collect.star.3",
+        "collect.star.4",
+        "collect.star.5"
+      ]
+    },
+    {
+      "requires": [
+        "carpenter.asked"
+      ],
+      "forbids": [
+        "carpenter.done"
+      ],
+      "text": "objective.carpenter",
+      "count": [
+        "collect.wood.1",
+        "collect.wood.2",
+        "collect.wood.3",
+        "collect.wood.4",
+        "collect.stone.1",
+        "collect.stone.2",
+        "collect.stone.3"
       ]
     },
     {
