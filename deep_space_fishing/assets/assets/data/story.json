@@ -16,10 +16,7 @@
       "id": "prologue.festival",
       "map": "village",
       "requires": [
-        "friend.festival_invite",
-        "met.fisher_old",
-        "met.kid",
-        "met.neighbor"
+        "friend.festival_invite"
       ],
       "steps": [
         {

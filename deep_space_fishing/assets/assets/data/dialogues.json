@@ -58,6 +58,12 @@
     "id": "friend.talk",
     "start": [
       {
+        "node": "boss",
+        "requires": [
+          "earth.boss.appeared"
+        ]
+      },
+      {
         "node": "after_catch",
         "requires": [
           "encounter.earth.pier.caught"
@@ -148,6 +154,11 @@
       "festival_wait": {
         "speaker": "friend",
         "text": "dialogue.friend.festival_wait"
+      },
+      "boss": {
+        "speaker": "friend",
+        "text": "dialogue.friend.boss",
+        "expression": "serious"
       }
     }
   },
@@ -289,12 +300,25 @@
   {
     "id": "family.talk",
     "start": [
-      "a"
+      {
+        "node": "a",
+        "requires": [
+          "earth.friend.dead"
+        ]
+      },
+      "search"
     ],
     "nodes": {
       "a": {
         "text": "dialogue.family.talk",
         "speaker": "friend_family"
+      },
+      "search": {
+        "speaker": "friend_family",
+        "text": "dialogue.family.search",
+        "set": [
+          "earth.friend.found"
+        ]
       }
     }
   },
@@ -555,6 +579,12 @@
     "id": "net_mender.talk",
     "start": [
       {
+        "node": "after_boss",
+        "requires": [
+          "encounter.earth.boss.caught"
+        ]
+      },
+      {
         "node": "boss",
         "requires": [
           "earth.boss.appeared"
@@ -572,6 +602,13 @@
       },
       "boss": {
         "text": "dialogue.net_mender.boss",
+        "speaker": "net_mender",
+        "set": [
+          "met.net_mender"
+        ]
+      },
+      "after_boss": {
+        "text": "dialogue.net_mender.after_boss",
         "speaker": "net_mender",
         "set": [
           "met.net_mender"
