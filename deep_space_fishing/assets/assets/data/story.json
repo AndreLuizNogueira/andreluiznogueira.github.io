@@ -40,6 +40,21 @@
           "card": "story.card.weeks_later"
         },
         {
+          "move": {
+            "who": "player",
+            "x": 1336,
+            "y": 504,
+            "instant": true
+          }
+        },
+        {
+          "move": {
+            "who": "player",
+            "x": 1342,
+            "y": 504
+          }
+        },
+        {
           "dialogue": "villager.alarm"
         },
         {
@@ -107,6 +122,21 @@
           "card": "story.card.final"
         },
         {
+          "move": {
+            "who": "player",
+            "x": 483,
+            "y": 250,
+            "instant": true
+          }
+        },
+        {
+          "move": {
+            "who": "player",
+            "x": 483,
+            "y": 246
+          }
+        },
+        {
           "dialogue": "organizer.dinner"
         },
         {
@@ -116,7 +146,8 @@
           "card": "story.card.wake_up"
         },
         {
-          "dialogue": "aliens.reveal"
+          "dialogue": "aliens.reveal",
+          "image": "ship/ship_dredger_main_amplo_v1.png"
         },
         {
           "card": "story.card.ship",
