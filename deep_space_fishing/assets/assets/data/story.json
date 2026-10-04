@@ -253,14 +253,40 @@
       ]
     },
     {
-      "id": "prologue.venue",
+      "id": "prologue.bus",
       "map": "venue",
       "requires": [
         "tournament.invited"
       ],
       "steps": [
         {
-          "card": "story.card.venue"
+          "card": "story.card.bus_board"
+        },
+        {
+          "card": "story.card.bus_road"
+        },
+        {
+          "card": "story.card.bus_arrival"
+        }
+      ]
+    },
+    {
+      "id": "tournament.start",
+      "map": "venue",
+      "requires": [
+        "tournament.entered"
+      ],
+      "steps": [
+        {
+          "move": {
+            "who": "player",
+            "x": 448,
+            "y": 576,
+            "instant": true
+          }
+        },
+        {
+          "dialogue": "announcer.start"
         }
       ]
     },
@@ -350,6 +376,24 @@
         "tournament.entered"
       ],
       "text": "objective.tournament_round1"
+    },
+    {
+      "requires": [
+        "venue.ate"
+      ],
+      "text": "objective.venue_organizer"
+    },
+    {
+      "requires": [
+        "venue.invite_checked"
+      ],
+      "text": "objective.venue_eat"
+    },
+    {
+      "requires": [
+        "scene.prologue.bus"
+      ],
+      "text": "objective.venue_gate"
     },
     {
       "requires": [
