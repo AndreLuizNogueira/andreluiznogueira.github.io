@@ -1,0 +1,74 @@
+[
+  {
+    "id": "earth.common",
+    "minWeightKg": 2.0,
+    "maxWeightKg": 4.0,
+    "pricePerKg": 1,
+    "mechanic": "line",
+    "sprite": "fish/prototype_fish_128_anim_v1",
+    "spriteSize": 48
+  },
+  {
+    "id": "earth.small",
+    "minWeightKg": 0.2,
+    "maxWeightKg": 0.6,
+    "price": 2,
+    "mechanic": "reflex",
+    "sprite": "fish/prototype_fish_128_anim_v1",
+    "spriteSize": 32
+  },
+  {
+    "id": "earth.odd",
+    "minWeightKg": 5.0,
+    "maxWeightKg": 9.0,
+    "pricePerKg": 2,
+    "mechanic": "direction",
+    "sprite": "fish/prototype_fish_128_anim_v1",
+    "spriteSize": 64
+  },
+  {
+    "id": "earth.boss",
+    "minWeightKg": 20.0,
+    "maxWeightKg": 20.0,
+    "pricePerKg": 1,
+    "mechanic": "line",
+    "strength": 2.25,
+    "endurance": 0.3,
+    "initialDistance": 24,
+    "sprite": "fish/earth_boss_128_anim_v1",
+    "spriteSize": 96
+  },
+  {
+    "id": "tournament.round1",
+    "minWeightKg": 4.0,
+    "maxWeightKg": 4.0,
+    "pricePerKg": 1,
+    "mechanic": "line",
+    "strength": 0.8,
+    "sprite": "fish/prototype_fish_128_anim_v1",
+    "spriteSize": 48
+  },
+  {
+    "id": "tournament.round2",
+    "minWeightKg": 7.0,
+    "maxWeightKg": 7.0,
+    "pricePerKg": 1,
+    "mechanic": "line",
+    "strength": 1.1,
+    "endurance": 0.8,
+    "sprite": "fish/prototype_fish_128_anim_v1",
+    "spriteSize": 48
+  },
+  {
+    "id": "tournament.final",
+    "minWeightKg": 22.0,
+    "maxWeightKg": 22.0,
+    "pricePerKg": 1,
+    "mechanic": "line",
+    "strength": 2.25,
+    "endurance": 0.3,
+    "initialDistance": 24,
+    "sprite": "fish/earth_boss_128_anim_v1",
+    "spriteSize": 96
+  }
+]

@@ -1,37 +1,52 @@
 [
   {
     "id": "earth.pier",
-    "fishWeightKg": 3
+    "depthM": 0,
+    "pool": [
+      { "fish": "earth.small", "weight": 50 },
+      { "fish": "earth.common", "weight": 35 },
+      { "fish": "earth.odd", "weight": 15 }
+    ]
   },
   {
     "id": "earth.boss",
-    "fishWeightKg": 20,
     "depthM": 10,
     "strength": 2.25,
     "endurance": 0.3,
     "initialDistance": 24,
     "sprite": "fish/earth_boss_128_anim_v1",
-    "spriteSize": 96
+    "spriteSize": 96,
+    "pool": [
+      { "fish": "earth.boss", "weight": 1 }
+    ]
   },
   {
     "id": "tournament.round1",
-    "fishWeightKg": 4,
-    "strength": 0.8
+    "depthM": 0,
+    "strength": 0.8,
+    "pool": [
+      { "fish": "tournament.round1", "weight": 1 }
+    ]
   },
   {
     "id": "tournament.round2",
-    "fishWeightKg": 7,
+    "depthM": 0,
     "strength": 1.1,
-    "endurance": 0.8
+    "endurance": 0.8,
+    "pool": [
+      { "fish": "tournament.round2", "weight": 1 }
+    ]
   },
   {
     "id": "tournament.final",
-    "fishWeightKg": 22,
     "depthM": 12,
     "strength": 2.25,
     "endurance": 0.3,
     "initialDistance": 24,
     "sprite": "fish/earth_boss_128_anim_v1",
-    "spriteSize": 96
+    "spriteSize": 96,
+    "pool": [
+      { "fish": "tournament.final", "weight": 1 }
+    ]
   }
 ]
