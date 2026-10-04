@@ -145,11 +145,13 @@
       "invite_yes": {
         "speaker": "friend",
         "text": "dialogue.friend.invite_yes_answer",
-        "expression": "laugh"
+        "expression": "laugh",
+        "next": "spread"
       },
       "invite_maybe": {
         "speaker": "friend",
-        "text": "dialogue.friend.invite_maybe_answer"
+        "text": "dialogue.friend.invite_maybe_answer",
+        "next": "spread"
       },
       "festival_wait": {
         "speaker": "friend",
@@ -159,6 +161,10 @@
         "speaker": "friend",
         "text": "dialogue.friend.boss",
         "expression": "serious"
+      },
+      "spread": {
+        "speaker": "friend",
+        "text": "dialogue.friend.spread"
       }
     }
   },
@@ -506,6 +512,9 @@
         "node": "festa",
         "requires": [
           "friend.festival_invite"
+        ],
+        "forbids": [
+          "earth.friend.gift_line"
         ]
       },
       {
@@ -535,7 +544,8 @@
         "text": "dialogue.neighbor.festival",
         "speaker": "neighbor",
         "set": [
-          "met.neighbor"
+          "met.neighbor",
+          "festival.told.neighbor"
         ]
       },
       "boss": {
@@ -626,6 +636,15 @@
         ]
       },
       {
+        "node": "festa",
+        "requires": [
+          "friend.festival_invite"
+        ],
+        "forbids": [
+          "earth.friend.gift_line"
+        ]
+      },
+      {
         "node": "pescou",
         "requires": [
           "encounter.earth.pier.caught"
@@ -653,6 +672,14 @@
         "speaker": "fisher_old",
         "set": [
           "met.fisher_old"
+        ]
+      },
+      "festa": {
+        "text": "dialogue.fisher_old.festival",
+        "speaker": "fisher_old",
+        "set": [
+          "met.fisher_old",
+          "festival.told.fisher_old"
         ]
       }
     }
@@ -746,12 +773,28 @@
   {
     "id": "baker.talk",
     "start": [
+      {
+        "node": "festa",
+        "requires": [
+          "friend.festival_invite"
+        ],
+        "forbids": [
+          "earth.friend.gift_line"
+        ]
+      },
       "a"
     ],
     "nodes": {
       "a": {
         "text": "dialogue.baker.talk",
         "speaker": "baker"
+      },
+      "festa": {
+        "text": "dialogue.baker.festival",
+        "speaker": "baker",
+        "set": [
+          "festival.told.baker"
+        ]
       }
     }
   },

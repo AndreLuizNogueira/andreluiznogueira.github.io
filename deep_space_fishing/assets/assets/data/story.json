@@ -16,7 +16,10 @@
       "id": "prologue.festival",
       "map": "village",
       "requires": [
-        "friend.festival_invite"
+        "friend.festival_invite",
+        "festival.told.neighbor",
+        "festival.told.baker",
+        "festival.told.fisher_old"
       ],
       "steps": [
         {
@@ -147,7 +150,7 @@
         },
         {
           "dialogue": "aliens.reveal",
-          "image": "ship/ship_dredger_main_amplo_v1.png"
+          "image": "ship/ship_mapa_estelar_v1.png"
         },
         {
           "card": "story.card.ship",
@@ -205,7 +208,12 @@
       "requires": [
         "friend.festival_invite"
       ],
-      "text": "objective.festival"
+      "text": "objective.festival_tell",
+      "count": [
+        "festival.told.neighbor",
+        "festival.told.baker",
+        "festival.told.fisher_old"
+      ]
     },
     {
       "requires": [
