@@ -77,6 +77,9 @@
       ],
       "steps": [
         {
+          "music": "festival"
+        },
+        {
           "card": "story.card.months"
         },
         {
@@ -92,6 +95,9 @@
         },
         {
           "flag": "earth.friend.gift_line"
+        },
+        {
+          "music": "village"
         },
         {
           "card": "story.card.weeks_later"
@@ -126,6 +132,9 @@
         "earth.friend.found"
       ],
       "steps": [
+        {
+          "music": "loss"
+        },
         {
           "card": "story.card.boss_caught"
         },
@@ -176,6 +185,9 @@
       ],
       "steps": [
         {
+          "music": "victory"
+        },
+        {
           "card": "story.card.final"
         },
         {
@@ -200,6 +212,9 @@
           "card": "story.card.knocked_out"
         },
         {
+          "music": "ship"
+        },
+        {
           "card": "story.card.wake_up"
         },
         {
@@ -209,6 +224,9 @@
         {
           "card": "story.card.ship",
           "image": "screens/cutscene_partida_v1.png"
+        },
+        {
+          "music": "title"
         },
         {
           "title": true
