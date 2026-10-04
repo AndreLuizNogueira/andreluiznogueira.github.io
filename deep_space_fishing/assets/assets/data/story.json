@@ -5,6 +5,18 @@
       "map": "village",
       "steps": [
         {
+          "card": "story.card.comet_space"
+        },
+        {
+          "card": "story.card.comet_atmosphere"
+        },
+        {
+          "card": "story.card.comet_impact"
+        },
+        {
+          "card": "story.card.months_before"
+        },
+        {
           "card": "story.card.opening"
         },
         {
@@ -83,24 +95,97 @@
           "card": "story.card.months"
         },
         {
-          "card": "story.card.festival",
-          "image": "screens/cutscene_festa_v1.png"
+          "move": {
+            "who": "player",
+            "x": 790,
+            "y": 812,
+            "instant": true
+          }
         },
         {
-          "dialogue": "friend.gift",
-          "image": "screens/cutscene_festa_v1.png"
+          "move": {
+            "who": "friend",
+            "x": 744,
+            "y": 812,
+            "instant": true
+          }
         },
+        {
+          "move": {
+            "who": "neighbor",
+            "x": 700,
+            "y": 836,
+            "instant": true
+          }
+        },
+        {
+          "move": {
+            "who": "villager",
+            "x": 860,
+            "y": 836,
+            "instant": true
+          }
+        },
+        {
+          "move": {
+            "who": "player",
+            "x": 786,
+            "y": 812
+          }
+        },
+        {
+          "flag": "festival.active"
+        }
+      ]
+    },
+    {
+      "id": "tutorial.special_line",
+      "map": "village",
+      "requires": [
+        "earth.friend.gift_line"
+      ],
+      "steps": [
         {
           "give": "line.special_gift"
-        },
-        {
-          "flag": "earth.friend.gift_line"
-        },
+        }
+      ]
+    },
+    {
+      "id": "prologue.morning_attack",
+      "map": "village",
+      "requires": [
+        "festival.done"
+      ],
+      "steps": [
         {
           "music": "village"
         },
         {
-          "card": "story.card.weeks_later"
+          "card": "story.card.next_morning"
+        },
+        {
+          "move": {
+            "who": "villager",
+            "x": 1376,
+            "y": 496,
+            "instant": true
+          }
+        },
+        {
+          "move": {
+            "who": "neighbor",
+            "x": 342,
+            "y": 224,
+            "instant": true
+          }
+        },
+        {
+          "move": {
+            "who": "friend",
+            "x": 710,
+            "y": 1130,
+            "instant": true
+          }
         },
         {
           "move": {
@@ -275,6 +360,24 @@
         "earth.boss.appeared"
       ],
       "text": "objective.boss"
+    },
+    {
+      "requires": [
+        "earth.friend.gift_line"
+      ],
+      "forbids": [
+        "earth.boss.appeared"
+      ],
+      "text": "objective.festival_rest"
+    },
+    {
+      "requires": [
+        "festival.active"
+      ],
+      "forbids": [
+        "earth.boss.appeared"
+      ],
+      "text": "objective.festival_friend"
     },
     {
       "requires": [

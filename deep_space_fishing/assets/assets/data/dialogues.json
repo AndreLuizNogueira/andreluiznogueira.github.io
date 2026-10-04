@@ -64,6 +64,26 @@
         ]
       },
       {
+        "node": "festival_end_ask",
+        "requires": [
+          "festival.active",
+          "earth.friend.gift_line"
+        ],
+        "forbids": [
+          "festival.done"
+        ]
+      },
+      {
+        "node": "festival_gift",
+        "requires": [
+          "festival.active"
+        ],
+        "forbids": [
+          "earth.friend.gift_line",
+          "festival.done"
+        ]
+      },
+      {
         "node": "festival_wait",
         "requires": [
           "friend.festival_invite"
@@ -184,6 +204,78 @@
       "festival_wait": {
         "speaker": "friend",
         "text": "dialogue.friend.festival_wait"
+      },
+      "festival_gift": {
+        "speaker": "friend",
+        "text": "dialogue.friend.gift",
+        "next": "festival_gift_line"
+      },
+      "festival_gift_line": {
+        "speaker": "friend",
+        "text": "dialogue.friend.gift_line",
+        "next": "festival_gift_rule"
+      },
+      "festival_gift_rule": {
+        "speaker": "friend",
+        "text": "dialogue.friend.gift_rule",
+        "expression": "serious",
+        "choices": [
+          {
+            "text": "dialogue.friend.gift_thanks",
+            "next": "festival_gift_thanks"
+          },
+          {
+            "text": "dialogue.friend.gift_why",
+            "next": "festival_gift_why"
+          }
+        ]
+      },
+      "festival_gift_thanks": {
+        "speaker": "friend",
+        "text": "dialogue.friend.gift_thanks_answer",
+        "expression": "laugh",
+        "set": [
+          "earth.friend.gift_line"
+        ]
+      },
+      "festival_gift_why": {
+        "speaker": "friend",
+        "text": "dialogue.friend.gift_why_answer",
+        "expression": "serious",
+        "next": "festival_gift_why_b"
+      },
+      "festival_gift_why_b": {
+        "speaker": "friend",
+        "text": "dialogue.friend.gift_why_answer_b",
+        "expression": "serious",
+        "set": [
+          "earth.friend.gift_line"
+        ]
+      },
+      "festival_end_ask": {
+        "speaker": "friend",
+        "text": "dialogue.friend.festival_end_ask",
+        "choices": [
+          {
+            "text": "dialogue.friend.festival_end_choice_rest",
+            "next": "festival_end_rest"
+          },
+          {
+            "text": "dialogue.friend.festival_end_choice_stay",
+            "next": "festival_end_stay"
+          }
+        ]
+      },
+      "festival_end_rest": {
+        "speaker": "friend",
+        "text": "dialogue.friend.festival_end_rest_answer",
+        "set": [
+          "festival.done"
+        ]
+      },
+      "festival_end_stay": {
+        "speaker": "friend",
+        "text": "dialogue.friend.festival_end_stay_answer"
       },
       "boss": {
         "speaker": "friend",
@@ -359,11 +451,24 @@
           "earth.boss.appeared"
         ]
       },
+      {
+        "node": "festival",
+        "requires": [
+          "festival.active"
+        ],
+        "forbids": [
+          "earth.boss.appeared"
+        ]
+      },
       "calm"
     ],
     "nodes": {
       "calm": {
         "text": "dialogue.villager.calm",
+        "speaker": "villager"
+      },
+      "festival": {
+        "text": "dialogue.villager.festival",
         "speaker": "villager"
       },
       "boss": {
@@ -614,6 +719,15 @@
         ]
       },
       {
+        "node": "festival_party",
+        "requires": [
+          "festival.active"
+        ],
+        "forbids": [
+          "earth.boss.appeared"
+        ]
+      },
+      {
         "node": "festa",
         "requires": [
           "friend.festival_invite"
@@ -653,6 +767,13 @@
           "festival.told.neighbor"
         ]
       },
+      "festival_party": {
+        "text": "dialogue.neighbor.festival_party",
+        "speaker": "neighbor",
+        "set": [
+          "met.neighbor"
+        ]
+      },
       "boss": {
         "text": "dialogue.neighbor.boss",
         "speaker": "neighbor",
@@ -665,6 +786,15 @@
   {
     "id": "kid.talk",
     "start": [
+      {
+        "node": "festival",
+        "requires": [
+          "festival.active"
+        ],
+        "forbids": [
+          "earth.boss.appeared"
+        ]
+      },
       {
         "node": "depois",
         "requires": [
@@ -687,6 +817,10 @@
         "set": [
           "met.kid"
         ]
+      },
+      "festival": {
+        "text": "dialogue.kid.festival",
+        "speaker": "kid"
       }
     }
   },
@@ -942,6 +1076,15 @@
     "id": "baker.talk",
     "start": [
       {
+        "node": "festival_party",
+        "requires": [
+          "festival.active"
+        ],
+        "forbids": [
+          "earth.boss.appeared"
+        ]
+      },
+      {
         "node": "festa",
         "requires": [
           "friend.festival_invite"
@@ -963,6 +1106,10 @@
         "set": [
           "festival.told.baker"
         ]
+      },
+      "festival_party": {
+        "text": "dialogue.baker.festival_party",
+        "speaker": "baker"
       }
     }
   },
