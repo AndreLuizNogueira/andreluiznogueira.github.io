@@ -222,13 +222,14 @@
   "dialogue.boat_builder.deliver": "Isso serve. Me dá um minuto.",
   "dialogue.boat_builder.deliver_b": "Pronto: vara de madeira, feita à mão. Molinete e linha não são comigo.",
   "dialogue.fisher_old.reel_ask": "Molinete? Tenho um velho, guardado faz tempo.",
-  "dialogue.fisher_old.reel_ask_b": "Te dou. Mas me faz um favor: cata cinco estrelas-do-mar na praia pra mim.",
-  "dialogue.fisher_old.reel_wait": "Cinco estrelas-do-mar. Na areia, perto da água.",
+  "dialogue.fisher_old.reel_ask_b": "Te dou. Mas me faz um favor: cata oito estrelas-do-mar na praia pra mim.",
+  "dialogue.fisher_old.reel_wait": "Oito estrelas-do-mar. Tem na areia toda, do cais até o leste.",
   "dialogue.fisher_old.reel_deliver": "Olha que bonitas.",
   "dialogue.fisher_old.reel_deliver_b": "Toma o molinete. Cuida dele.",
   "objective.carpenter": "Madeira e pedras para o carpinteiro",
   "objective.starfish": "Estrelas-do-mar para o velho do cais",
   "collect.wood": "Você pega um pedaço de madeira.",
   "collect.stone": "Você pega uma pedra lisa da praia.",
-  "collect.star": "Você pega uma estrela-do-mar."
+  "collect.star": "Você pega uma estrela-do-mar.",
+  "collect.star_before": "Uma estrela-do-mar na areia."
 }

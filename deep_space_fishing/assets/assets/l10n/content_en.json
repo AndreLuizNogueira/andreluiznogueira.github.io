@@ -222,13 +222,14 @@
   "dialogue.boat_builder.deliver": "That will do. Give me a minute.",
   "dialogue.boat_builder.deliver_b": "Done: a wooden rod, handmade. Reel and line aren't my trade.",
   "dialogue.fisher_old.reel_ask": "A reel? I've got an old one, put away a long time.",
-  "dialogue.fisher_old.reel_ask_b": "It's yours. But do me a favor: gather five starfish on the beach for me.",
-  "dialogue.fisher_old.reel_wait": "Five starfish. On the sand, near the water.",
+  "dialogue.fisher_old.reel_ask_b": "It's yours. But do me a favor: gather eight starfish on the beach for me.",
+  "dialogue.fisher_old.reel_wait": "Eight starfish. They're all over the sand, from the pier to the east.",
   "dialogue.fisher_old.reel_deliver": "Look how pretty.",
   "dialogue.fisher_old.reel_deliver_b": "Here, the reel. Take care of it.",
   "objective.carpenter": "Wood and stones for the carpenter",
   "objective.starfish": "Starfish for the old pier man",
   "collect.wood": "You pick up a piece of wood.",
   "collect.stone": "You pick up a smooth beach stone.",
-  "collect.star": "You pick up a starfish."
+  "collect.star": "You pick up a starfish.",
+  "collect.star_before": "A starfish on the sand."
 }
