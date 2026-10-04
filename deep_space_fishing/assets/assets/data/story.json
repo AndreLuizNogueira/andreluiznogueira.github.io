@@ -190,20 +190,20 @@
         {
           "move": {
             "who": "player",
-            "x": 1336,
-            "y": 504,
+            "x": 710,
+            "y": 1150,
             "instant": true
           }
         },
         {
           "move": {
             "who": "player",
-            "x": 1342,
-            "y": 504
+            "x": 710,
+            "y": 1146
           }
         },
         {
-          "dialogue": "villager.alarm"
+          "dialogue": "friend.alarm"
         },
         {
           "flag": "earth.boss.appeared"
@@ -221,21 +221,20 @@
           "music": "loss"
         },
         {
-          "card": "story.card.boss_caught"
-        },
-        {
-          "card": "story.card.damage",
-          "image": "screens/cutscene_destruicao_v1.png"
-        },
-        {
           "card": "story.card.loss"
-        },
-        {
-          "flag": "earth.friend.dead"
         },
         {
           "card": "story.card.funeral",
           "image": "screens/cutscene_funeral_corrigido_v1.png"
+        },
+        {
+          "card": "story.card.rebuilding"
+        },
+        {
+          "card": "story.card.letters"
+        },
+        {
+          "flag": "earth.friend.dead"
         },
         {
           "dialogue": "family.letters",
@@ -247,6 +246,9 @@
         },
         {
           "flag": "tournament.invited"
+        },
+        {
+          "give": "net.special_broken"
         }
       ]
     },
@@ -357,7 +359,25 @@
     },
     {
       "requires": [
+        "encounter.earth.boss.caught"
+      ],
+      "forbids": [
+        "earth.friend.dead"
+      ],
+      "text": "objective.clear_debris",
+      "count": [
+        "collect.rubble.1",
+        "collect.rubble.2",
+        "collect.rubble.3",
+        "earth.friend.found"
+      ]
+    },
+    {
+      "requires": [
         "earth.boss.appeared"
+      ],
+      "forbids": [
+        "encounter.earth.boss.caught"
       ],
       "text": "objective.boss"
     },

@@ -415,6 +415,31 @@
     }
   },
   {
+    "id": "friend.alarm",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "speaker": "friend",
+        "expression": "serious",
+        "text": "dialogue.friend.alarm_a",
+        "next": "b"
+      },
+      "b": {
+        "speaker": "friend",
+        "expression": "serious",
+        "text": "dialogue.friend.alarm_b",
+        "next": "c"
+      },
+      "c": {
+        "speaker": "friend",
+        "expression": "serious",
+        "text": "dialogue.friend.alarm_c"
+      }
+    }
+  },
+  {
     "id": "villager.alarm",
     "start": [
       "a"
@@ -531,10 +556,7 @@
       },
       "search": {
         "speaker": "friend_family",
-        "text": "dialogue.family.search",
-        "set": [
-          "earth.friend.found"
-        ]
+        "text": "dialogue.family.search"
       }
     }
   },
@@ -713,6 +735,12 @@
     "id": "neighbor.talk",
     "start": [
       {
+        "node": "after_boss",
+        "requires": [
+          "encounter.earth.boss.caught"
+        ]
+      },
+      {
         "node": "boss",
         "requires": [
           "earth.boss.appeared"
@@ -780,6 +808,13 @@
         "set": [
           "met.neighbor"
         ]
+      },
+      "after_boss": {
+        "text": "dialogue.neighbor.after_boss",
+        "speaker": "neighbor",
+        "set": [
+          "met.neighbor"
+        ]
       }
     }
   },
@@ -821,47 +856,6 @@
       "festival": {
         "text": "dialogue.kid.festival",
         "speaker": "kid"
-      }
-    }
-  },
-  {
-    "id": "net_mender.talk",
-    "start": [
-      {
-        "node": "after_boss",
-        "requires": [
-          "encounter.earth.boss.caught"
-        ]
-      },
-      {
-        "node": "boss",
-        "requires": [
-          "earth.boss.appeared"
-        ]
-      },
-      "primeiro"
-    ],
-    "nodes": {
-      "primeiro": {
-        "text": "dialogue.net_mender.first",
-        "speaker": "net_mender",
-        "set": [
-          "met.net_mender"
-        ]
-      },
-      "boss": {
-        "text": "dialogue.net_mender.boss",
-        "speaker": "net_mender",
-        "set": [
-          "met.net_mender"
-        ]
-      },
-      "after_boss": {
-        "text": "dialogue.net_mender.after_boss",
-        "speaker": "net_mender",
-        "set": [
-          "met.net_mender"
-        ]
       }
     }
   },

@@ -138,5 +138,13 @@
       "speed": 2.6,
       "fightEfficiency": 0.035
     }
+  },
+  {
+    "id": "net.special_broken",
+    "category": "net",
+    "tier": 2,
+    "unique": true,
+    "broken": true,
+    "stats": {}
   }
 ]
