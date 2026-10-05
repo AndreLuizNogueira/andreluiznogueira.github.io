@@ -623,7 +623,47 @@
       },
       "d": {
         "speaker": "organizer",
-        "text": "dialogue.organizer.dinner_sorry"
+        "text": "dialogue.organizer.dinner_sorry",
+        "set": [
+          "venue.organizer_concluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "cyclist.talk",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "speaker": "cyclist",
+        "text": "dialogue.cyclist.bus_gone",
+        "next": "b"
+      },
+      "b": {
+        "speaker": "cyclist",
+        "text": "dialogue.cyclist.other_stop",
+        "set": [
+          "venue.cyclist_talked"
+        ]
+      }
+    }
+  },
+  {
+    "id": "survivors.welcome",
+    "start": [
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "speaker": "survivor_a",
+        "text": "dialogue.survivors.welcome_a",
+        "next": "b"
+      },
+      "b": {
+        "speaker": "survivor_b",
+        "text": "dialogue.survivors.welcome_b"
       }
     }
   },

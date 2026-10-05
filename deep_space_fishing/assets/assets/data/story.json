@@ -291,7 +291,7 @@
       ]
     },
     {
-      "id": "prologue.departure",
+      "id": "prologue.night",
       "map": "venue",
       "requires": [
         "encounter.tournament.final.caught"
@@ -304,25 +304,42 @@
           "card": "story.card.final"
         },
         {
+          "card": "story.card.nightfall"
+        },
+        {
           "move": {
             "who": "player",
-            "x": 483,
-            "y": 250,
+            "x": 480,
+            "y": 240,
             "instant": true
           }
         },
         {
-          "move": {
-            "who": "player",
-            "x": 483,
-            "y": 246
-          }
-        },
-        {
           "dialogue": "organizer.dinner"
+        }
+      ]
+    },
+    {
+      "id": "prologue.departure",
+      "map": "road",
+      "requires": [
+        "road.scene_triggered"
+      ],
+      "steps": [
+        {
+          "card": "story.card.road_walking"
         },
         {
-          "card": "story.card.knocked_out"
+          "card": "story.card.van_approaching"
+        },
+        {
+          "card": "story.card.van_headlights"
+        },
+        {
+          "card": "story.card.van_kidnapped"
+        },
+        {
+          "flag": "prologue.kidnapped"
         },
         {
           "music": "ship"
@@ -331,12 +348,22 @@
           "card": "story.card.wake_up"
         },
         {
+          "dialogue": "survivors.welcome",
+          "image": "ship/ship_companheiros_v1.png"
+        },
+        {
+          "card": "story.card.to_meeting"
+        },
+        {
           "dialogue": "aliens.reveal",
           "image": "ship/ship_mapa_estelar_v1.png"
         },
         {
-          "card": "story.card.ship",
+          "card": "story.card.earth_space",
           "image": "screens/cutscene_partida_v1.png"
+        },
+        {
+          "card": "story.card.to_be_continued"
         },
         {
           "music": "title"
@@ -356,6 +383,18 @@
         "prologue.done"
       ],
       "text": "objective.prologue_done"
+    },
+    {
+      "requires": [
+        "venue.cyclist_talked"
+      ],
+      "text": "objective.walk_road"
+    },
+    {
+      "requires": [
+        "venue.organizer_concluded"
+      ],
+      "text": "objective.venue_bus_stop"
     },
     {
       "requires": [
