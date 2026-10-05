@@ -310,5 +310,20 @@
   "dialogue.survivors.welcome_a": "Você está seguro aqui. Acalme-se.",
   "dialogue.survivors.welcome_b": "Vamos levar você até a reunião.",
   "road.ahead": "A estrada continua no escuro...",
-  "map.road.name": "Estrada noturna"
+  "map.road.name": "Estrada noturna",
+  "story.card.caldris_journey": "A bordo da nave, o grupo decide ir a Caldris pedir uma audiência à família governante.",
+  "story.card.caldris_arrival": "A nave pousa em Caldris: muito verde, pouca água e cidades muito avançadas.",
+  "objective.caldris_audience": "Procure o responsável pelas audiências da corte.",
+  "objective.caldris_tournament": "Vá até a arena do torneio de Caldris.",
+  "character.caldris_official.name": "Oficial da corte",
+  "dialogue.alien_a.caldris": "A corte precisa nos ouvir. Vá falar com o oficial da audiência.",
+  "dialogue.alien_a.tournament": "Eles estão todos no torneio. Vamos até lá.",
+  "dialogue.alien_b.caldris": "Fique perto da gente.",
+  "dialogue.caldris.official_ask": "O que vocês querem com a família governante?",
+  "dialogue.caldris.request_audience": "Precisamos de uma audiência urgente com os governantes.",
+  "dialogue.caldris.official_tournament": "A corte inteira está no grande torneio de pesca. Nenhuma audiência será concedida agora.",
+  "dialogue.caldris.official_schedule": "Se quiserem falar com os governantes, vão até a arena. A audiência fica para o fim do evento.",
+  "dialogue.caldris.official_again": "A arena fica logo à frente. Procurem os governantes lá.",
+  "map.caldris.name": "Caldris",
+  "director.caldris": "Caldris: chegada e corte (a cena começa)"
 }

@@ -765,6 +765,80 @@
     }
   },
   {
+    "id": "alien_a.talk",
+    "start": [
+      {
+        "node": "tournament",
+        "requires": [
+          "caldris.audience_scheduled"
+        ]
+      },
+      "default"
+    ],
+    "nodes": {
+      "default": {
+        "speaker": "alien_a",
+        "text": "dialogue.alien_a.caldris"
+      },
+      "tournament": {
+        "speaker": "alien_a",
+        "text": "dialogue.alien_a.tournament"
+      }
+    }
+  },
+  {
+    "id": "alien_b.talk",
+    "start": [
+      "default"
+    ],
+    "nodes": {
+      "default": {
+        "speaker": "alien_b",
+        "text": "dialogue.alien_b.caldris"
+      }
+    }
+  },
+  {
+    "id": "caldris.audience",
+    "start": [
+      {
+        "node": "again",
+        "requires": [
+          "caldris.audience_scheduled"
+        ]
+      },
+      "a"
+    ],
+    "nodes": {
+      "a": {
+        "speaker": "caldris_official",
+        "text": "dialogue.caldris.official_ask",
+        "next": "b"
+      },
+      "b": {
+        "speaker": "player",
+        "text": "dialogue.caldris.request_audience",
+        "next": "c"
+      },
+      "c": {
+        "speaker": "caldris_official",
+        "text": "dialogue.caldris.official_tournament",
+        "next": "d"
+      },
+      "d": {
+        "speaker": "caldris_official",
+        "text": "dialogue.caldris.official_schedule",
+        "set": [
+          "caldris.audience_scheduled"
+        ]
+      },
+      "again": {
+        "speaker": "caldris_official",
+        "text": "dialogue.caldris.official_again"
+      }
+    }
+  },
+  {
     "id": "neighbor.talk",
     "start": [
       {

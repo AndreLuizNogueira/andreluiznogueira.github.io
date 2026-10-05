@@ -363,6 +363,31 @@
           "image": "screens/cutscene_partida_v1.png"
         },
         {
+          "card": "story.card.caldris_journey"
+        },
+        {
+          "card": "story.card.caldris_arrival"
+        },
+        {
+          "flag": "prologue.reached_caldris"
+        },
+        {
+          "travel": {
+            "map": "caldris",
+            "x": 48,
+            "y": 160
+          }
+        }
+      ]
+    },
+    {
+      "id": "caldris.to_be_continued",
+      "map": "caldris",
+      "requires": [
+        "caldris.audience_scheduled"
+      ],
+      "steps": [
+        {
           "card": "story.card.to_be_continued"
         },
         {
@@ -383,6 +408,18 @@
         "prologue.done"
       ],
       "text": "objective.prologue_done"
+    },
+    {
+      "requires": [
+        "caldris.audience_scheduled"
+      ],
+      "text": "objective.caldris_tournament"
+    },
+    {
+      "requires": [
+        "prologue.reached_caldris"
+      ],
+      "text": "objective.caldris_audience"
     },
     {
       "requires": [

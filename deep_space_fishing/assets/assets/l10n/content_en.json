@@ -310,5 +310,20 @@
   "dialogue.survivors.welcome_a": "You are safe here. Calm down.",
   "dialogue.survivors.welcome_b": "We are taking you to the meeting.",
   "road.ahead": "The road continues into the darkness...",
-  "map.road.name": "Night road"
+  "map.road.name": "Night road",
+  "story.card.caldris_journey": "Aboard the ship, the group decides to head to Caldris to request an audience with the governing family.",
+  "story.card.caldris_arrival": "The ship lands on Caldris: lots of green, little water and very advanced cities.",
+  "objective.caldris_audience": "Find the court official in charge of audiences.",
+  "objective.caldris_tournament": "Head to the Caldris tournament arena.",
+  "character.caldris_official.name": "Court official",
+  "dialogue.alien_a.caldris": "The court needs to hear us. Go speak to the audience official.",
+  "dialogue.alien_a.tournament": "They are all at the tournament. Let's head there.",
+  "dialogue.alien_b.caldris": "Stay close to us.",
+  "dialogue.caldris.official_ask": "What do you want with the governing family?",
+  "dialogue.caldris.request_audience": "We need an urgent audience with the rulers.",
+  "dialogue.caldris.official_tournament": "The entire court is at the great fishing tournament. No audience will be granted right now.",
+  "dialogue.caldris.official_schedule": "If you wish to speak with the rulers, go to the arena. The audience will be held at the end of the event.",
+  "dialogue.caldris.official_again": "The arena is straight ahead. Look for the rulers there.",
+  "map.caldris.name": "Caldris",
+  "director.caldris": "Caldris: arrival and court (the scene starts)"
 }
