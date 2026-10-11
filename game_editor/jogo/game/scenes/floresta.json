@@ -783,6 +783,32 @@
         "interactable": {
           "promptKey": "Entrar",
           "radius": 120
+        },
+        "region": {
+          "points": [
+            [
+              -55,
+              -165
+            ],
+            [
+              55,
+              -165
+            ],
+            [
+              55,
+              25
+            ],
+            [
+              -55,
+              25
+            ]
+          ],
+          "role": "interaction",
+          "shape": "polygon",
+          "size": [
+            100,
+            100
+          ]
         }
       },
       "id": "porta_cabana",
