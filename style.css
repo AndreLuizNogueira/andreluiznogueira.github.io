@@ -69,6 +69,9 @@ h1 span{color:#7a7d71}
 .r3forma-art::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 19px,#ffffff10 20px 21px),repeating-linear-gradient(0deg,transparent 0 19px,#ffffff10 20px 21px)}
 .r3forma-art .art-label,.r3forma-art .art-caption{z-index:1;color:#d6e6f2}
 .r3forma-plan{position:relative;width:min(300px,78%);height:auto;transform:rotate(-4deg);filter:drop-shadow(0 14px 18px #0005)}
+.game-editor-art{background:linear-gradient(170deg,#0b1426 0%,#1c2c4a 70%,#26331f 100%)}
+.game-editor-art .art-label,.game-editor-art .art-caption{z-index:1;color:#dbe4f2}
+.game-editor-scene{position:relative;width:min(320px,82%);height:auto;filter:drop-shadow(0 14px 18px #0006)}
 .contact{padding:14px 0 44px;display:flex;justify-content:space-between;align-items:center;gap:30px}
 .contact h2{font-size:32px;line-height:1.2;font-weight:500;letter-spacing:-1px;margin:16px 0 0}
 .contact>a{font-size:14px;overflow-wrap:anywhere}
