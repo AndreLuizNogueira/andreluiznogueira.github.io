@@ -1,0 +1,412 @@
+{
+  "atmosphere": {
+    "ambient": "#FFFFFFFF",
+    "darkness": 0,
+    "fogColor": "#96AABEFF",
+    "fogDensity": 0
+  },
+  "audio": {
+    "ambience": [],
+    "music": "noite"
+  },
+  "camera": {
+    "mode": "fixed",
+    "position": [
+      960,
+      540
+    ],
+    "zoom": 1
+  },
+  "id": "floresta",
+  "layers": [
+    {
+      "id": "ceu",
+      "locked": false,
+      "name": "Céu",
+      "parallax": 0,
+      "sortByY": false,
+      "visible": true
+    },
+    {
+      "id": "montanhas",
+      "locked": false,
+      "name": "Montanhas",
+      "parallax": 0.15,
+      "sortByY": false,
+      "visible": true
+    },
+    {
+      "id": "longe",
+      "locked": false,
+      "name": "Árvores ao longe",
+      "parallax": 0.4,
+      "sortByY": false,
+      "visible": true
+    },
+    {
+      "id": "perto",
+      "locked": false,
+      "name": "Árvores perto",
+      "parallax": 0.7,
+      "sortByY": false,
+      "visible": true
+    },
+    {
+      "id": "chao",
+      "locked": false,
+      "name": "Chão",
+      "parallax": 1,
+      "sortByY": false,
+      "visible": true
+    },
+    {
+      "id": "acao",
+      "locked": false,
+      "name": "Ação",
+      "parallax": 1,
+      "sortByY": true,
+      "visible": true
+    },
+    {
+      "id": "frente",
+      "locked": false,
+      "name": "Frente",
+      "parallax": 1.3,
+      "sortByY": false,
+      "visible": true
+    }
+  ],
+  "name": "Floresta",
+  "nodes": [
+    {
+      "components": {
+        "sprite": {
+          "asset": "ceu",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "ceu",
+      "layer": "ceu",
+      "name": "Céu",
+      "tags": [],
+      "transform": {
+        "x": 960,
+        "y": 1080
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "montanhas",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "montanhas",
+      "layer": "montanhas",
+      "name": "Montanhas",
+      "tags": [],
+      "transform": {
+        "x": 960,
+        "y": 820
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "arvore_longe",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 0.85,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "arvore1",
+      "layer": "longe",
+      "name": "Árvore",
+      "tags": [],
+      "transform": {
+        "x": 150,
+        "y": 870
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "arvore_longe",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 0.85,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "arvore2",
+      "layer": "longe",
+      "name": "Árvore",
+      "tags": [],
+      "transform": {
+        "scaleX": 1.2,
+        "scaleY": 1.2,
+        "x": 520,
+        "y": 880
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "arvore_longe",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 0.85,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "arvore3",
+      "layer": "longe",
+      "name": "Árvore",
+      "tags": [],
+      "transform": {
+        "x": 1250,
+        "y": 870
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "arvore_longe",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 0.85,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "arvore4",
+      "layer": "longe",
+      "name": "Árvore",
+      "tags": [],
+      "transform": {
+        "scaleX": 1.1,
+        "scaleY": 1.1,
+        "x": 1720,
+        "y": 880
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "arvore_perto",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "arvore5",
+      "layer": "perto",
+      "name": "Árvore",
+      "tags": [],
+      "transform": {
+        "x": 330,
+        "y": 930
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "arvore_perto",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "arvore6",
+      "layer": "perto",
+      "name": "Árvore",
+      "tags": [],
+      "transform": {
+        "scaleX": 1.15,
+        "scaleY": 1.15,
+        "x": 1500,
+        "y": 940
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "chao",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "chao",
+      "layer": "chao",
+      "name": "Chão",
+      "tags": [],
+      "transform": {
+        "scaleX": 3.8,
+        "x": 960,
+        "y": 1080
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "cabana",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "cabana",
+      "layer": "acao",
+      "name": "Cabana",
+      "tags": [],
+      "transform": {
+        "x": 1350,
+        "y": 960
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "pedra",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "pedra1",
+      "layer": "acao",
+      "name": "Pedra",
+      "tags": [],
+      "transform": {
+        "scaleX": 0.9,
+        "scaleY": 0.9,
+        "x": 600,
+        "y": 1010
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "pedra",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "pedra2",
+      "layer": "acao",
+      "name": "Pedra",
+      "tags": [],
+      "transform": {
+        "scaleX": 1.3,
+        "scaleY": 1.3,
+        "x": 1750,
+        "y": 1050
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "animatedSprite": {
+          "animation": "idle",
+          "asset": "heroi",
+          "flipX": false,
+          "playing": true,
+          "speed": 1
+        },
+        "audioSource": {
+          "asset": "sino",
+          "autoplay": true,
+          "bus": "sfx",
+          "loop": false,
+          "spatial": false,
+          "volume": 0.6
+        }
+      },
+      "id": "heroi",
+      "layer": "acao",
+      "name": "Herói",
+      "tags": [],
+      "transform": {
+        "scaleX": 1.3,
+        "scaleY": 1.3,
+        "x": 900,
+        "y": 1030
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "galho",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "galho1",
+      "layer": "frente",
+      "name": "Galho",
+      "tags": [],
+      "transform": {
+        "scaleX": 1.3,
+        "scaleY": 1.3,
+        "x": 260,
+        "y": 230
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "galho",
+          "flipX": true,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "galho2",
+      "layer": "frente",
+      "name": "Galho",
+      "tags": [],
+      "transform": {
+        "scaleX": 1.3,
+        "scaleY": 1.3,
+        "x": 1700,
+        "y": 200
+      },
+      "visible": true
+    }
+  ],
+  "size": [
+    1920,
+    1080
+  ],
+  "variables": []
+}

@@ -1,0 +1,89 @@
+{
+  "assets": [
+    {
+      "id": "ceu",
+      "kind": "image",
+      "path": "assets/images/ceu_noite.png"
+    },
+    {
+      "id": "montanhas",
+      "kind": "image",
+      "path": "assets/images/montanhas.png"
+    },
+    {
+      "id": "arvore_longe",
+      "kind": "image",
+      "path": "assets/images/arvore_longe.png"
+    },
+    {
+      "id": "arvore_perto",
+      "kind": "image",
+      "path": "assets/images/arvore_perto.png"
+    },
+    {
+      "id": "chao",
+      "kind": "image",
+      "path": "assets/images/chao.png"
+    },
+    {
+      "id": "cabana",
+      "kind": "image",
+      "path": "assets/images/cabana.png"
+    },
+    {
+      "id": "pedra",
+      "kind": "image",
+      "path": "assets/images/pedra.png"
+    },
+    {
+      "id": "galho",
+      "kind": "image",
+      "path": "assets/images/galho.png"
+    },
+    {
+      "id": "heroi",
+      "kind": "spriteSheet",
+      "path": "assets/sheets/heroi.png",
+      "sheet": "assets/sheets/heroi_sheet.json"
+    },
+    {
+      "id": "noite",
+      "kind": "audio",
+      "path": "assets/audio/noite.wav"
+    },
+    {
+      "id": "sino",
+      "kind": "audio",
+      "path": "assets/audio/sino.ogg"
+    }
+  ],
+  "locales": [
+    "pt"
+  ],
+  "meta": {
+    "appId": "dev.exemplo.cabana",
+    "author": "Exemplo",
+    "name": "Cabana na floresta",
+    "version": "1.0.0"
+  },
+  "scenes": [
+    {
+      "id": "floresta",
+      "name": "Floresta"
+    }
+  ],
+  "settings": {
+    "resolution": [
+      1920,
+      1080
+    ],
+    "scaleMode": "fit",
+    "targets": [
+      "windows",
+      "web",
+      "android"
+    ]
+  },
+  "startScene": "floresta",
+  "variables": []
+}
