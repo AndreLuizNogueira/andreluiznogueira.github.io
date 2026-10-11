@@ -55,6 +55,11 @@
       "id": "sino",
       "kind": "audio",
       "path": "assets/audio/sino.ogg"
+    },
+    {
+      "id": "pedra_normal",
+      "kind": "image",
+      "path": "assets/images/pedra_normal.png"
     }
   ],
   "locales": [

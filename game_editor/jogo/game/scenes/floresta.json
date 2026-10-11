@@ -1,9 +1,11 @@
 {
   "atmosphere": {
-    "ambient": "#FFFFFFFF",
-    "darkness": 0,
-    "fogColor": "#96AABEFF",
-    "fogDensity": 0
+    "ambient": "#7088C0FF",
+    "darkness": 0.4,
+    "fogColor": "#8090B0FF",
+    "fogDensity": 0.5,
+    "fogHeight": 0.45,
+    "fogSpeed": 25
   },
   "audio": {
     "ambience": [],
@@ -291,6 +293,7 @@
           "asset": "pedra",
           "flipX": false,
           "frame": 0,
+          "normalMap": "pedra_normal",
           "opacity": 1,
           "tint": "#FFFFFFFF"
         }
@@ -313,6 +316,7 @@
           "asset": "pedra",
           "flipX": false,
           "frame": 0,
+          "normalMap": "pedra_normal",
           "opacity": 1,
           "tint": "#FFFFFFFF"
         }
@@ -402,8 +406,174 @@
         "y": 200
       },
       "visible": true
+    },
+    {
+      "components": {
+        "light": {
+          "color": "#B8C8FFFF",
+          "flicker": "none",
+          "flickerSpeed": 1,
+          "intensity": 0.8,
+          "radius": 1100,
+          "softness": 1
+        }
+      },
+      "id": "luar",
+      "layer": "ceu",
+      "name": "Luar",
+      "tags": [],
+      "transform": {
+        "x": 1500,
+        "y": 200
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "light": {
+          "color": "#FFC070FF",
+          "flicker": "flicker",
+          "flickerSpeed": 0.6,
+          "intensity": 0.9,
+          "radius": 240,
+          "softness": 0.8
+        }
+      },
+      "id": "janela_esq",
+      "layer": "acao",
+      "name": "Luz da janela (esq.)",
+      "tags": [],
+      "transform": {
+        "x": 1240,
+        "y": 805
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "light": {
+          "color": "#FFC070FF",
+          "flicker": "flicker",
+          "flickerSpeed": 0.6,
+          "intensity": 0.9,
+          "radius": 240,
+          "softness": 0.8
+        }
+      },
+      "id": "janela_dir",
+      "layer": "acao",
+      "name": "Luz da janela (dir.)",
+      "tags": [],
+      "transform": {
+        "x": 1460,
+        "y": 805
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "light": {
+          "color": "#FFB060FF",
+          "flicker": "pulse",
+          "flickerSpeed": 0.3,
+          "intensity": 0.5,
+          "radius": 200,
+          "softness": 0.9
+        }
+      },
+      "id": "porta",
+      "layer": "acao",
+      "name": "Luz da porta",
+      "tags": [],
+      "transform": {
+        "x": 1350,
+        "y": 930
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "emitter": {
+          "additive": false,
+          "area": [
+            20,
+            10
+          ],
+          "color": "#8A8A90A0",
+          "colorEnd": "#8A8A9000",
+          "direction": -90,
+          "duration": 0,
+          "gravity": -10,
+          "lifetime": 4,
+          "maxParticles": 80,
+          "preset": "smoke",
+          "prewarm": true,
+          "rate": 12,
+          "shape": "soft",
+          "size": 24,
+          "sizeEnd": 90,
+          "speed": 50,
+          "spin": 0,
+          "spread": 25,
+          "wind": 15
+        }
+      },
+      "id": "fumaca",
+      "layer": "acao",
+      "name": "Fumaça",
+      "tags": [],
+      "transform": {
+        "x": 1490,
+        "y": 640
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "emitter": {
+          "additive": true,
+          "area": [
+            1000,
+            260
+          ],
+          "color": "#D8FF80FF",
+          "colorEnd": "#D8FF8000",
+          "direction": -90,
+          "duration": 0,
+          "gravity": 0,
+          "lifetime": 6,
+          "maxParticles": 60,
+          "preset": "fireflies",
+          "prewarm": true,
+          "rate": 8,
+          "shape": "soft",
+          "size": 9,
+          "sizeEnd": 9,
+          "speed": 18,
+          "spin": 0,
+          "spread": 360,
+          "wind": 0
+        }
+      },
+      "id": "vagalumes",
+      "layer": "acao",
+      "name": "Vaga-lumes",
+      "tags": [],
+      "transform": {
+        "x": 760,
+        "y": 880
+      },
+      "visible": true
     }
   ],
+  "post": {
+    "brightness": 0,
+    "contrast": 0.08,
+    "grain": 0.15,
+    "saturation": -0.1,
+    "tint": "#3050FF14",
+    "vignette": 0.5
+  },
   "size": [
     1920,
     1080
