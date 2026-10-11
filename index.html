@@ -11,9 +11,57 @@
 <link rel="alternate" hreflang="en" href="en.html">
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;" aria-hidden="true">
+  <symbol id="icon-vengine" viewBox="0 0 24 24">
+    <path fill="#d87336" d="M12 2L2 7l10 5 10-5-10-5zm0 7.5L4.5 6 12 3.5 19.5 6 12 9.5z"/>
+    <path fill="#ad492b" d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#ad492b" stroke-width="1.6" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-playforge" viewBox="0 0 24 24">
+    <path fill="#ad492b" d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 9 18.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+  </symbol>
+  <symbol id="icon-flutter" viewBox="0 0 24 24">
+    <path fill="#02569B" d="M14.314 0L2.3 12 6 15.7 21.686 0z"/>
+    <path fill="#0175C2" d="M14.286 11.971l-5.6 5.6 3.714 3.715 5.6-5.6z"/>
+    <path fill="#29B6F6" d="M8.686 17.571l3.714 3.715L16.114 24H8.686z"/>
+  </symbol>
+  <symbol id="icon-dart" viewBox="0 0 24 24">
+    <path fill="#00B4AB" d="M4.1 3.2L12.5 0l7.4 3.2v5.7L12.5 12l-8.4-3.1z"/>
+    <path fill="#0075C9" d="M12.5 12l7.4-3.1v8.9L12.5 24l-8.4-6.2V8.9z"/>
+  </symbol>
+  <symbol id="icon-flame" viewBox="0 0 24 24">
+    <path fill="#f25f22" d="M12 2C9.5 6 7 8.5 7 12a5 5 0 0010 0c0-2-1-4-2-5.5-.3 1.5-1.5 2.5-3 2.5 1-2 1-4.5 0-7z"/>
+  </symbol>
+  <symbol id="icon-webgl" viewBox="0 0 24 24">
+    <path fill="#990000" d="M12 2L2 8v8l10 6 10-6V8L12 2zm0 2.3l7.5 4.5L12 13.3 4.5 8.8 12 4.3zM4 10.3l7 4.2v6.7l-7-4.2v-6.7zm9 10.9v-6.7l7-4.2v6.7l-7 4.2z"/>
+  </symbol>
+  <symbol id="icon-sqlite" viewBox="0 0 24 24">
+    <path fill="#003B57" d="M12 3C6.5 3 2 4.8 2 7v10c0 2.2 4.5 4 10 4s10-1.8 10-4V7c0-2.2-4.5-4-10-4zm0 2c4.4 0 8 1.3 8 2s-3.6 2-8 2-8-1.3-8-2 3.6-2 8-2zm0 6c4.4 0 8-1.3 8-2v3c0 .7-3.6 2-8 2s-8-1.3-8-2V9c0 .7 3.6 2 8 2zm0 5c4.4 0 8-1.3 8-2v3c0 .7-3.6 2-8 2s-8-1.3-8-2v-3c0 .7 3.6 2 8 2z"/>
+  </symbol>
+  <symbol id="icon-supabase" viewBox="0 0 24 24">
+    <path fill="#3ECF8E" d="M21.36 15.34l-9.15 8.24c-.75.68-1.92.15-1.92-.86V13.8H2.88c-.85 0-1.33-.99-.81-1.66l9.15-8.24c.75-.68 1.92-.15 1.92.86v8.92h7.41c.85 0 1.33.99.81 1.66z"/>
+  </symbol>
+  <symbol id="icon-audio" viewBox="0 0 24 24">
+    <path fill="#62665e" d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+  </symbol>
+  <symbol id="icon-pdf" viewBox="0 0 24 24">
+    <path fill="#b30b00" d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm3.5-3H19v1h1v1.5h-1V13h-1.5V7h3v1.5z"/>
+  </symbol>
+  <symbol id="icon-canvas" viewBox="0 0 24 24">
+    <path fill="#4e613a" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1z"/>
+  </symbol>
+  <symbol id="icon-android" viewBox="0 0 24 24">
+    <path fill="#3DDC84" d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v6c0 .83.67 1.5 1.5 1.5S5 16.33 5 15.5v-6C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-6c0-.83-.67-1.5-1.5-1.5zm-4.97-4.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48C13.85 2.23 12.95 2 12 2s-1.85.23-2.64.63L7.88 1.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.3 1.3C6.67 4.28 5.4 6 5.1 8h13.8c-.3-2-1.57-3.72-3.37-4.84zM9 6c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm6 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
+  </symbol>
+  <symbol id="icon-bell" viewBox="0 0 24 24">
+    <path fill="#62665e" d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+  </symbol>
+  <symbol id="icon-shader" viewBox="0 0 24 24">
+    <path fill="#d87336" d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+  </symbol>
+</svg>
 <a class="skip-link" href="#projetos">Pular para os projetos</a>
 <header class="site-header wrap"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">an.</span>André Luiz Nogueira</a>
-<nav aria-label="Navegação principal"><a href="#projetos">Projetos</a><a href="licencas/">Privacidade</a><a href="#contato">Contato ↗</a>
+<nav aria-label="Navegação principal"><a href="#projetos">Projetos</a><a href="#tecnologias">Tecnologias</a><a href="licencas/">Privacidade</a><a href="#contato">Contato ↗</a>
 <span class="language-switch" role="group" aria-label="Idioma"><a href="./" lang="pt-BR" hreflang="pt-BR" aria-current="page">Português</a><span aria-hidden="true">/</span><a href="en.html" lang="en" hreflang="en">English</a></span>
 </nav>
 </header>
@@ -24,7 +72,7 @@
 </h1>
 <p class="intro">Sou André Luiz Nogueira. Crio aplicativos para facilitar o dia a dia e jogos para sair um pouco dele.</p>
 <a class="text-link" href="#projetos">Conheça meus projetos <span aria-hidden="true">↓</span></a>
-<div class="hero-note"><span>Feitos com cuidado. Usados do seu jeito.</span><span>APPS & JOGOS / 01—06</span>
+<div class="hero-note"><span>Feitos com cuidado. Usados do seu jeito.</span><span>APPS &amp; JOGOS / 01—07</span>
 </div>
 </section>
 <section id="projetos" aria-labelledby="projects-title">
@@ -36,11 +84,32 @@
 <div class="project-art listagem-art"><span class="art-label">MENOS IMPROVISO. MAIS ORGANIZAÇÃO.</span><img src="assets/listagem.png" alt="Ícone do Listagem: uma prancheta com itens marcados" width="512" height="512"><span class="art-caption">Sua próxima compra começa aqui.</span>
 </div>
 <div class="project-copy">
-<div class="project-meta"><span>01 / ORGANIZAÇÃO</span><span class="status">Publicado</span>
+<div class="project-meta"><span>01 / ORGANIZAÇÃO</span>
+<div class="project-status-group">
+<span class="status">Publicado</span>
+<span class="meta-tag">v2.1.5</span>
+<span class="meta-tag meta-date">Atualizado em 18/09/2026</span>
+</div>
 </div>
 <h3>Listagem</h3>
 <p class="project-tagline">Uma boa compra começa<br>com uma boa lista.</p>
 <p>Organize suas listas de compras, acompanhe os valores e consulte o histórico para entender como os preços mudam. Do planejamento ao carrinho, tudo em um só lugar.</p>
+<div class="project-progress">
+<div class="progress-header">
+<span class="progress-label">Status do projeto</span>
+<span class="progress-val">100% Concluído</span>
+</div>
+<div class="progress-bar"><div class="progress-fill completed" style="width: 100%;"></div></div>
+</div>
+<div class="project-tech-stack">
+<span class="tech-title">Principais tecnologias</span>
+<div class="tech-tags">
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-flutter"/></svg> Flutter</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-dart"/></svg> Dart</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-sqlite"/></svg> SQLite</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-android"/></svg> Android</span>
+</div>
+</div>
 <ul class="features" aria-label="Recursos do Listagem">
 <li>Listas de compras</li>
 <li>Histórico de preços</li>
@@ -54,11 +123,32 @@
 <div class="project-art pet-art"><span class="art-label">PARA QUEM FAZ PARTE DA FAMÍLIA.</span><img src="assets/hora-do-pet.png" alt="Ícone do Hora do Pet: uma pata branca com marca de confirmação" width="1024" height="1024" loading="lazy"><span class="art-caption">Cada cuidado, na hora certa.</span>
 </div>
 <div class="project-copy">
-<div class="project-meta"><span>02 / CUIDADO ANIMAL</span><span class="status">Publicado</span>
+<div class="project-meta"><span>02 / CUIDADO ANIMAL</span>
+<div class="project-status-group">
+<span class="status">Publicado</span>
+<span class="meta-tag">v1.1.0</span>
+<span class="meta-tag meta-date">Atualizado em 18/09/2026</span>
+</div>
 </div>
 <h3>Hora do Pet</h3>
 <p class="project-tagline">Mais cuidado.<br>Menos esquecimentos.</p>
 <p>Comida, remédio e os pequenos cuidados de todos os dias. Organize a rotina de cada pet, receba lembretes e acompanhe o estoque para saber quando é hora de repor.</p>
+<div class="project-progress">
+<div class="progress-header">
+<span class="progress-label">Status do projeto</span>
+<span class="progress-val">100% Concluído</span>
+</div>
+<div class="progress-bar"><div class="progress-fill completed" style="width: 100%;"></div></div>
+</div>
+<div class="project-tech-stack">
+<span class="tech-title">Principais tecnologias</span>
+<div class="tech-tags">
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-flutter"/></svg> Flutter</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-dart"/></svg> Dart</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-sqlite"/></svg> SQLite</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-bell"/></svg> Notificações Locais</span>
+</div>
+</div>
 <ul class="features" aria-label="Recursos do Hora do Pet">
 <li>Rotinas e lembretes</li>
 <li>Controle de estoque</li>
@@ -75,11 +165,33 @@
 <span class="game-caption">A HORTA SE REVOLTOU.</span>
 </div>
 <div class="project-copy">
-<div class="project-meta"><span>03 / JOGO DE SOBREVIVÊNCIA</span><span class="status development">Em desenvolvimento</span>
+<div class="project-meta"><span>03 / JOGO DE SOBREVIVÊNCIA</span>
+<div class="project-status-group">
+<span class="status development">Em desenvolvimento</span>
+<span class="meta-tag">v0.97.15</span>
+<span class="meta-tag meta-date">Atualizado em 22/09/2026</span>
+</div>
 </div>
 <h3>Salad Survivors</h3>
 <p class="project-tagline">Nem toda salada<br>é inofensiva.</p>
 <p>Escolha seu vegetal e sobreviva a uma horta em revolta. As armas disparam sozinhas; você decide para onde ir e quais melhorias combinar. Enfrente hordas, desafie chefes e proteja seus canteiros.</p>
+<div class="project-progress">
+<div class="progress-header">
+<span class="progress-label">Conclusão estimada</span>
+<span class="progress-val">95% (Pronto para lançamento)</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" style="width: 95%;"></div></div>
+</div>
+<div class="project-tech-stack">
+<span class="tech-title">Principais tecnologias</span>
+<div class="tech-tags">
+<a class="tech-tag is-author" href="#tecnologias" title="Tecnologia autoral desenvolvida por André"><svg class="tech-icon"><use href="#icon-playforge"/></svg> PlayForge <span class="author-badge">Autoral</span></a>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-flutter"/></svg> Flutter</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-flame"/></svg> Flame</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-supabase"/></svg> Supabase</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-audio"/></svg> Web Audio</span>
+</div>
+</div>
 <ul class="features" aria-label="Recursos do Salad Survivors">
 <li>Ondas e sobrevivência</li>
 <li>Cultivo e estratégia</li>
@@ -96,11 +208,33 @@
 <span class="game-caption">A PESCA SAIU DO PLANETA.</span>
 </div>
 <div class="project-copy">
-<div class="project-meta"><span>04 / RPG DE PESCARIA</span><span class="status development">Em desenvolvimento</span>
+<div class="project-meta"><span>04 / RPG DE PESCARIA</span>
+<div class="project-status-group">
+<span class="status development">Em desenvolvimento</span>
+<span class="meta-tag">v0.1.94</span>
+<span class="meta-tag meta-date">Atualizado em 05/10/2026</span>
+</div>
 </div>
 <h3>Deep Space Fishing</h3>
 <p class="project-tagline">O anzol chegou<br>mais longe.</p>
 <p>Um pescador comum é levado para uma disputa entre mundos. Viaje entre planetas, aprenda o que cada um exige da sua linha e enfrente criaturas usadas como armas. Cada torneio vencido muda o que você consegue pescar no anterior.</p>
+<div class="project-progress">
+<div class="progress-header">
+<span class="progress-label">Conclusão estimada</span>
+<span class="progress-val">10% (Prólogo)</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" style="width: 10%;"></div></div>
+</div>
+<div class="project-tech-stack">
+<span class="tech-title">Principais tecnologias</span>
+<div class="tech-tags">
+<a class="tech-tag is-author" href="#tecnologias" title="Tecnologia autoral desenvolvida por André"><svg class="tech-icon"><use href="#icon-playforge"/></svg> PlayForge <span class="author-badge">Autoral</span></a>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-flutter"/></svg> Flutter</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-dart"/></svg> Dart puro (Core)</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-canvas"/></svg> Canvas 2D</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-audio"/></svg> Web Audio</span>
+</div>
+</div>
 <ul class="features" aria-label="Recursos do Deep Space Fishing">
 <li>Pescaria com tensão e equipamento</li>
 <li>Planetas e torneios</li>
@@ -118,11 +252,33 @@
 <span class="game-caption">O PROTÓTIPO ESTÁ GANHANDO FORMA.</span>
 </div>
 <div class="project-copy">
-<div class="project-meta"><span>05 / FPS DE ARENA</span><span class="status development">Em desenvolvimento</span>
+<div class="project-meta"><span>05 / FPS DE ARENA</span>
+<div class="project-status-group">
+<span class="status development">Em desenvolvimento</span>
+<span class="meta-tag">v0.0.124</span>
+<span class="meta-tag meta-date">Atualizado em 11/10/2026</span>
+</div>
 </div>
 <h3>Drezkul</h3>
 <p class="project-tagline">Três rotas.<br>Uma saída: avançar.</p>
 <p>Um jogo de tiro em primeira pessoa inspirado nos clássicos 2,5D. Entre corredores, cruze caminhos e domine uma arena compacta criada para confrontos rápidos.</p>
+<div class="project-progress">
+<div class="progress-header">
+<span class="progress-label">Conclusão estimada</span>
+<span class="progress-val">85% (Campanha &amp; Multiplayer)</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+</div>
+<div class="project-tech-stack">
+<span class="tech-title">Principais tecnologias</span>
+<div class="tech-tags">
+<a class="tech-tag is-author" href="#tecnologias" title="Motor 3D autoral desenvolvido por André"><svg class="tech-icon"><use href="#icon-vengine"/></svg> V-Engine <span class="author-badge">Autoral</span></a>
+<a class="tech-tag is-author" href="#tecnologias" title="Toolkit autoral desenvolvido por André"><svg class="tech-icon"><use href="#icon-playforge"/></svg> PlayForge <span class="author-badge">Autoral</span></a>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-flutter"/></svg> Flutter</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-webgl"/></svg> WebGL2</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-shader"/></svg> GLSL Shaders</span>
+</div>
+</div>
 <ul class="features" aria-label="Recursos planejados de Drezkul">
 <li>Raycasting com visual retrô</li>
 <li>Arenas compactas</li>
@@ -139,11 +295,32 @@
 <span class="art-caption">Sua próxima reunião começa aqui.</span>
 </div>
 <div class="project-copy">
-<div class="project-meta"><span>06 / ARQUITETURA</span><span class="status development">Em desenvolvimento</span>
+<div class="project-meta"><span>06 / ARQUITETURA</span>
+<div class="project-status-group">
+<span class="status development">Em desenvolvimento</span>
+<span class="meta-tag">v0.18.1</span>
+<span class="meta-tag meta-date">Atualizado em 11/10/2026</span>
+</div>
 </div>
 <h3>R3Forma</h3>
 <p class="project-tagline">Do terreno à planta.<br>Da planta ao 3D.</p>
 <p>Informe as medidas do terreno, desenhe paredes e cômodos em escala real, coloque portas e janelas e veja a construção em 3D na hora. Feito para conceber projetos com rapidez, até durante uma reunião, e entregar a planta em PDF.</p>
+<div class="project-progress">
+<div class="progress-header">
+<span class="progress-label">Conclusão estimada</span>
+<span class="progress-val">95% (Recursos avançados prontos)</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" style="width: 95%;"></div></div>
+</div>
+<div class="project-tech-stack">
+<span class="tech-title">Principais tecnologias</span>
+<div class="tech-tags">
+<a class="tech-tag is-author" href="#tecnologias" title="Motor 3D autoral desenvolvido por André"><svg class="tech-icon"><use href="#icon-vengine"/></svg> V-Engine <span class="author-badge">Autoral</span></a>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-flutter"/></svg> Flutter</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-canvas"/></svg> Canvas 2D</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-pdf"/></svg> PDF Export</span>
+</div>
+</div>
 <ul class="features" aria-label="Recursos do R3Forma">
 <li>Planta 2D em escala real</li>
 <li>Visualização 3D e caminhada</li>
@@ -160,11 +337,32 @@
 <span class="art-caption">Sem escrever uma linha de código.</span>
 </div>
 <div class="project-copy">
-<div class="project-meta"><span>07 / CRIAÇÃO DE JOGOS</span><span class="status development">Em desenvolvimento</span>
+<div class="project-meta"><span>07 / CRIAÇÃO DE JOGOS</span>
+<div class="project-status-group">
+<span class="status development">Em desenvolvimento</span>
+<span class="meta-tag">v0.1.0</span>
+<span class="meta-tag meta-date">Atualizado em 11/10/2026</span>
+</div>
 </div>
 <h3>Game Editor</h3>
 <p class="project-tagline">Arraste, posicione,<br>aperte Testar.</p>
 <p>Um editor visual para criar jogos 2,5D com cenários em camadas, profundidade e personagens animados. Importe imagens e folhas de sprites, monte cada cena arrastando os elementos, ajuste tudo pelo inspetor e teste o jogo na hora, no mesmo motor que roda o jogo final. Nome ainda provisório.</p>
+<div class="project-progress">
+<div class="progress-header">
+<span class="progress-label">Conclusão estimada</span>
+<span class="progress-val">65% (MVP concluído)</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" style="width: 65%;"></div></div>
+</div>
+<div class="project-tech-stack">
+<span class="tech-title">Principais tecnologias</span>
+<div class="tech-tags">
+<a class="tech-tag is-author" href="#tecnologias" title="Palco 2.5D e atmosfera autoral desenvolvida por André"><svg class="tech-icon"><use href="#icon-vengine"/></svg> V-Engine <span class="author-badge">Autoral</span></a>
+<a class="tech-tag is-author" href="#tecnologias" title="Formato e lógica autoral desenvolvida por André"><svg class="tech-icon"><use href="#icon-playforge"/></svg> PlayForge <span class="author-badge">Autoral</span></a>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-flutter"/></svg> Flutter</span>
+<span class="tech-tag"><svg class="tech-icon"><use href="#icon-canvas"/></svg> Canvas 2D</span>
+</div>
+</div>
 <ul class="features" aria-label="Recursos do Game Editor">
 <li>Cenas em camadas com parallax</li>
 <li>Inspetor, desfazer e salvamento automático</li>
@@ -174,6 +372,74 @@
 </div>
 </div>
 </article>
+</section>
+<section id="tecnologias" class="author-tech-section" aria-labelledby="tech-title">
+<div class="section-heading">
+<h2 id="tech-title">Tecnologias Autorais &amp; Engenharia</h2>
+<span>Motores e bibliotecas desenvolvidos sob medida</span>
+</div>
+<p class="author-tech-intro">Além dos produtos finais, desenvolvo motores, frameworks e ferramentas de engenharia próprias para resolver desafios específicos de física, renderização 3D, rede e arquitetura de jogos.</p>
+<div class="author-tech-grid">
+<div class="author-tech-card">
+<div>
+<div class="author-tech-card-header">
+<div class="author-tech-card-title">
+<div class="author-tech-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 7.5L4.5 6 12 3.5 19.5 6 12 9.5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+<div>
+<h3>V-Engine</h3>
+<span class="author-tech-type">Motor 3D, Mundo &amp; Física Espacial (v0.12.0)</span>
+</div>
+</div>
+<span class="author-tech-badge-pill">Tecnologia Autoral</span>
+</div>
+<p class="author-tech-desc">Motor em tempo real para Flutter com múltiplos backends sobre o mesmo mundo lógico: GPU nativa (WebGL2 e Flutter GPU Impeller), modelos glTF com esqueleto animado na GPU, iluminação dinâmica por setor, raycasting, portais 2.5D e palco 2.5D com luzes por shader, atmosfera e partículas.</p>
+<ul class="author-tech-modules" aria-label="Módulos da V-Engine">
+<li>WebGL2 / Flutter GPU</li>
+<li>glTF com Esqueleto</li>
+<li>Raycast &amp; Portais</li>
+<li>Luz Dinâmica &amp; Shaders</li>
+<li>Física Espacial Dart</li>
+<li>Palco 2.5D &amp; Atmosfera</li>
+</ul>
+</div>
+<div class="author-tech-usage">
+<strong>Utilizado em:</strong>
+<a href="#drezkul">Drezkul</a>,
+<a href="#r3forma">R3Forma</a>,
+<a href="#game-editor">Game Editor</a>
+</div>
+</div>
+<div class="author-tech-card">
+<div>
+<div class="author-tech-card-header">
+<div class="author-tech-card-title">
+<div class="author-tech-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 9 18.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div>
+<div>
+<h3>PlayForge</h3>
+<span class="author-tech-type">Game Toolkit &amp; Lógica Modular (v0.33.0)</span>
+</div>
+</div>
+<span class="author-tech-badge-pill">Tecnologia Autoral</span>
+</div>
+<p class="author-tech-desc">Toolkit e plugin nativo para Flutter e Flame que unifica a arquitetura dos jogos: controle refinado (gamepad com deadzones radiais, touch analógico, Pointer Lock), Web Audio de baixa latência, gravação com migrações de esquema, rede multijogador com client prediction/lag compensation, formato de cena e motor narrativo com lógica visual.</p>
+<ul class="author-tech-modules" aria-label="Módulos do PlayForge">
+<li>Gamepad &amp; Touch Controls</li>
+<li>Web Audio &amp; Orçamento de Vozes</li>
+<li>Multiplayer &amp; Client Prediction</li>
+<li>Saves &amp; Migrações</li>
+<li>Formato de Projeto 2.5D</li>
+<li>Lógica &amp; Narrativa</li>
+</ul>
+</div>
+<div class="author-tech-usage">
+<strong>Utilizado em:</strong>
+<a href="#salad-survivors">Salad Survivors</a>,
+<a href="#deep-space-fishing">Deep Space Fishing</a>,
+<a href="#drezkul">Drezkul</a>,
+<a href="#game-editor">Game Editor</a>
+</div>
+</div>
+</div>
 </section>
 <section class="contact" id="contato">
 <div>
