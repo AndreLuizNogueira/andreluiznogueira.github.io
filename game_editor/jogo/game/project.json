@@ -55,10 +55,224 @@
       "id": "sino",
       "kind": "audio",
       "path": "assets/audio/sino.ogg"
+    },
+    {
+      "id": "pedra_normal",
+      "kind": "image",
+      "path": "assets/images/pedra_normal.png"
+    },
+    {
+      "id": "porta",
+      "kind": "audio",
+      "path": "assets/audio/porta.wav"
+    },
+    {
+      "id": "fogo",
+      "kind": "audio",
+      "path": "assets/audio/fogo.wav"
+    },
+    {
+      "id": "vento",
+      "kind": "audio",
+      "path": "assets/audio/vento.wav"
+    },
+    {
+      "id": "interior",
+      "kind": "audio",
+      "path": "assets/audio/interior.wav"
+    },
+    {
+      "id": "crepitar",
+      "kind": "audio",
+      "path": "assets/audio/crepitar.wav"
+    },
+    {
+      "id": "voz_guarda",
+      "kind": "audio",
+      "path": "assets/audio/voz_guarda.wav"
+    },
+    {
+      "id": "chave",
+      "kind": "audio",
+      "path": "assets/audio/chave.wav"
+    },
+    {
+      "id": "guarda",
+      "kind": "spriteSheet",
+      "path": "assets/sheets/guarda.png",
+      "sheet": "assets/sheets/guarda_sheet.json"
+    },
+    {
+      "id": "parede",
+      "kind": "image",
+      "path": "assets/images/parede.png"
+    },
+    {
+      "id": "piso",
+      "kind": "image",
+      "path": "assets/images/piso.png"
+    },
+    {
+      "id": "janela",
+      "kind": "image",
+      "path": "assets/images/janela.png"
+    },
+    {
+      "id": "lareira",
+      "kind": "image",
+      "path": "assets/images/lareira.png"
+    },
+    {
+      "id": "porta_interna",
+      "kind": "image",
+      "path": "assets/images/porta_dentro.png"
+    },
+    {
+      "id": "mesa",
+      "kind": "image",
+      "path": "assets/images/mesa.png"
+    }
+  ],
+  "dialogues": [
+    {
+      "id": "guarda",
+      "name": "Conversa com o guarda",
+      "nodes": [
+        {
+          "id": "oi",
+          "next": "pergunta",
+          "speaker": "nome.guarda",
+          "text": "guarda.oi",
+          "type": "line",
+          "voice": "voz_guarda"
+        },
+        {
+          "id": "pergunta",
+          "options": [
+            {
+              "condition": {
+                "op": "==",
+                "type": "compare",
+                "value": "false",
+                "variable": "tem_chave"
+              },
+              "next": "da_chave",
+              "text": "guarda.pedir"
+            },
+            {
+              "condition": {
+                "op": "==",
+                "type": "compare",
+                "value": "true",
+                "variable": "tem_chave"
+              },
+              "next": "de_nada",
+              "text": "guarda.ja_tem"
+            },
+            {
+              "next": "tchau",
+              "text": "guarda.nada"
+            }
+          ],
+          "text": "guarda.pergunta",
+          "type": "choice"
+        },
+        {
+          "id": "da_chave",
+          "next": "pega",
+          "speaker": "nome.guarda",
+          "text": "guarda.chave",
+          "type": "line"
+        },
+        {
+          "id": "pega",
+          "next": "som_chave",
+          "op": "set",
+          "type": "set",
+          "value": "true",
+          "variable": "tem_chave"
+        },
+        {
+          "id": "som_chave",
+          "next": "fim",
+          "signal": "pegou_chave",
+          "type": "signal"
+        },
+        {
+          "id": "de_nada",
+          "next": "fim",
+          "speaker": "nome.guarda",
+          "text": "guarda.de_nada",
+          "type": "line"
+        },
+        {
+          "id": "tchau",
+          "next": "fim",
+          "speaker": "nome.guarda",
+          "text": "guarda.tchau",
+          "type": "line"
+        },
+        {
+          "id": "fim",
+          "type": "end"
+        }
+      ],
+      "start": "oi"
+    },
+    {
+      "id": "porta_trancada",
+      "name": "Porta trancada",
+      "nodes": [
+        {
+          "id": "trancada",
+          "next": "fim",
+          "speaker": "nome.heroi",
+          "text": "porta.trancada",
+          "type": "line"
+        },
+        {
+          "id": "fim",
+          "type": "end"
+        }
+      ],
+      "start": "trancada"
+    },
+    {
+      "id": "porta_entrar",
+      "name": "Entrar?",
+      "nodes": [
+        {
+          "id": "pergunta",
+          "options": [
+            {
+              "next": "entra",
+              "text": "sim"
+            },
+            {
+              "next": "fim",
+              "text": "nao"
+            }
+          ],
+          "text": "porta.entrar",
+          "type": "choice"
+        },
+        {
+          "id": "entra",
+          "next": "fim",
+          "signal": "entrar",
+          "type": "signal"
+        },
+        {
+          "id": "fim",
+          "type": "end"
+        }
+      ],
+      "start": "pergunta"
     }
   ],
   "locales": [
-    "pt"
+    "pt",
+    "en"
   ],
   "meta": {
     "appId": "dev.exemplo.cabana",
@@ -70,6 +284,10 @@
     {
       "id": "floresta",
       "name": "Floresta"
+    },
+    {
+      "id": "interior",
+      "name": "Dentro da cabana"
     }
   ],
   "settings": {
@@ -85,5 +303,79 @@
     ]
   },
   "startScene": "floresta",
-  "variables": []
+  "strings": {
+    "guarda.chave": {
+      "en": "Of course. Here is the key. The firewood is next to the fireplace.",
+      "pt": "Claro. Aqui está a chave. A lenha fica do lado da lareira."
+    },
+    "guarda.de_nada": {
+      "en": "Don't forget to put out the fire before you sleep.",
+      "pt": "Não esqueça de apagar o fogo antes de dormir."
+    },
+    "guarda.ja_tem": {
+      "en": "Thanks for the key!",
+      "pt": "Obrigado pela chave!"
+    },
+    "guarda.nada": {
+      "en": "Just passing through.",
+      "pt": "Só estou de passagem."
+    },
+    "guarda.oi": {
+      "en": "Good evening! Few people walk this trail after dark. The cabin at the end is mine, but tonight I keep watch out here.",
+      "pt": "Boa noite! Pouca gente anda por esta trilha depois que escurece. A cabana lá no fim é minha, mas hoje eu fico de vigia aqui fora."
+    },
+    "guarda.pedir": {
+      "en": "May I rest in the cabin?",
+      "pt": "Posso descansar na cabana?"
+    },
+    "guarda.pergunta": {
+      "en": "Can I help?",
+      "pt": "Posso ajudar?"
+    },
+    "guarda.tchau": {
+      "en": "Have a good walk, then.",
+      "pt": "Boa caminhada, então."
+    },
+    "nao": {
+      "en": "No",
+      "pt": "Não"
+    },
+    "nome.guarda": {
+      "en": "Ranger",
+      "pt": "Guarda"
+    },
+    "nome.heroi": {
+      "en": "You",
+      "pt": "Você"
+    },
+    "porta.entrar": {
+      "en": "Go into the cabin?",
+      "pt": "Entrar na cabana?"
+    },
+    "porta.trancada": {
+      "en": "It is locked. Maybe the trail ranger has the key.",
+      "pt": "Está trancada. Talvez o guarda da trilha tenha a chave."
+    },
+    "sim": {
+      "en": "Yes",
+      "pt": "Sim"
+    }
+  },
+  "variables": [
+    {
+      "initial": false,
+      "name": "visitou_cabana",
+      "type": "boolean"
+    },
+    {
+      "initial": false,
+      "name": "lareira_acesa",
+      "type": "boolean"
+    },
+    {
+      "initial": false,
+      "name": "tem_chave",
+      "type": "boolean"
+    }
+  ]
 }

@@ -1,22 +1,205 @@
 {
   "atmosphere": {
-    "ambient": "#FFFFFFFF",
-    "darkness": 0,
-    "fogColor": "#96AABEFF",
-    "fogDensity": 0
+    "ambient": "#7088C0FF",
+    "darkness": 0.4,
+    "fogColor": "#8090B0FF",
+    "fogDensity": 0.5,
+    "fogHeight": 0.45,
+    "fogSpeed": 25
   },
   "audio": {
-    "ambience": [],
-    "music": "noite"
+    "ambience": [
+      "vento"
+    ],
+    "music": "noite",
+    "musicFade": 1
   },
   "camera": {
-    "mode": "fixed",
+    "bounds": [
+      0,
+      0,
+      3840,
+      1080
+    ],
+    "mode": "follow",
     "position": [
       960,
       540
     ],
+    "target": "heroi",
     "zoom": 1
   },
+  "events": [
+    {
+      "actions": [
+        {
+          "dialogue": "guarda",
+          "type": "showDialogue"
+        }
+      ],
+      "conditions": [],
+      "enabled": true,
+      "id": "falar_guarda",
+      "name": "Falar com o guarda",
+      "once": false,
+      "trigger": {
+        "node": "guarda",
+        "type": "interact"
+      }
+    },
+    {
+      "actions": [
+        {
+          "asset": "chave",
+          "type": "playSound"
+        }
+      ],
+      "conditions": [],
+      "enabled": true,
+      "id": "pegou_chave",
+      "name": "Som da chave",
+      "once": false,
+      "trigger": {
+        "signal": "pegou_chave",
+        "type": "dialogueSignal"
+      }
+    },
+    {
+      "actions": [
+        {
+          "dialogue": "porta_trancada",
+          "type": "showDialogue"
+        }
+      ],
+      "conditions": [
+        {
+          "op": "==",
+          "type": "compare",
+          "value": "false",
+          "variable": "tem_chave"
+        }
+      ],
+      "enabled": true,
+      "id": "porta_trancada",
+      "name": "Porta trancada",
+      "once": false,
+      "trigger": {
+        "node": "porta_cabana",
+        "type": "interact"
+      }
+    },
+    {
+      "actions": [
+        {
+          "dialogue": "porta_entrar",
+          "type": "showDialogue"
+        }
+      ],
+      "conditions": [
+        {
+          "op": "==",
+          "type": "compare",
+          "value": "true",
+          "variable": "tem_chave"
+        }
+      ],
+      "enabled": true,
+      "id": "perguntar",
+      "name": "Perguntar se entra",
+      "once": false,
+      "trigger": {
+        "node": "porta_cabana",
+        "type": "interact"
+      }
+    },
+    {
+      "actions": [
+        {
+          "enabled": false,
+          "type": "setControl"
+        },
+        {
+          "asset": "porta",
+          "type": "playSound"
+        },
+        {
+          "seconds": 0.3,
+          "type": "wait"
+        },
+        {
+          "op": "set",
+          "type": "setVariable",
+          "value": "true",
+          "variable": "visitou_cabana"
+        },
+        {
+          "duration": 0.9,
+          "scene": "interior",
+          "spawn": "porta_dentro",
+          "transition": "fade",
+          "type": "changeScene"
+        }
+      ],
+      "conditions": [],
+      "enabled": true,
+      "id": "entrar",
+      "name": "Entrar na cabana",
+      "once": false,
+      "trigger": {
+        "signal": "entrar",
+        "type": "dialogueSignal"
+      }
+    },
+    {
+      "actions": [
+        {
+          "node": "fumaca",
+          "type": "setVisible",
+          "visible": true
+        }
+      ],
+      "conditions": [
+        {
+          "op": "==",
+          "type": "compare",
+          "value": "true",
+          "variable": "lareira_acesa"
+        }
+      ],
+      "enabled": true,
+      "id": "fumaca_acesa",
+      "name": "Fumaça com a lareira acesa",
+      "once": false,
+      "trigger": {
+        "type": "sceneStart"
+      }
+    },
+    {
+      "actions": [
+        {
+          "node": "fumaca",
+          "type": "setVisible",
+          "visible": false
+        }
+      ],
+      "conditions": [
+        {
+          "negate": true,
+          "op": "==",
+          "type": "compare",
+          "value": "true",
+          "variable": "lareira_acesa"
+        }
+      ],
+      "enabled": true,
+      "id": "fumaca_apagada",
+      "name": "Sem fumaça com a lareira apagada",
+      "once": false,
+      "trigger": {
+        "type": "sceneStart"
+      }
+    }
+  ],
   "id": "floresta",
   "layers": [
     {
@@ -113,7 +296,7 @@
       "name": "Montanhas",
       "tags": [],
       "transform": {
-        "x": 960,
+        "x": 1150,
         "y": 820
       },
       "visible": true
@@ -175,7 +358,7 @@
       "name": "Árvore",
       "tags": [],
       "transform": {
-        "x": 1250,
+        "x": 1050,
         "y": 870
       },
       "visible": true
@@ -197,8 +380,70 @@
       "transform": {
         "scaleX": 1.1,
         "scaleY": 1.1,
-        "x": 1720,
+        "x": 1480,
         "y": 880
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "arvore_longe",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 0.85,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "arvore7",
+      "layer": "longe",
+      "name": "Árvore",
+      "tags": [],
+      "transform": {
+        "x": 1900,
+        "y": 875
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "arvore_longe",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 0.85,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "arvore8",
+      "layer": "longe",
+      "name": "Árvore",
+      "tags": [],
+      "transform": {
+        "scaleX": 1.15,
+        "scaleY": 1.15,
+        "x": 2300,
+        "y": 880
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "arvore_longe",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 0.85,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "arvore9",
+      "layer": "longe",
+      "name": "Árvore",
+      "tags": [],
+      "transform": {
+        "x": 2620,
+        "y": 870
       },
       "visible": true
     },
@@ -239,7 +484,49 @@
       "transform": {
         "scaleX": 1.15,
         "scaleY": 1.15,
-        "x": 1500,
+        "x": 1250,
+        "y": 940
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "arvore_perto",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "arvore10",
+      "layer": "perto",
+      "name": "Árvore",
+      "tags": [],
+      "transform": {
+        "x": 2100,
+        "y": 935
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "arvore_perto",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "arvore11",
+      "layer": "perto",
+      "name": "Árvore",
+      "tags": [],
+      "transform": {
+        "scaleX": 1.1,
+        "scaleY": 1.1,
+        "x": 3050,
         "y": 940
       },
       "visible": true
@@ -259,8 +546,8 @@
       "name": "Chão",
       "tags": [],
       "transform": {
-        "scaleX": 3.8,
-        "x": 960,
+        "scaleX": 7.6,
+        "x": 1920,
         "y": 1080
       },
       "visible": true
@@ -280,7 +567,7 @@
       "name": "Cabana",
       "tags": [],
       "transform": {
-        "x": 1350,
+        "x": 3100,
         "y": 960
       },
       "visible": true
@@ -291,6 +578,7 @@
           "asset": "pedra",
           "flipX": false,
           "frame": 0,
+          "normalMap": "pedra_normal",
           "opacity": 1,
           "tint": "#FFFFFFFF"
         }
@@ -302,7 +590,7 @@
       "transform": {
         "scaleX": 0.9,
         "scaleY": 0.9,
-        "x": 600,
+        "x": 900,
         "y": 1010
       },
       "visible": true
@@ -313,6 +601,7 @@
           "asset": "pedra",
           "flipX": false,
           "frame": 0,
+          "normalMap": "pedra_normal",
           "opacity": 1,
           "tint": "#FFFFFFFF"
         }
@@ -324,8 +613,31 @@
       "transform": {
         "scaleX": 1.3,
         "scaleY": 1.3,
-        "x": 1750,
+        "x": 3600,
         "y": 1050
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "pedra",
+          "flipX": false,
+          "frame": 0,
+          "normalMap": "pedra_normal",
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "pedra3",
+      "layer": "acao",
+      "name": "Pedra",
+      "tags": [],
+      "transform": {
+        "scaleX": 0.9,
+        "scaleY": 0.9,
+        "x": 2300,
+        "y": 1058
       },
       "visible": true
     },
@@ -345,6 +657,13 @@
           "loop": false,
           "spatial": false,
           "volume": 0.6
+        },
+        "character": {
+          "axes": "both",
+          "control": "player",
+          "idle": "idle",
+          "speed": 420,
+          "walk": "walk"
         }
       },
       "id": "heroi",
@@ -354,7 +673,7 @@
       "transform": {
         "scaleX": 1.3,
         "scaleY": 1.3,
-        "x": 900,
+        "x": 500,
         "y": 1030
       },
       "visible": true
@@ -402,10 +721,535 @@
         "y": 200
       },
       "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "galho",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "galho3",
+      "layer": "frente",
+      "name": "Galho",
+      "tags": [],
+      "transform": {
+        "scaleX": 1.2,
+        "scaleY": 1.2,
+        "x": 2900,
+        "y": 240
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "galho",
+          "flipX": true,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "galho4",
+      "layer": "frente",
+      "name": "Galho",
+      "tags": [],
+      "transform": {
+        "scaleX": 1.3,
+        "scaleY": 1.3,
+        "x": 4150,
+        "y": 210
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "light": {
+          "color": "#B8C8FFFF",
+          "flicker": "none",
+          "flickerSpeed": 1,
+          "intensity": 0.8,
+          "radius": 1100,
+          "softness": 1
+        }
+      },
+      "id": "luar",
+      "layer": "ceu",
+      "name": "Luar",
+      "tags": [],
+      "transform": {
+        "x": 1500,
+        "y": 200
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "light": {
+          "color": "#FFC070FF",
+          "flicker": "flicker",
+          "flickerSpeed": 0.6,
+          "intensity": 0.9,
+          "radius": 240,
+          "softness": 0.8
+        }
+      },
+      "id": "janela_esq",
+      "layer": "acao",
+      "name": "Luz da janela (esq.)",
+      "tags": [],
+      "transform": {
+        "x": 2990,
+        "y": 805
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "light": {
+          "color": "#FFC070FF",
+          "flicker": "flicker",
+          "flickerSpeed": 0.6,
+          "intensity": 0.9,
+          "radius": 240,
+          "softness": 0.8
+        }
+      },
+      "id": "janela_dir",
+      "layer": "acao",
+      "name": "Luz da janela (dir.)",
+      "tags": [],
+      "transform": {
+        "x": 3210,
+        "y": 805
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "light": {
+          "color": "#FFB060FF",
+          "flicker": "pulse",
+          "flickerSpeed": 0.3,
+          "intensity": 0.5,
+          "radius": 200,
+          "softness": 0.9
+        }
+      },
+      "id": "porta",
+      "layer": "acao",
+      "name": "Luz da porta",
+      "tags": [],
+      "transform": {
+        "x": 3100,
+        "y": 930
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "emitter": {
+          "additive": false,
+          "area": [
+            20,
+            10
+          ],
+          "color": "#8A8A90A0",
+          "colorEnd": "#8A8A9000",
+          "direction": -90,
+          "duration": 0,
+          "gravity": -10,
+          "lifetime": 4,
+          "maxParticles": 80,
+          "preset": "smoke",
+          "prewarm": true,
+          "rate": 12,
+          "shape": "soft",
+          "size": 24,
+          "sizeEnd": 90,
+          "speed": 50,
+          "spin": 0,
+          "spread": 25,
+          "wind": 15
+        }
+      },
+      "id": "fumaca",
+      "layer": "acao",
+      "name": "Fumaça",
+      "tags": [],
+      "transform": {
+        "x": 3240,
+        "y": 640
+      },
+      "visible": false
+    },
+    {
+      "components": {
+        "emitter": {
+          "additive": true,
+          "area": [
+            1000,
+            260
+          ],
+          "color": "#D8FF80FF",
+          "colorEnd": "#D8FF8000",
+          "direction": -90,
+          "duration": 0,
+          "gravity": 0,
+          "lifetime": 6,
+          "maxParticles": 60,
+          "preset": "fireflies",
+          "prewarm": true,
+          "rate": 8,
+          "shape": "soft",
+          "size": 9,
+          "sizeEnd": 9,
+          "speed": 18,
+          "spin": 0,
+          "spread": 360,
+          "wind": 0
+        }
+      },
+      "id": "vagalumes",
+      "layer": "acao",
+      "name": "Vaga-lumes",
+      "tags": [],
+      "transform": {
+        "x": 760,
+        "y": 880
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "emitter": {
+          "additive": true,
+          "area": [
+            1200,
+            260
+          ],
+          "color": "#D8FF80FF",
+          "colorEnd": "#D8FF8000",
+          "direction": -90,
+          "duration": 0,
+          "gravity": 0,
+          "lifetime": 6,
+          "maxParticles": 60,
+          "preset": "fireflies",
+          "prewarm": true,
+          "rate": 8,
+          "shape": "soft",
+          "size": 9,
+          "sizeEnd": 9,
+          "speed": 18,
+          "spin": 0,
+          "spread": 360,
+          "wind": 0
+        }
+      },
+      "id": "vagalumes2",
+      "layer": "acao",
+      "name": "Vaga-lumes",
+      "tags": [],
+      "transform": {
+        "x": 2500,
+        "y": 880
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "light": {
+          "color": "#FFC878FF",
+          "flicker": "flicker",
+          "flickerSpeed": 0.4,
+          "intensity": 0.8,
+          "radius": 260,
+          "softness": 0.9
+        }
+      },
+      "id": "lanterna",
+      "layer": "acao",
+      "name": "Lanterna do guarda",
+      "tags": [],
+      "transform": {
+        "x": 1690,
+        "y": 930
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "animatedSprite": {
+          "animation": "idle",
+          "asset": "guarda",
+          "flipX": true,
+          "playing": true,
+          "speed": 1
+        },
+        "interactable": {
+          "promptKey": "Conversar",
+          "radius": 150
+        }
+      },
+      "id": "guarda",
+      "layer": "acao",
+      "name": "Guarda",
+      "tags": [],
+      "transform": {
+        "scaleX": 1.3,
+        "scaleY": 1.3,
+        "x": 1650,
+        "y": 1025
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "region": {
+          "points": [
+            [
+              40,
+              975
+            ],
+            [
+              3800,
+              975
+            ],
+            [
+              3800,
+              1072
+            ],
+            [
+              40,
+              1072
+            ]
+          ],
+          "role": "walkable",
+          "shape": "polygon",
+          "size": [
+            100,
+            100
+          ]
+        }
+      },
+      "id": "chao_andavel",
+      "layer": "acao",
+      "name": "Chão (navegável)",
+      "tags": [],
+      "transform": {
+        "x": 0,
+        "y": 0
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "region": {
+          "points": [
+            [
+              852,
+              985
+            ],
+            [
+              948,
+              985
+            ],
+            [
+              948,
+              1012
+            ],
+            [
+              852,
+              1012
+            ]
+          ],
+          "role": "blocker",
+          "shape": "polygon",
+          "size": [
+            100,
+            100
+          ]
+        }
+      },
+      "id": "pedra1_bloqueio",
+      "layer": "acao",
+      "name": "Pedra (sólida)",
+      "tags": [],
+      "transform": {
+        "x": 0,
+        "y": 0
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "region": {
+          "points": [
+            [
+              3530,
+              1000
+            ],
+            [
+              3670,
+              1000
+            ],
+            [
+              3670,
+              1052
+            ],
+            [
+              3530,
+              1052
+            ]
+          ],
+          "role": "blocker",
+          "shape": "polygon",
+          "size": [
+            100,
+            100
+          ]
+        }
+      },
+      "id": "pedra2_bloqueio",
+      "layer": "acao",
+      "name": "Pedra (sólida)",
+      "tags": [],
+      "transform": {
+        "x": 0,
+        "y": 0
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "region": {
+          "points": [
+            [
+              2252,
+              1032
+            ],
+            [
+              2348,
+              1032
+            ],
+            [
+              2348,
+              1060
+            ],
+            [
+              2252,
+              1060
+            ]
+          ],
+          "role": "blocker",
+          "shape": "polygon",
+          "size": [
+            100,
+            100
+          ]
+        }
+      },
+      "id": "pedra3_bloqueio",
+      "layer": "acao",
+      "name": "Pedra (sólida)",
+      "tags": [],
+      "transform": {
+        "x": 0,
+        "y": 0
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "interactable": {
+          "promptKey": "Porta",
+          "radius": 120
+        },
+        "region": {
+          "points": [
+            [
+              -55,
+              -165
+            ],
+            [
+              55,
+              -165
+            ],
+            [
+              55,
+              25
+            ],
+            [
+              -55,
+              25
+            ]
+          ],
+          "role": "interaction",
+          "shape": "polygon",
+          "size": [
+            100,
+            100
+          ]
+        }
+      },
+      "id": "porta_cabana",
+      "layer": "acao",
+      "name": "Porta da cabana",
+      "tags": [],
+      "transform": {
+        "x": 3100,
+        "y": 985
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "spawnPoint": {
+          "name": "inicio"
+        }
+      },
+      "id": "entrada_inicio",
+      "layer": "acao",
+      "name": "Entrada: inicio",
+      "tags": [],
+      "transform": {
+        "x": 500,
+        "y": 1030
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "spawnPoint": {
+          "name": "porta_fora"
+        }
+      },
+      "id": "entrada_porta",
+      "layer": "acao",
+      "name": "Entrada: porta_fora",
+      "tags": [],
+      "transform": {
+        "x": 3100,
+        "y": 1010
+      },
+      "visible": true
     }
   ],
+  "post": {
+    "brightness": 0,
+    "contrast": 0.08,
+    "grain": 0.15,
+    "saturation": -0.1,
+    "tint": "#3050FF14",
+    "vignette": 0.5
+  },
   "size": [
-    1920,
+    3840,
     1080
   ],
   "variables": []
