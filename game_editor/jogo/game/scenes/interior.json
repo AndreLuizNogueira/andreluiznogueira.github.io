@@ -8,7 +8,9 @@
     "fogSpeed": 20
   },
   "audio": {
-    "ambience": []
+    "ambience": [],
+    "music": "interior",
+    "musicFade": 1
   },
   "camera": {
     "mode": "fixed",
@@ -22,8 +24,35 @@
     {
       "actions": [
         {
+          "asset": "crepitar",
+          "type": "playAmbience"
+        }
+      ],
+      "conditions": [
+        {
+          "op": "==",
+          "type": "compare",
+          "value": "true",
+          "variable": "lareira_acesa"
+        }
+      ],
+      "enabled": true,
+      "id": "crepitar",
+      "name": "Crepitar com a lareira acesa",
+      "once": false,
+      "trigger": {
+        "type": "sceneStart"
+      }
+    },
+    {
+      "actions": [
+        {
           "asset": "fogo",
           "type": "playSound"
+        },
+        {
+          "asset": "crepitar",
+          "type": "playAmbience"
         },
         {
           "node": "fogo",
@@ -61,6 +90,10 @@
     },
     {
       "actions": [
+        {
+          "asset": "crepitar",
+          "type": "stopAmbience"
+        },
         {
           "node": "fogo",
           "type": "setVisible",
@@ -290,7 +323,7 @@
           "axes": "both",
           "control": "player",
           "idle": "idle",
-          "speed": 360,
+          "speed": 420,
           "walk": "walk"
         }
       },
@@ -497,6 +530,27 @@
       "transform": {
         "x": 330,
         "y": 880
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "audioSource": {
+          "asset": "vento",
+          "autoplay": true,
+          "bus": "sfx",
+          "loop": true,
+          "spatial": false,
+          "volume": 0.25
+        }
+      },
+      "id": "vento_fora",
+      "layer": "fundo",
+      "name": "Vento lá fora",
+      "tags": [],
+      "transform": {
+        "x": 1150,
+        "y": 420
       },
       "visible": true
     }
