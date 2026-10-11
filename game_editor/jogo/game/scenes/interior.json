@@ -1,0 +1,517 @@
+{
+  "atmosphere": {
+    "ambient": "#967864FF",
+    "darkness": 0.6,
+    "fogColor": "#96AABEFF",
+    "fogDensity": 0,
+    "fogHeight": 0.5,
+    "fogSpeed": 20
+  },
+  "audio": {
+    "ambience": []
+  },
+  "camera": {
+    "mode": "fixed",
+    "position": [
+      960,
+      540
+    ],
+    "zoom": 1
+  },
+  "events": [
+    {
+      "actions": [
+        {
+          "asset": "fogo",
+          "type": "playSound"
+        },
+        {
+          "node": "fogo",
+          "type": "setVisible",
+          "visible": true
+        },
+        {
+          "node": "faiscas",
+          "type": "setVisible",
+          "visible": true
+        },
+        {
+          "op": "set",
+          "type": "setVariable",
+          "value": "true",
+          "variable": "lareira_acesa"
+        }
+      ],
+      "conditions": [
+        {
+          "op": "==",
+          "type": "compare",
+          "value": "false",
+          "variable": "lareira_acesa"
+        }
+      ],
+      "enabled": true,
+      "id": "acender",
+      "name": "Acender a lareira",
+      "once": false,
+      "trigger": {
+        "node": "lareira",
+        "type": "interact"
+      }
+    },
+    {
+      "actions": [
+        {
+          "node": "fogo",
+          "type": "setVisible",
+          "visible": false
+        },
+        {
+          "node": "faiscas",
+          "type": "setVisible",
+          "visible": false
+        },
+        {
+          "op": "set",
+          "type": "setVariable",
+          "value": "false",
+          "variable": "lareira_acesa"
+        }
+      ],
+      "conditions": [
+        {
+          "op": "==",
+          "type": "compare",
+          "value": "true",
+          "variable": "lareira_acesa"
+        }
+      ],
+      "enabled": true,
+      "id": "apagar",
+      "name": "Apagar a lareira",
+      "once": false,
+      "trigger": {
+        "node": "lareira",
+        "type": "interact"
+      }
+    },
+    {
+      "actions": [
+        {
+          "asset": "porta",
+          "type": "playSound"
+        },
+        {
+          "duration": 0.7,
+          "scene": "floresta",
+          "spawn": "porta_fora",
+          "transition": "dissolve",
+          "type": "changeScene"
+        }
+      ],
+      "conditions": [],
+      "enabled": true,
+      "id": "sair",
+      "name": "Sair da cabana",
+      "once": false,
+      "trigger": {
+        "node": "saida",
+        "type": "interact"
+      }
+    }
+  ],
+  "id": "interior",
+  "layers": [
+    {
+      "id": "fundo",
+      "locked": false,
+      "name": "Fundo",
+      "parallax": 1,
+      "sortByY": false,
+      "visible": true
+    },
+    {
+      "id": "acao",
+      "locked": false,
+      "name": "Ação",
+      "parallax": 1,
+      "sortByY": true,
+      "visible": true
+    }
+  ],
+  "name": "Dentro da cabana",
+  "nodes": [
+    {
+      "components": {
+        "sprite": {
+          "asset": "parede",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "parede",
+      "layer": "fundo",
+      "name": "Parede",
+      "tags": [],
+      "transform": {
+        "x": 960,
+        "y": 760
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "piso",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "piso",
+      "layer": "fundo",
+      "name": "Piso",
+      "tags": [],
+      "transform": {
+        "x": 960,
+        "y": 1080
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "janela",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "janela",
+      "layer": "fundo",
+      "name": "Janela",
+      "tags": [],
+      "transform": {
+        "x": 1150,
+        "y": 420
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "interactable": {
+          "promptKey": "Lareira",
+          "radius": 170
+        },
+        "sprite": {
+          "asset": "lareira",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "lareira",
+      "layer": "fundo",
+      "name": "Lareira",
+      "tags": [],
+      "transform": {
+        "x": 1580,
+        "y": 790
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "interactable": {
+          "promptKey": "Sair",
+          "radius": 170
+        },
+        "sprite": {
+          "asset": "porta_interna",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "saida",
+      "layer": "fundo",
+      "name": "Porta",
+      "tags": [],
+      "transform": {
+        "x": 260,
+        "y": 780
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "sprite": {
+          "asset": "mesa",
+          "flipX": false,
+          "frame": 0,
+          "opacity": 1,
+          "tint": "#FFFFFFFF"
+        }
+      },
+      "id": "mesa",
+      "layer": "acao",
+      "name": "Mesa",
+      "tags": [],
+      "transform": {
+        "x": 900,
+        "y": 905
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "animatedSprite": {
+          "animation": "idle",
+          "asset": "heroi",
+          "flipX": false,
+          "playing": true,
+          "speed": 1
+        },
+        "audioSource": {
+          "asset": "sino",
+          "autoplay": true,
+          "bus": "sfx",
+          "loop": false,
+          "spatial": false,
+          "volume": 0.6
+        },
+        "character": {
+          "axes": "both",
+          "control": "player",
+          "idle": "idle",
+          "speed": 360,
+          "walk": "walk"
+        }
+      },
+      "id": "heroi",
+      "layer": "acao",
+      "name": "Herói",
+      "tags": [],
+      "transform": {
+        "scaleX": 1.3,
+        "scaleY": 1.3,
+        "x": 330,
+        "y": 880
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "light": {
+          "color": "#AABEFFFF",
+          "flicker": "none",
+          "flickerSpeed": 1,
+          "intensity": 0.7,
+          "radius": 650,
+          "softness": 1
+        }
+      },
+      "id": "luar_janela",
+      "layer": "acao",
+      "name": "Luar da janela",
+      "tags": [],
+      "transform": {
+        "x": 1150,
+        "y": 330
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "light": {
+          "color": "#FF783CFF",
+          "flicker": "flicker",
+          "flickerSpeed": 0.5,
+          "intensity": 0.6,
+          "radius": 260,
+          "softness": 0.9
+        }
+      },
+      "id": "brasa",
+      "layer": "acao",
+      "name": "Brasa",
+      "tags": [],
+      "transform": {
+        "x": 1580,
+        "y": 740
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "light": {
+          "color": "#FFAA5AFF",
+          "flicker": "flicker",
+          "flickerSpeed": 1.2,
+          "intensity": 1.3,
+          "radius": 900,
+          "softness": 0.8
+        }
+      },
+      "id": "fogo",
+      "layer": "acao",
+      "name": "Fogo",
+      "tags": [],
+      "transform": {
+        "x": 1580,
+        "y": 700
+      },
+      "visible": false
+    },
+    {
+      "components": {
+        "emitter": {
+          "additive": true,
+          "area": [
+            120,
+            10
+          ],
+          "color": "#FFD070FF",
+          "colorEnd": "#FF602000",
+          "direction": -90,
+          "duration": 0,
+          "gravity": 700,
+          "lifetime": 0.8,
+          "maxParticles": 120,
+          "preset": "sparks",
+          "prewarm": false,
+          "rate": 25,
+          "shape": "streak",
+          "size": 3,
+          "sizeEnd": 1,
+          "speed": 160,
+          "spin": 0,
+          "spread": 70,
+          "wind": 0
+        }
+      },
+      "id": "faiscas",
+      "layer": "acao",
+      "name": "Faíscas",
+      "tags": [],
+      "transform": {
+        "x": 1580,
+        "y": 730
+      },
+      "visible": false
+    },
+    {
+      "components": {
+        "region": {
+          "points": [
+            [
+              150,
+              805
+            ],
+            [
+              1770,
+              805
+            ],
+            [
+              1840,
+              1062
+            ],
+            [
+              80,
+              1062
+            ]
+          ],
+          "role": "walkable",
+          "shape": "polygon",
+          "size": [
+            100,
+            100
+          ]
+        }
+      },
+      "id": "piso_andavel",
+      "layer": "acao",
+      "name": "Piso (navegável)",
+      "tags": [],
+      "transform": {
+        "x": 0,
+        "y": 0
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "region": {
+          "points": [
+            [
+              760,
+              862
+            ],
+            [
+              1040,
+              862
+            ],
+            [
+              1040,
+              908
+            ],
+            [
+              760,
+              908
+            ]
+          ],
+          "role": "blocker",
+          "shape": "polygon",
+          "size": [
+            100,
+            100
+          ]
+        }
+      },
+      "id": "mesa_bloqueio",
+      "layer": "acao",
+      "name": "Mesa (sólida)",
+      "tags": [],
+      "transform": {
+        "x": 0,
+        "y": 0
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "spawnPoint": {
+          "name": "porta_dentro"
+        }
+      },
+      "id": "entrada_porta",
+      "layer": "acao",
+      "name": "Entrada: porta_dentro",
+      "tags": [],
+      "transform": {
+        "x": 330,
+        "y": 880
+      },
+      "visible": true
+    }
+  ],
+  "post": {
+    "brightness": 0,
+    "contrast": 0.05,
+    "grain": 0.1,
+    "saturation": 0,
+    "tint": "#FFFFFF00",
+    "vignette": 0.55
+  },
+  "size": [
+    1920,
+    1080
+  ],
+  "variables": []
+}

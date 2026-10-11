@@ -60,6 +60,46 @@
       "id": "pedra_normal",
       "kind": "image",
       "path": "assets/images/pedra_normal.png"
+    },
+    {
+      "id": "porta",
+      "kind": "audio",
+      "path": "assets/audio/porta.wav"
+    },
+    {
+      "id": "fogo",
+      "kind": "audio",
+      "path": "assets/audio/fogo.wav"
+    },
+    {
+      "id": "parede",
+      "kind": "image",
+      "path": "assets/images/parede.png"
+    },
+    {
+      "id": "piso",
+      "kind": "image",
+      "path": "assets/images/piso.png"
+    },
+    {
+      "id": "janela",
+      "kind": "image",
+      "path": "assets/images/janela.png"
+    },
+    {
+      "id": "lareira",
+      "kind": "image",
+      "path": "assets/images/lareira.png"
+    },
+    {
+      "id": "porta_interna",
+      "kind": "image",
+      "path": "assets/images/porta_dentro.png"
+    },
+    {
+      "id": "mesa",
+      "kind": "image",
+      "path": "assets/images/mesa.png"
     }
   ],
   "locales": [
@@ -75,6 +115,10 @@
     {
       "id": "floresta",
       "name": "Floresta"
+    },
+    {
+      "id": "interior",
+      "name": "Dentro da cabana"
     }
   ],
   "settings": {
@@ -90,5 +134,16 @@
     ]
   },
   "startScene": "floresta",
-  "variables": []
+  "variables": [
+    {
+      "initial": false,
+      "name": "visitou_cabana",
+      "type": "boolean"
+    },
+    {
+      "initial": false,
+      "name": "lareira_acesa",
+      "type": "boolean"
+    }
+  ]
 }

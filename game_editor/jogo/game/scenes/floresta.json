@@ -19,6 +19,95 @@
     ],
     "zoom": 1
   },
+  "events": [
+    {
+      "actions": [
+        {
+          "enabled": false,
+          "type": "setControl"
+        },
+        {
+          "asset": "porta",
+          "type": "playSound"
+        },
+        {
+          "seconds": 0.3,
+          "type": "wait"
+        },
+        {
+          "op": "set",
+          "type": "setVariable",
+          "value": "true",
+          "variable": "visitou_cabana"
+        },
+        {
+          "duration": 0.9,
+          "scene": "interior",
+          "spawn": "porta_dentro",
+          "transition": "fade",
+          "type": "changeScene"
+        }
+      ],
+      "conditions": [],
+      "enabled": true,
+      "id": "entrar",
+      "name": "Entrar na cabana",
+      "once": false,
+      "trigger": {
+        "node": "porta_cabana",
+        "type": "interact"
+      }
+    },
+    {
+      "actions": [
+        {
+          "node": "fumaca",
+          "type": "setVisible",
+          "visible": true
+        }
+      ],
+      "conditions": [
+        {
+          "op": "==",
+          "type": "compare",
+          "value": "true",
+          "variable": "lareira_acesa"
+        }
+      ],
+      "enabled": true,
+      "id": "fumaca_acesa",
+      "name": "Fumaça com a lareira acesa",
+      "once": false,
+      "trigger": {
+        "type": "sceneStart"
+      }
+    },
+    {
+      "actions": [
+        {
+          "node": "fumaca",
+          "type": "setVisible",
+          "visible": false
+        }
+      ],
+      "conditions": [
+        {
+          "negate": true,
+          "op": "==",
+          "type": "compare",
+          "value": "true",
+          "variable": "lareira_acesa"
+        }
+      ],
+      "enabled": true,
+      "id": "fumaca_apagada",
+      "name": "Sem fumaça com a lareira apagada",
+      "once": false,
+      "trigger": {
+        "type": "sceneStart"
+      }
+    }
+  ],
   "id": "floresta",
   "layers": [
     {
@@ -349,6 +438,13 @@
           "loop": false,
           "spatial": false,
           "volume": 0.6
+        },
+        "character": {
+          "axes": "both",
+          "control": "player",
+          "idle": "idle",
+          "speed": 360,
+          "walk": "walk"
         }
       },
       "id": "heroi",
@@ -526,7 +622,7 @@
         "x": 1490,
         "y": 640
       },
-      "visible": true
+      "visible": false
     },
     {
       "components": {
@@ -562,6 +658,172 @@
       "transform": {
         "x": 760,
         "y": 880
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "region": {
+          "points": [
+            [
+              40,
+              975
+            ],
+            [
+              1880,
+              975
+            ],
+            [
+              1880,
+              1072
+            ],
+            [
+              40,
+              1072
+            ]
+          ],
+          "role": "walkable",
+          "shape": "polygon",
+          "size": [
+            100,
+            100
+          ]
+        }
+      },
+      "id": "chao_andavel",
+      "layer": "acao",
+      "name": "Chão (navegável)",
+      "tags": [],
+      "transform": {
+        "x": 0,
+        "y": 0
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "region": {
+          "points": [
+            [
+              552,
+              985
+            ],
+            [
+              648,
+              985
+            ],
+            [
+              648,
+              1012
+            ],
+            [
+              552,
+              1012
+            ]
+          ],
+          "role": "blocker",
+          "shape": "polygon",
+          "size": [
+            100,
+            100
+          ]
+        }
+      },
+      "id": "pedra1_bloqueio",
+      "layer": "acao",
+      "name": "Pedra (sólida)",
+      "tags": [],
+      "transform": {
+        "x": 0,
+        "y": 0
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "region": {
+          "points": [
+            [
+              1680,
+              1000
+            ],
+            [
+              1820,
+              1000
+            ],
+            [
+              1820,
+              1052
+            ],
+            [
+              1680,
+              1052
+            ]
+          ],
+          "role": "blocker",
+          "shape": "polygon",
+          "size": [
+            100,
+            100
+          ]
+        }
+      },
+      "id": "pedra2_bloqueio",
+      "layer": "acao",
+      "name": "Pedra (sólida)",
+      "tags": [],
+      "transform": {
+        "x": 0,
+        "y": 0
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "interactable": {
+          "promptKey": "Entrar",
+          "radius": 120
+        }
+      },
+      "id": "porta_cabana",
+      "layer": "acao",
+      "name": "Porta da cabana",
+      "tags": [],
+      "transform": {
+        "x": 1350,
+        "y": 985
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "spawnPoint": {
+          "name": "inicio"
+        }
+      },
+      "id": "entrada_inicio",
+      "layer": "acao",
+      "name": "Entrada: inicio",
+      "tags": [],
+      "transform": {
+        "x": 900,
+        "y": 1030
+      },
+      "visible": true
+    },
+    {
+      "components": {
+        "spawnPoint": {
+          "name": "porta_fora"
+        }
+      },
+      "id": "entrada_porta",
+      "layer": "acao",
+      "name": "Entrada: porta_fora",
+      "tags": [],
+      "transform": {
+        "x": 1350,
+        "y": 1010
       },
       "visible": true
     }
