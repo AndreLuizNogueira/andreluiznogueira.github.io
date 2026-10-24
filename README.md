@@ -1,9 +1,8 @@
 # Portfólio de André Luiz Nogueira
 
 Site estático para GitHub Pages, em HTML e CSS, sem dependências de build.
-A página inicial reúne Listagem, Hora do Pet, Salad Survivors, Deep Space Fishing,
-Drezkul e R3Forma. As imagens
-em `assets/` foram copiadas dos projetos originais.
+A página inicial apresenta sete projetos: Listagem, Hora do Pet, Salad Survivors, Deep Space Fishing,
+Drezkul, R3Forma e Game Editor. As imagens em `assets/` foram copiadas dos projetos originais.
 
 ## Políticas individuais
 
