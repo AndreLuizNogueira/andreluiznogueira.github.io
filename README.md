@@ -9,6 +9,9 @@ Drezkul, R3Forma e Game Editor. As imagens em `assets/` foram copiadas dos proje
 - Listagem: https://andreluiznogueira.github.io/licencas/listagem/
 - Hora do Pet: https://andreluiznogueira.github.io/licencas/hora-do-pet/
 - Salad Survivors: https://andreluiznogueira.github.io/licencas/salad-survivors/
+- Deep Space Fishing: https://andreluiznogueira.github.io/licencas/deep-space-fishing/
+- Drezkul: https://andreluiznogueira.github.io/licencas/drezkul/
+- Game Editor: https://andreluiznogueira.github.io/licencas/game-editor/
 - R3Forma: https://andreluiznogueira.github.io/licencas/r3forma/
 
 Depois da publicação, atualizar os links nas lojas e nos aplicativos que
